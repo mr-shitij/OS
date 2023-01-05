@@ -21,7 +21,7 @@ int insert_last_DCLL(DCLL* list, Data* data) {
     new_node->data->marks = data->marks;
     strcpy(new_node->data->name, data->name);
 
-    if(*list == NULL){
+    if(*list == NULL) {
         new_node->frount = new_node;
         new_node->back = new_node;
         *list = new_node;
@@ -73,7 +73,7 @@ int insert_sorted_DCLL(DCLL* list, Data* data) {
                 *list = new_node;
             }
         }
-        else{
+        else {
             new_node->frount = *list;
             new_node->back = node;
 
@@ -100,12 +100,12 @@ void show_DCLL(DCLL* list) {
 
 }
 
-Data* get_item_DCLL(DCLL* list, int count){
+Data* get_item_DCLL(DCLL* list, int count) {
     if(*list == NULL)
         return NULL;
 
     Node* node = *list;
-    while(node->frount != *list && count != 0){
+    while(node->frount != *list && count != 0) {
         node = node->frount;
         count--;
     }
