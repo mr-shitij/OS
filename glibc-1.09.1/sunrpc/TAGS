@@ -1,0 +1,551 @@
+
+auth_none.c,231
+#define MAX_MARSHEL_SIZE 45,1690
+static struct authnone_private 64,2055
+authnone_create(71,2190
+authnone_marshal(99,2883
+authnone_verf(112,3128
+authnone_validate(117,3163
+authnone_refresh(124,3219
+authnone_destroy(131,3273
+
+auth_unix.c,276
+struct audata 73,2355
+#define	AUTH_PRIVATE(80,2626
+authunix_create(90,2832
+authunix_create_default(168,4629
+authunix_nextverf(191,5059
+authunix_marshal(198,5142
+authunix_validate(208,5325
+authunix_refresh(238,6023
+authunix_destroy(281,7099
+marshal_new_auth(304,7663
+
+authuxprot.c,28
+xdr_authunix_parms(51,1731
+
+bindrsvprt.c,22
+bindresvport(43,1556
+
+clnt_gen.c,21
+clnt_create(47,1786
+
+clnt_perr.c,239
+_buf(55,1764
+clnt_sperror(67,1876
+clnt_perror(150,3504
+struct rpc_errtab 158,3607
+clnt_sperrno(207,4724
+clnt_perrno(221,4976
+clnt_spcreateerror(229,5075
+clnt_pcreateerror(263,5855
+struct auth_errtab 269,5943
+auth_errmsg(294,6470
+
+clnt_raw.c,245
+#define MCALL_MSG_SIZE 47,1755
+static struct clntraw_private 52,1844
+clntraw_create(82,2442
+clntraw_call(125,3500
+clntraw_geterr(200,5329
+clntraw_freeres(206,5366
+clntraw_abort(225,5713
+clntraw_control(230,5748
+clntraw_destroy(236,5800
+
+clnt_simp.c,56
+static struct callrpc_private 47,1655
+callrpc(54,1790
+
+clnt_tcp.c,271
+#define MCALL_MSG_SIZE 60,2320
+struct ct_data 83,2761
+clnttcp_create(110,3748
+clnttcp_call(223,6515
+clnttcp_geterr(320,9332
+clnttcp_freeres(331,9504
+clnttcp_abort(344,9775
+clnttcp_control(349,9810
+clnttcp_destroy(375,10282
+readtcp(395,10738
+writetcp(451,11760
+
+clnt_udp.c,232
+struct cu_data 72,2168
+clntudp_bufcreate(105,3155
+clntudp_create(195,5618
+clntudp_call(208,5901
+clntudp_geterr(371,10632
+clntudp_freeres(382,10802
+clntudp_abort(395,11077
+clntudp_control(401,11133
+clntudp_destroy(431,11737
+
+rpc_dtable.c,25
+_rpc_dtablesize(38,1558
+
+get_myaddr.c,23
+get_myaddress(54,1910
+
+getrpcent.c,169
+struct rpcdata 48,1632
+_rpcdata(68,2097
+getrpcbynumber(80,2275
+getrpcbyname(101,2607
+setrpcent(120,2954
+endrpcent(137,3200
+getrpcent(154,3450
+interpret(172,3839
+
+getrpcport.c,20
+getrpcport(43,1564
+
+pmap_clnt.c,38
+pmap_set(56,1858
+pmap_unset(92,2743
+
+pm_getmaps.c,83
+#define NAMELEN 51,1820
+#define MAX_BROADCAST_SIZE 52,1840
+pmap_getmaps(61,2012
+
+pm_getport.c,22
+pmap_getport(56,1913
+
+pmap_prot.c,18
+xdr_pmap(47,1642
+
+pmap_prot2.c,22
+xdr_pmaplist(85,2890
+
+pmap_rmt.c,202
+#define MAX_BROADCAST_SIZE 52,1815
+pmap_rmtcall(66,2223
+xdr_rmtcall_args(108,3178
+xdr_rmtcallres(139,3964
+getbroadcastnets(162,4526
+typedef bool_t (*resultproc_t)208,6028
+clnt_broadcast(211,6079
+
+rpc_prot.c,212
+xdr_opaque_auth(60,2090
+xdr_des_block(75,2343
+xdr_accepted_reply(88,2632
+xdr_rejected_reply(115,3286
+xdr_replymsg(145,3960
+xdr_callhdr(165,4553
+accepted(185,5110
+rejected(223,5824
+_seterr_reply(248,6307
+
+rpc_common.c,0
+
+rpc_cmsg.c,21
+xdr_callmsg(49,1601
+
+svc.c,472
+#define NOFILE 53,1864
+#define NULL_SVC 58,1944
+#define	RQCRED_SIZE	59,1987
+static struct svc_callout 67,2217
+xprt_register(82,2509
+xprt_unregister(109,2945
+svc_register(136,3540
+svc_unregister(172,4364
+svc_find(197,4936
+svc_sendreply(221,5354
+svcerr_noproc(241,5828
+svcerr_decode(257,6123
+svcerr_systemerr(273,6410
+svcerr_auth(289,6707
+svcerr_weakauth(306,6998
+svcerr_noprog(317,7124
+svcerr_progvers(333,7437
+svc_getreq(368,8650
+svc_getreqset(385,8895
+
+svc_auth.c,73
+#define	AUTH_MAX	68,2351
+_authenticate(90,3180
+_svcauth_null(108,3645
+
+svc_authux.c,48
+_svcauth_unix(52,1991
+_svcauth_short(129,4004
+
+svc_raw.c,202
+static struct svcraw_private 49,1821
+svcraw_create(73,2309
+svcraw_stat(91,2747
+svcraw_recv(98,2802
+svcraw_reply(116,3133
+svcraw_getargs(135,3527
+svcraw_freeargs(148,3783
+svcraw_destroy(164,4099
+
+svc_run.c,17
+svc_run(43,1573
+
+svc_simple.c,71
+static struct proglst 46,1631
+registerrpc(57,1851
+universal(97,2872
+
+svc_tcp.c,387
+struct tcp_rendezvous 88,2518
+struct tcp_conn 93,2606
+svctcp_create(121,3599
+svcfd_create(179,5139
+makefd_xprt(189,5289
+rendezvous_request(225,6283
+rendezvous_stat(252,6886
+svctcp_destroy(259,6943
+readtcp(289,7678
+	if ((len = read(319,8272
+writetcp(332,8528
+svctcp_stat(350,8857
+svctcp_recv(364,9116
+svctcp_getargs(382,9464
+svctcp_freeargs(392,9659
+svctcp_reply(405,9912
+
+svc_udp.c,603
+#define rpc_buffer(48,1710
+#define MAX(49,1751
+struct svcudp_data 72,2171
+#define	su_data(79,2428
+svcudp_bufcreate(95,2983
+svcudp_create(152,4574
+svcudp_stat(160,4690
+svcudp_recv(168,4766
+svcudp_reply(202,5651
+svcudp_getargs(229,6272
+svcudp_freeargs(239,6449
+svcudp_destroy(251,6677
+#define SPARSENESS 273,7213
+#define CACHE_PERROR(275,7252
+#define ALLOC(278,7317
+#define BZERO(281,7402
+typedef struct cache_node *cache_ptr;287,7522
+struct cache_node 288,7560
+struct udp_cache 313,7962
+#define CACHE_LOC(328,8432
+svcudp_enablecache(336,8614
+cache_set(375,9508
+cache_get(440,11219
+
+xdr.c,445
+#define XDR_FALSE	53,1800
+#define XDR_TRUE	54,1829
+#define LASTUNSIGNED	55,1857
+xdr_free(67,2083
+xdr_void(81,2218
+xdr_int(93,2336
+xdr_u_int(114,2655
+xdr_long(136,3042
+xdr_u_long(158,3393
+xdr_short(176,3703
+xdr_u_short(205,4074
+xdr_char(235,4443
+xdr_u_char(253,4623
+xdr_bool(271,4801
+xdr_enum(300,5204
+xdr_opaque(329,5850
+xdr_bytes(381,6768
+xdr_netobj(436,7770
+xdr_union(456,8423
+xdr_string(505,9770
+xdr_wrapstring(569,10913
+
+xdr_array.c,70
+#define LASTUNSIGNED	48,1759
+xdr_array(59,2107
+xdr_vector(134,3866
+
+xdr_float.c,369
+struct	ieee_single 57,1932
+struct	vax_single 64,2081
+#define VAX_SNG_BIAS	71,2222
+#define IEEE_SNG_BIAS	72,2248
+static struct sgl_limits 74,2276
+xdr_float(86,2558
+struct	ieee_double 156,4172
+struct  vax_double 164,4358
+#define VAX_DBL_BIAS	173,4560
+#define IEEE_DBL_BIAS	174,4586
+#define MASK(175,4614
+static struct dbl_limits 177,4654
+xdr_double(191,4978
+
+xdr_mem.c,220
+xdrmem_create(75,2338
+xdrmem_destroy(89,2567
+xdrmem_getlong(95,2627
+xdrmem_putlong(108,2874
+xdrmem_getbytes(121,3117
+xdrmem_putbytes(135,3355
+xdrmem_getpos(149,3592
+xdrmem_setpos(157,3709
+xdrmem_inline(172,4043
+
+xdr_rec.c,543
+#define LAST_FRAG 93,3335
+typedef struct rec_strm 95,3374
+} RECSTREAM;119,4116
+xdrrec_create(132,4550
+xdrrec_getlong(192,6344
+xdrrec_putlong(215,6933
+xdrrec_getbytes(239,7575
+xdrrec_putbytes(267,8149
+xdrrec_getpos(292,8738
+xdrrec_setpos(318,9194
+xdrrec_inline(354,9958
+xdrrec_destroy(383,10512
+xdrrec_skiprecord(403,10948
+xdrrec_eof(425,11461
+xdrrec_endofrecord(449,12159
+flush_out(475,12818
+fill_input_buf(494,13468
+get_input_bytes(514,13945
+set_input_fragment(538,14503
+skip_input_bytes(552,14884
+fix_buf_size(573,15277
+
+xdr_ref.c,75
+#define LASTUNSIGNED	47,1757
+xdr_reference(59,2187
+xdr_pointer(114,3354
+
+xdr_stdio.c,239
+xdrstdio_create(77,2650
+xdrstdio_destroy(95,2988
+xdrstdio_getlong(103,3130
+xdrstdio_putlong(117,3357
+xdrstdio_getbytes(132,3599
+xdrstdio_putbytes(144,3804
+xdrstdio_getpos(156,4009
+xdrstdio_setpos(164,4113
+xdrstdio_inline(174,4265
+
+rpc/auth.h,688
+#define MAX_AUTH_BYTES	42,1580
+#define MAXNETNAMELEN	43,1607
+enum auth_stat 48,1730
+typedef u_long u_int32;66,2249
+union des_block 69,2312
+typedef union des_block des_block;76,2394
+struct opaque_auth 82,2511
+} AUTH;104,3125
+#define AUTH_NEXTVERF(115,3301
+#define auth_nextverf(117,3375
+#define AUTH_MARSHALL(120,3450
+#define auth_marshall(122,3534
+#define AUTH_VALIDATE(125,3619
+#define auth_validate(127,3708
+#define AUTH_REFRESH(130,3798
+#define auth_refresh(132,3870
+#define AUTH_DESTROY(135,3943
+#define auth_destroy(137,4015
+#define AUTH_NONE	162,4567
+#define	AUTH_NULL	163,4612
+#define	AUTH_UNIX	164,4662
+#define	AUTH_SHORT	165,4712
+#define AUTH_DES	166,4762
+
+rpc/auth_unix.h,120
+#define MAX_MACHINE_NAME 46,1838
+#define NGRPS 49,1947
+struct authunix_parms 54,1999
+struct short_hand_verf 70,2355
+
+rpc/clnt.h,893
+#define _CLNT_38,1463
+enum clnt_stat 45,1664
+struct rpc_err 87,2746
+} CLIENT;124,3860
+#define	CLNT_CALL(145,4159
+#define	clnt_call(147,4291
+#define	CLNT_ABORT(155,4474
+#define	clnt_abort(156,4529
+#define	CLNT_GETERR(163,4646
+#define	clnt_geterr(164,4714
+#define	CLNT_FREERES(174,4886
+#define	clnt_freeres(175,4965
+#define	CLNT_CONTROL(184,5160
+#define	clnt_control(185,5231
+#define CLSET_TIMEOUT 190,5374
+#define CLGET_TIMEOUT 191,5434
+#define CLGET_SERVER_ADDR 192,5494
+#define CLSET_RETRY_TIMEOUT 196,5602
+#define CLGET_RETRY_TIMEOUT 197,5668
+#define	CLNT_DESTROY(204,5787
+#define	clnt_destroy(205,5846
+#define RPCTEST_PROGRAM	214,6076
+#define RPCTEST_VERSION	215,6113
+#define RPCTEST_NULL_PROC	216,6150
+#define RPCTEST_NULL_BATCH_PROC	217,6188
+#define NULLPROC 223,6309
+struct rpc_createerr 312,8293
+#define UDPMSGSIZE	328,8564
+#define RPCSMALLMSGSIZE	329,8628
+
+rpc/netdb.h,52
+#define _RPC_NETDB_H37,1538
+struct rpcent 40,1583
+
+rpc/pmap_clnt.h,0
+
+rpc/pmap_prot.h,378
+#define PMAPPORT	68,2706
+#define PMAPPROG	69,2739
+#define PMAPVERS	70,2774
+#define PMAPVERS_PROTO	71,2804
+#define PMAPVERS_ORIG	72,2840
+#define PMAPPROC_NULL	73,2875
+#define PMAPPROC_SET	74,2910
+#define PMAPPROC_UNSET	75,2944
+#define PMAPPROC_GETPORT	76,2980
+#define PMAPPROC_DUMP	77,3017
+#define PMAPPROC_CALLIT	78,3052
+struct pmap 80,3090
+struct pmaplist 89,3231
+
+rpc/pmap_rmt.h,55
+struct rmtcallargs 38,1500
+struct rmtcallres 46,1627
+
+rpc/rpc.h,31
+#define __RPC_HEADER__38,1511
+
+rpc/rpc_msg.h,370
+#define RPC_MSG_VERSION	39,1457
+#define RPC_SERVICE_PORT	40,1495
+enum msg_type 48,1684
+enum reply_stat 53,1722
+enum accept_stat 58,1775
+enum reject_stat 67,1893
+struct accepted_reply 81,2129
+struct rejected_reply 102,2518
+struct reply_body 118,2813
+struct call_body 131,3030
+struct rpc_msg 143,3280
+#define	acpted_rply	153,3473
+#define	rjcted_rply	154,3512
+
+rpc/svc.h,532
+#define __SVC_HEADER__38,1469
+enum xprt_stat 62,2671
+} SVCXPRT;87,3437
+#define svc_getcaller(92,3502
+#define SVC_RECV(102,3683
+#define svc_recv(104,3759
+#define SVC_STAT(107,3836
+#define svc_stat(109,3899
+#define SVC_GETARGS(112,3963
+#define svc_getargs(114,4064
+#define SVC_REPLY(117,4166
+#define svc_reply(119,4245
+#define SVC_FREEARGS(122,4325
+#define svc_freeargs(124,4427
+#define SVC_DESTROY(127,4530
+#define svc_destroy(129,4598
+struct svc_req 136,4694
+#define svc_fds 238,7979
+#define	RPC_ANYSOCK	256,8443
+
+rpc/svc_auth.h,0
+
+rpc/types.h,314
+#define __TYPES_RPC_HEADER__36,1428
+#define	bool_t	38,1458
+#define	enum_t	39,1477
+#define	FALSE	40,1496
+#define	TRUE	41,1514
+#define __dontcare__	42,1531
+#	define NULL 44,1568
+#define mem_alloc(48,1615
+#define mem_free(49,1654
+#define       INADDR_LOOPBACK 57,1828
+#define        MAXHOSTNAMELEN 60,1915
+
+rpc/xdr.h,1194
+#define __XDR_HEADER__39,1497
+enum xdr_op 76,3014
+#define BYTES_PER_XDR_UNIT	85,3139
+#define RNDUP(86,3170
+typedef	bool_t (*xdrproc_t)98,3686
+} XDR;122,4711
+#define XDR_GETLONG(133,4847
+#define xdr_getlong(135,4926
+#define XDR_PUTLONG(138,5006
+#define xdr_putlong(140,5085
+#define XDR_GETBYTES(143,5165
+#define xdr_getbytes(145,5254
+#define XDR_PUTBYTES(148,5344
+#define xdr_putbytes(150,5433
+#define XDR_GETPOS(153,5523
+#define xdr_getpos(155,5589
+#define XDR_SETPOS(158,5656
+#define xdr_setpos(160,5732
+#define	XDR_INLINE(163,5809
+#define	xdr_inline(165,5883
+#define	XDR_DESTROY(168,5958
+#define	xdr_destroy(171,6061
+#define NULL_xdrproc_t 185,6666
+struct xdr_discrim 186,6704
+#define IXDR_GET_LONG(206,7320
+#define IXDR_PUT_LONG(207,7380
+#define IXDR_GET_BOOL(209,7448
+#define IXDR_GET_ENUM(210,7505
+#define IXDR_GET_U_LONG(211,7560
+#define IXDR_GET_SHORT(212,7619
+#define IXDR_GET_U_SHORT(213,7676
+#define IXDR_PUT_BOOL(215,7738
+#define IXDR_PUT_ENUM(216,7803
+#define IXDR_PUT_U_LONG(217,7868
+#define IXDR_PUT_SHORT(218,7935
+#define IXDR_PUT_U_SHORT(219,8001
+#define MAX_NETOBJ_SZ 251,8827
+struct netobj 252,8855
+typedef struct netobj netobj;256,8904
+
+rpcsvc/bootparam.x,31
+program BOOTPARAMPROG 92,2637
+
+rpcsvc/nlm_prot.x,27
+program NLM_PROG 142,2412
+
+rpcsvc/rstat.x,28
+program RSTATPROG 114,3101
+
+rpcsvc/yppasswd.x,30
+program YPPASSWDPROG 37,1441
+
+rpcsvc/klm_prot.x,27
+program KLM_PROG 119,3074
+
+rpcsvc/rex.x,26
+program REXPROG 196,6653
+
+rpcsvc/sm_inter.x,25
+program SM_PROG 40,1469
+
+rpcsvc/mount.x,28
+program MOUNTPROG 101,2888
+
+rpcsvc/rnusers.x,28
+program RUSERSPROG 57,1701
+
+rpcsvc/spray.x,27
+program SPRAYPROG 61,1767
+
+rpcsvc/nfs_prot.x,30
+program NFS_PROGRAM 298,6825
+
+rpcsvc/rquota.x,28
+program RQUOTAPROG 47,1312
+
+rpcsvc/yp.x,91
+program YPPROG 220,4994
+program YPPUSH_XFRRESPPROG 264,5674
+program YPBINDPROG 278,5928

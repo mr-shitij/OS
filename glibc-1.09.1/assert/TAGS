@@ -1,0 +1,10 @@
+
+assert.c,29
+DEFUN(__assert_fail,32,1210
+
+assert.h,144
+#define	_ASSERT_H	30,969
+#define	assert(39,1170
+#define	assert(55,1504
+#define __ASSERT_FUNCTION	64,1950
+#define __ASSERT_FUNCTION	66,2003

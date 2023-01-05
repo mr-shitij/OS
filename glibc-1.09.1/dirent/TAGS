@@ -1,0 +1,128 @@
+
+../sysdeps/unix/opendir.c,23
+DEFUN(opendir,35,1172
+
+../sysdeps/stub/opendir.c,22
+DEFUN(opendir,27,954
+
+../sysdeps/mach/hurd/opendir.c,23
+DEFUN(opendir,35,1115
+
+../sysdeps/unix/closedir.c,24
+DEFUN(closedir,29,1035
+
+../sysdeps/stub/closedir.c,23
+DEFUN(closedir,28,990
+
+../sysdeps/mach/hurd/closedir.c,24
+DEFUN(closedir,30,1047
+
+../sysdeps/unix/bsd/readdir.c,23
+DEFUN(readdir,31,1060
+
+../sysdeps/unix/readdir.c,91
+#define D_RECLEN(32,1142
+DEFUN(readdir,38,1246
+DEFUN(readdir, (dirp), DIR *dirp)38,1246
+
+../sysdeps/stub/readdir.c,22
+DEFUN(readdir,26,964
+
+../sysdeps/mach/hurd/readdir.c,23
+DEFUN(readdir,32,1066
+
+../sysdeps/unix/rewinddir.c,24
+DEFUN(rewinddir,28,991
+
+../sysdeps/stub/rewinddir.c,24
+DEFUN(rewinddir,27,967
+
+../sysdeps/mach/hurd/rewinddir.c,24
+DEFUN(rewinddir,28,991
+
+../sysdeps/unix/seekdir.c,22
+DEFUN(seekdir,27,969
+
+../sysdeps/stub/seekdir.c,82
+DEFUN(seekdir,27,972
+DEFUN(seekdir, (dirp, pos), DIR *dirp AND off_t pos)27,972
+
+../sysdeps/mach/hurd/seekdir.c,84
+DEFUN(seekdir,27,975
+DEFUN(seekdir, (dirp, pos), DIR *dirp AND __off_t pos)27,975
+
+../sysdeps/unix/telldir.c,23
+DEFUN(telldir,28,1000
+
+../sysdeps/stub/telldir.c,63
+DEFUN(telldir,27,980
+DEFUN(telldir, (dirp), DIR *dirp)27,980
+
+../sysdeps/mach/hurd/telldir.c,65
+DEFUN(telldir,28,1000
+DEFUN(telldir, (dirp), DIR *dirp)28,1000
+
+scandir.c,22
+DEFUN(scandir,24,898
+
+alphasort.c,24
+DEFUN(alphasort,24,892
+
+getdents.c,37
+	       DEFUN(getdirentries,26,1019
+
+../sysdeps/unix/bsd/hp/m68k/__getdents.S,0
+
+../sysdeps/unix/__getdents.c,100
+DEFUN(__getdirentries,26,934
+      int fd AND char *buf AND size_t nbytes AND off_t *basep)27,983
+
+../sysdeps/stub/__getdents.c,30
+DEFUN(__getdirentries,25,914
+
+../sysdeps/unix/bsd/sun/__getdents.S,33
+SYSCALL__ (getdirentries,21,852
+
+../sysdeps/unix/bsd/ultrix4/__getdents.S,0
+
+../sysdeps/unix/bsd/bsd4.4/__getdents.S,0
+
+../sysdeps/unix/bsd/osf1/alpha/__getdents.S,33
+SYSCALL__ (getdirentries,21,857
+
+../sysdeps/unix/sysv/__getdents.c,101
+DEFUN(__getdirentries,28,999
+      int fd AND char *buf AND size_t nbytes AND off_t *basep)29,1048
+
+../sysdeps/mach/hurd/__getdents.c,30
+DEFUN(__getdirentries,27,969
+
+dirent.h,155
+#define	_DIRENT_H	25,933
+struct dirent41,1366
+#define	d_ino	52,1740
+#define	MAXNAMLEN	84,2815
+#define	MAXNAMLEN	86,2848
+#define __need_size_t91,2908
+
+../sysdeps/unix/bsd/dirstream.h,75
+#define	_DIRSTREAM_H	21,847
+#define __need_size_t23,871
+  } DIR;39,1369
+
+../sysdeps/unix/dirstream.h,75
+#define	_DIRSTREAM_H	21,847
+#define __need_size_t23,871
+  } DIR;41,1432
+
+../sysdeps/stub/dirstream.h,29
+#define	_DIRSTREAM_H	21,847
+
+../sysdeps/unix/bsd/osf1/dirstream.h,75
+#define	_DIRSTREAM_H	21,858
+#define __need_size_t23,882
+  } DIR;42,1426
+
+../sysdeps/mach/hurd/dirstream.h,46
+#define	_DIRSTREAM_H	21,853
+  } DIR;40,1569

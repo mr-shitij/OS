@@ -1,0 +1,499 @@
+
+../sysdeps/m68k/fpu/acos.c,73
+#define	__NO_MATH_INLINES20,853
+#define	FUNC	24,911
+DEFUN(FUNC,29,958
+
+../sysdeps/generic/acos.c,19
+DEFUN(acos,25,931
+
+../sysdeps/stub/acos.c,19
+DEFUN(acos,25,931
+
+../sysdeps/m68k/fpu/asin.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/asin.c,19
+DEFUN(asin,25,929
+
+../sysdeps/stub/asin.c,19
+DEFUN(asin,25,929
+
+../sysdeps/m68k/fpu/atan.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/atan.c,19
+DEFUN(atan,24,926
+
+../sysdeps/m68k/fpu/cos.c,18
+#define	FUNC	1,0
+
+../sysdeps/stub/cos.c,18
+DEFUN(cos,25,923
+
+../sysdeps/m68k/fpu/sin.c,18
+#define	FUNC	1,0
+
+../sysdeps/stub/sin.c,18
+DEFUN(sin,25,921
+
+../sysdeps/m68k/fpu/tan.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/tan.c,13
+tan(40,1941
+
+../sysdeps/stub/tan.c,18
+DEFUN(tan,25,924
+
+../sysdeps/m68k/fpu/cosh.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/cosh.c,112
+vc(87,3523
+#define   mln2hi 96,3962
+#define   mln2lo 97,3997
+#define   lnovfl 98,4032
+double cosh(107,4272
+
+../sysdeps/stub/cosh.c,19
+DEFUN(cosh,25,934
+
+../sysdeps/m68k/fpu/sinh.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/sinh.c,106
+vc(80,3267
+#define	mln2hi	89,3706
+#define	mln2lo	90,3736
+#define	lnovfl	91,3766
+double sinh(101,4002
+
+../sysdeps/stub/sinh.c,19
+DEFUN(sinh,25,932
+
+../sysdeps/m68k/fpu/tanh.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/tanh.c,21
+double tanh(75,3024
+
+../sysdeps/stub/tanh.c,19
+DEFUN(tanh,25,935
+
+../sysdeps/m68k/fpu/exp.c,35
+#define	FUNC	1,0
+#define	OP	2,17
+
+../sysdeps/generic/exp.c,297
+vc(82,3209
+#define    ln2hi 94,4034
+#define    ln2lo 95,4068
+#define   lnhuge 96,4102
+#define   lntiny 97,4137
+#define   invln2 98,4172
+#define       p1 99,4207
+#define       p2 100,4238
+#define       p3 101,4269
+#define       p4 102,4300
+#define       p5 103,4331
+double exp(117,4971
+
+../sysdeps/stub/exp.c,18
+DEFUN(exp,25,918
+
+../sysdeps/m68k/fpu/fabs.c,35
+#define	FUNC	1,0
+#define	OP	2,18
+
+../sysdeps/generic/fabs.c,19
+DEFUN(fabs,24,912
+
+../sysdeps/alpha/fabs.c,46
+#define __NO_MATH_INLINES19,825
+fabs 24,887
+
+../sysdeps/m68k/fpu/ldexp.c,53
+#define	__NO_MATH_INLINES20,853
+DEFUN(ldexp,24,918
+
+../sysdeps/ieee754/ldexp.c,21
+DEFUN(ldexp,44,1930
+
+../sysdeps/generic/ldexp.c,20
+DEFUN(ldexp,24,919
+
+../sysdeps/m68k/fpu/log.c,35
+#define	FUNC	1,0
+#define	OP	2,17
+
+../sysdeps/generic/log.c,105
+vc(92,3559
+#define	ln2hi	101,3992
+#define	ln2lo	102,4020
+#define	sqrt2	103,4048
+double log(107,4085
+
+../sysdeps/stub/log.c,18
+DEFUN(log,25,934
+
+../sysdeps/m68k/fpu/log10.c,18
+#define	FUNC	1,0
+
+../sysdeps/ieee754/log10.c,20
+DEFUN(log10,25,948
+
+../sysdeps/generic/log10.c,41
+#define	LN10	24,898
+DEFUN(log10,29,979
+
+../sysdeps/stub/log10.c,20
+DEFUN(log10,25,935
+
+../sysdeps/tahoe/log10.c,24
+#define	FPCONST(19,825
+
+../sysdeps/vax/log10.c,46
+#define	FPCONST(22,864
+#define	LN10	26,1012
+
+../sysdeps/m68k/fpu/floor.c,35
+#define	FUNC	1,0
+#define	OP	2,19
+
+../sysdeps/generic/floor.c,46
+vc(40,1981
+#define	L	45,2120
+floor(56,2384
+
+../sysdeps/m68k/fpu/sqrt.c,18
+#define	FUNC	1,0
+
+../sysdeps/ieee754/sqrt.c,21
+DEFUN (sqrt,26,1107
+
+../sysdeps/stub/sqrt.c,19
+DEFUN(sqrt,25,928
+
+../sysdeps/sparc/sqrt.c,20
+DEFUN(sqrt,29,1028
+
+../sysdeps/m68k/fpu/fmod.c,52
+#define	__NO_MATH_INLINES20,853
+DEFUN(fmod,24,918
+
+../sysdeps/generic/fmod.c,108
+_fmod(71,2717
+fmod(74,2757
+#define	NTEST	103,3282
+#define	NCASES	104,3302
+doit(109,3355
+main(122,3704
+
+../sysdeps/stub/fmod.c,19
+DEFUN(fmod,25,950
+
+../sysdeps/m68k/fpu/frexp.c,53
+#define	__NO_MATH_INLINES20,847
+DEFUN(frexp,24,899
+
+../sysdeps/ieee754/frexp.c,14
+frexp 25,947
+
+../sysdeps/generic/frexp.c,20
+DEFUN(frexp,25,972
+
+../sysdeps/stub/frexp.c,20
+DEFUN(frexp,25,966
+
+../sysdeps/m68k/fpu/pow.c,51
+#define	__NO_MATH_INLINES20,853
+DEFUN(pow,24,918
+
+../sysdeps/generic/pow.c,161
+vc(110,4441
+#define	ln2hi	121,5021
+#define	ln2lo	122,5049
+#define	invln2	123,5077
+#define	sqrt2	124,5107
+double pow(131,5244
+static double pow_p(176,6593
+
+../sysdeps/m68k/fpu/atan2.c,20
+DEFUN(atan2,25,915
+
+../sysdeps/generic/atan2.c,458
+vc(114,4952
+#define	athfhi	154,7623
+#define	athflo	155,7653
+#define	PIo4	156,7683
+#define	at1fhi	157,7709
+#define	at1flo	158,7739
+#define	PIo2	159,7769
+#define	PI	160,7795
+#define	a1	161,7817
+#define	a2	162,7839
+#define	a3	163,7861
+#define	a4	164,7883
+#define	a5	165,7905
+#define	a6	166,7927
+#define	a7	167,7949
+#define	a8	168,7971
+#define	a9	169,7993
+#define	a10	170,8015
+#define	a11	171,8039
+#define	a12	172,8063
+double atan2(175,8095
+
+../sysdeps/stub/atan2.c,20
+DEFUN(atan2,24,915
+
+../sysdeps/m68k/fpu/ceil.c,18
+#define	FUNC	2,1
+
+../sysdeps/generic/ceil.c,45
+vc(40,1981
+#define	L	45,2120
+ceil(49,2155
+
+../sysdeps/generic/modf.c,19
+DEFUN(modf,26,941
+
+isinf.c,28
+	       DEFUN(isinf,25,960
+
+isnan.c,28
+	       DEFUN(isnan,25,960
+
+finite.c,29
+	       DEFUN(finite,25,963
+
+infnan.c,29
+	       DEFUN(infnan,25,966
+
+copysign.c,31
+	       DEFUN(copysign,25,971
+
+scalb.c,28
+	       DEFUN(scalb,25,962
+
+drem.c,27
+	       DEFUN(drem,25,965
+
+logb.c,27
+	       DEFUN(logb,25,956
+
+../sysdeps/m68k/fpu/__isinf.c,73
+#define	__NO_MATH_INLINES20,853
+#define	FUNC	24,911
+DEFUN(FUNC,29,958
+
+../sysdeps/ieee754/__isinf.c,23
+DEFUN(__isinf,26,1002
+
+../sysdeps/stub/__isinf.c,22
+DEFUN(__isinf,25,962
+
+../sysdeps/m68k/fpu/__isnan.c,18
+#define	FUNC	1,0
+
+../sysdeps/ieee754/__isnan.c,22
+DEFUN(__isnan,25,958
+
+../sysdeps/generic/__isnan.c,22
+DEFUN(__isnan,24,918
+
+__finite.c,23
+DEFUN(__finite,26,960
+
+../sysdeps/ieee754/__infnan.c,68
+DEFUN(__infnan,32,1205
+DEFUN(__infnan, (error), int error)32,1205
+
+../sysdeps/generic/__infnan.c,68
+DEFUN(__infnan,30,1159
+DEFUN(__infnan, (error), int error)30,1159
+
+../sysdeps/vax/__infnan.c,68
+DEFUN(__infnan,34,1258
+DEFUN(__infnan, (error), int error)34,1258
+
+../sysdeps/ieee754/__copysign.c,25
+DEFUN(__copysign,25,961
+
+../sysdeps/generic/__copysign.c,25
+DEFUN(__copysign,24,921
+
+../sysdeps/alpha/__copysign.c,52
+#define __NO_MATH_INLINES19,831
+__copysign 25,952
+
+__scalb.c,30
+	       DEFUN(__scalb,25,964
+
+../sysdeps/m68k/fpu/__drem.c,54
+#define	__NO_MATH_INLINES20,859
+DEFUN(__drem,26,937
+
+../sysdeps/ieee754/__drem.c,22
+DEFUN(__drem,45,1966
+
+../sysdeps/stub/__drem.c,21
+DEFUN(__drem,25,928
+
+../sysdeps/m68k/fpu/__logb.c,21
+DEFUN(__logb,27,978
+
+../sysdeps/ieee754/__logb.c,21
+DEFUN(__logb,26,982
+
+../sysdeps/stub/__logb.c,21
+DEFUN(__logb,25,948
+
+../sysdeps/m68k/fpu/__rint.c,35
+#define	FUNC	1,0
+#define	OP	2,20
+
+../sysdeps/generic/__rint.c,47
+vc(40,1981
+#define	L	45,2120
+__rint(70,2766
+
+rint.c,27
+	       DEFUN(rint,25,956
+
+../sysdeps/generic/hypot.c,20
+DEFUN(hypot,24,925
+
+../sysdeps/ieee754/cabs.c,156
+vc(92,3659
+#define	r2p1hi	101,4101
+#define	r2p1lo	102,4131
+#define	sqrt2	103,4161
+hypot(107,4204
+cabs(174,5726
+z_abs(181,5799
+double hypot(189,5929
+
+../sysdeps/generic/cabs.c,19
+DEFUN(cabs,23,879
+
+../sysdeps/ieee754/cbrt.c,21
+double cbrt(68,2958
+
+../sysdeps/stub/cbrt.c,19
+DEFUN(cbrt,25,926
+
+../sysdeps/m68k/fpu/__expm1.c,35
+#define	FUNC	1,0
+#define	OP	2,21
+
+../sysdeps/generic/__expm1.c,133
+vc(91,3512
+#define	ln2hi	102,4092
+#define	ln2lo	103,4120
+#define	lnhuge	104,4148
+#define	invln2	105,4178
+double expm1(108,4216
+
+expm1.c,28
+	       DEFUN(expm1,25,959
+
+../sysdeps/m68k/fpu/log1p.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/log1p.c,108
+vc(100,4014
+#define	ln2hi	109,4447
+#define	ln2lo	110,4475
+#define	sqrt2	111,4503
+double log1p(114,4539
+
+../sysdeps/generic/acosh.c,86
+vc(77,3138
+#define    ln2hi 84,3430
+#define    ln2lo 85,3464
+double acosh(88,3506
+
+../sysdeps/generic/asinh.c,86
+vc(72,3004
+#define    ln2hi 79,3298
+#define    ln2lo 80,3332
+double asinh(83,3374
+
+../sysdeps/m68k/fpu/atanh.c,18
+#define	FUNC	1,0
+
+../sysdeps/generic/atanh.c,22
+double atanh(70,2943
+
+math.h,668
+#define	_MATH_H	25,911
+#define	__need_Emath30,967
+#define	__finite(148,4413
+#define	__scalb(166,5023
+struct __cabs_complex185,5598
+#define	isinf(203,6227
+#define	isnan(204,6263
+#define	infnan(205,6299
+#define	finite(206,6337
+#define	copysign(207,6375
+#define	scalb(208,6419
+#define	drem(209,6457
+#define	logb(210,6493
+#define	M_E	276,9722
+#define	M_LOG2E	277,9765
+#define	M_LOG10E	278,9817
+#define	M_LN2	279,9871
+#define	M_LN10	280,9922
+#define	M_PI	281,9975
+#define	M_PI_2	282,10021
+#define	M_PI_4	283,10071
+#define	M_1_PI	284,10121
+#define	M_2_PI	285,10171
+#define	M_2_SQRTPI	286,10221
+#define	M_SQRT2	287,10280
+#define	M_SQRT1_2	288,10334
+
+../sysdeps/m68k/fpu/__math.h,222
+#define	__m81_u(24,903
+#define	__m81_u(26,943
+#define	__MATH_INLINES	27,964
+#define	__inline_mathop2(30,997
+#define	__inline_mathop(38,1310
+__inline_mathop(40,1365
+__inline_mathop2(57,1751
+__inline_mathop2(61,1832
+
+../sysdeps/stub/__math.h,0
+
+../sysdeps/m68k/fpu/switch/__math.h,0
+
+../sysdeps/alpha/__math.h,33
+__copysign 22,917
+fabs 29,1060
+
+../sysdeps/ieee754/huge_val.h,151
+#define	   _HUGE_VAL_H	23,974
+#define	__huge_val_bytes	31,1109
+#define	__huge_val_bytes	34,1210
+#define	HUGE_VAL 38,1292
+#define	HUGE_VAL	44,1509
+
+../sysdeps/stub/huge_val.h,59
+#define	   _HUGE_VAL_H	23,934
+#define	   HUGE_VAL	25,960
+
+../sysdeps/vax/huge_val.h,59
+#define	   _HUGE_VAL_H	23,939
+#define	   HUGE_VAL	25,965
+
+../sysdeps/ieee754/nan.h,122
+#define	_NAN_H	23,880
+#define	__nan_bytes	30,979
+#define	__nan_bytes	33,1076
+#define	NAN 37,1154
+#define	NAN	43,1349
+
+../sysdeps/stub/nan.h,21
+#define	_NAN_H	2,15

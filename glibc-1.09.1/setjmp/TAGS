@@ -1,0 +1,104 @@
+
+../sysdeps/m68k/setjmp.c,24
+DEFUN(__setjmp,30,1036
+
+../sysdeps/stub/setjmp.c,23
+DEFUN(__setjmp,26,954
+
+../sysdeps/i386/setjmp.c,65
+#define REGS 24,894
+#define REG(29,947
+DEFUN(__setjmp,35,1078
+
+../sysdeps/sparc/setjmp.S,24
+ENTRY (__setjmp)23,933
+
+../sysdeps/vax/setjmp.c,24
+DEFUN(__setjmp,30,1112
+
+../sysdeps/mips/setjmp.S,25
+ENTRY (__setjmp)24,1007
+
+../sysdeps/alpha/setjmp.S,25
+ENTRY (__setjmp)24,1007
+
+sigjmp.c,29
+DEFUN(__sigjmp_save,28,1019
+
+_setjmp.c,49
+#define	_BSD_SOURCE19,831
+DEFUN(_setjmp,28,938
+
+longjmp.c,29
+		    DEFUN(longjmp,29,1003
+
+_longjmp.c,57
+#define	_BSD_SOURCE19,831
+		    DEFUN(_longjmp,31,1027
+
+../sysdeps/m68k/__longjmp.c,25
+DEFUN(__longjmp,31,1122
+
+../sysdeps/stub/__longjmp.c,25
+DEFUN(__longjmp,28,1016
+
+../sysdeps/i386/__longjmp.c,91
+#define REGS 30,1009
+#define REG(37,1088
+DEFUN(__longjmp,45,1281
+      int val)47,1338
+
+../sysdeps/sparc/__longjmp.S,26
+ENTRY (__longjmp)28,1010
+
+../sysdeps/vax/__longjmp.c,46
+#define	REI	28,1046
+DEFUN(__longjmp,34,1215
+
+../sysdeps/mips/__longjmp.c,25
+DEFUN(__longjmp,31,1027
+
+../sysdeps/alpha/__longjmp.c,43
+#define jmp_buf 25,962
+__longjmp 45,1606
+
+siglongjmp.c,26
+DEFUN(siglongjmp,30,1102
+
+setjmp.h,386
+#define	_SETJMP_H	25,919
+#define	__need_sigset_t35,1079
+  } sigjmp_buf[44,1368
+#define	sigsetjmp(50,1583
+#define	sigsetjmp(56,1853
+typedef sigjmp_buf jmp_buf;73,2450
+typedef __jmp_buf jmp_buf;78,2561
+#define	longjmp(89,2894
+#define	setjmp(95,3123
+#define	setjmp(110,3452
+#define	longjmp(113,3515
+#define	_setjmp(116,3594
+#define	_setjmp(121,3713
+#define	_longjmp(124,3795
+
+../sysdeps/m68k/jmp_buf.h,22
+  } __jmp_buf[19,510
+
+../sysdeps/stub/jmp_buf.h,28
+typedef int __jmp_buf[3,68
+
+../sysdeps/i386/jmp_buf.h,21
+  } __jmp_buf[9,177
+
+../sysdeps/sparc/jmp_buf.h,22
+  } __jmp_buf[14,365
+
+../sysdeps/vax/jmp_buf.h,21
+  } __jmp_buf[7,114
+
+../sysdeps/mips/jmp_buf.h,46
+  } __jmp_buf[42,1345
+#define JB_PC	46,1433
+
+../sysdeps/alpha/jmp_buf.h,23
+  } __jmp_buf[46,1853

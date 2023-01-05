@@ -1,0 +1,559 @@
+
+sysdeps/unix/bsd/bsdtty.h,0
+
+sysdeps/unix/errnos-tmpl.c,26
+DO(32,1234
+main(72,2036
+
+sysdeps/unix/ioctls-tmpl.c,83
+#define BSD_COMP3,94
+#define KANJI21,715
+#define	DEFINE(124,3016
+main(128,3100
+
+sysdeps/unix/make_errlist.c,13
+main 27,900
+
+sysdeps/unix/mk-local_lim.c,35
+struct param36,1107
+main(99,2185
+
+sysdeps/unix/common/glue-ctype.c,269
+#define TABLE	30,1332
+#define TABLE_NAME	32,1390
+#define	TABLE	35,1444
+#define TABLE 38,1518
+#define	TABLE	41,1593
+#define	TABLE	44,1668
+#define	TABLE	47,1743
+#define	STRINGIFY(51,1808
+#define	STRINGIFY(53,1842
+#define EVALLED_STRINGIFY(56,1879
+main 58,1923
+
+sysdeps/posix/mk-stdiolim.c,13
+main(22,866
+
+sysdeps/ieee754/support.c,180
+double scalb(89,4037
+double copysign(130,5249
+double logb(149,5744
+finite(176,6412
+double drem(190,6745
+double sqrt(271,9189
+double drem(351,11675
+double newsqrt(452,14655
+
+sysdeps/ieee754/ieee754.h,28
+union ieee754_double21,846
+
+sysdeps/generic/make_siglist.c,41
+#define sys_siglist 26,903
+main(32,996
+
+sysdeps/generic/signame.c,190
+#define	NSIG	29,1017
+#define	NSIG	31,1042
+#define const36,1087
+  } num_abbrev;63,1699
+init_sig 71,1915
+signame_init 84,2178
+sig_abbrev 224,6024
+sig_number 242,6361
+psignal 266,6909
+
+sysdeps/generic/signame.h,0
+
+sysdeps/generic/det_endian.c,13
+main 22,905
+
+sysdeps/generic/mathimpl.h,472
+#define national7,208
+#define	isinf	11,246
+#define	isnan	13,281
+#define	infnan	15,317
+#define	copysign	17,357
+#define	scalb	19,398
+#define	drem	21,432
+#define	logb	23,464
+#define	finite	26,514
+#define	expm1	28,551
+#    define	cat3(72,2596
+#    define	cat3(74,2640
+#    define	cat3t(79,2743
+#    define	cat3t(81,2788
+#  define vccast(84,2835
+#  define vc(102,3611
+#  define ic(105,3738
+#  define vc(111,3862
+#  define ic(113,3916
+struct Double 125,4155
+
+sysdeps/generic/trig.h,533
+vc(38,1894
+#define	thresh	53,2738
+#define	PIo4	54,2768
+#define	PIo2	55,2794
+#define	PI3o4	56,2820
+#define	PI	57,2848
+#define	PI2	58,2870
+#define   fmax 63,2967
+vc(119,4751
+#define	S0	135,5674
+#define	S1	136,5696
+#define	S2	137,5718
+#define	S3	138,5740
+#define	S4	139,5762
+#define	S5	140,5784
+#define	S6	141,5806
+#  define	sin__S(145,5869
+#  define	sin__S(147,5980
+#define	C0	207,8378
+#define	C1	208,8400
+#define	C2	209,8422
+#define	C3	210,8444
+#define	C4	211,8466
+#define	C5	212,8488
+#define cos__C(215,8518
+
+sysdeps/generic/sincos.c,26
+sin(40,1954
+cos(70,2534
+
+sysdeps/generic/asincos.c,43
+double asin(90,3595
+double acos(157,5537
+
+sysdeps/generic/exp__E.c,173
+vc(91,3784
+#define       p1 103,4400
+#define       p2 104,4431
+#define       q1 105,4462
+#define       q2 106,4493
+#define       q3 107,4524
+double __exp__E(110,4563
+
+sysdeps/generic/log__L.c,198
+vc(74,3146
+#define	L1	92,4140
+#define	L2	93,4162
+#define	L3	94,4184
+#define	L4	95,4206
+#define	L5	96,4228
+#define	L6	97,4250
+#define	L7	98,4272
+#define	L8	99,4294
+double __log__L(102,4324
+
+sysdeps/m68k/fpu/switch/68881-sw.h,103
+#define	_68881_SWITCH_H	21,856
+struct switch_caller33,1404
+#define	JMP	43,1815
+#define	JSR	44,1834
+
+sysdeps/m68k/fpu/switch/switch.c,75
+#define	TRAPSIG	27,1007
+DEFUN(trap,36,1229
+DEFUN(__68881_switch,47,1628
+
+sysdeps/sparc/DEFS.h,18
+#define	FUNC(1,0
+
+sysdeps/sparc/mul.S,29
+FUNC(14,273
+	! %o1 67,1640
+
+sysdeps/sparc/umul.S,55
+FUNC(18,488
+	add	%o4, %o0, %o4	! %o4 += %o0 100,2926
+
+sysdeps/sparc/sdiv.S,14
+FUNC(47,1347
+
+sysdeps/sparc/udiv.S,14
+FUNC(47,1351
+
+sysdeps/sparc/rem.S,14
+FUNC(47,1347
+
+sysdeps/sparc/urem.S,14
+FUNC(47,1351
+
+sysdeps/sparc/alloca.S,48
+#define __builtin_alloca 26,1068
+FUNC 29,1119
+
+sysdeps/unix/bsd/sony/newsos4/sys_wait4.S,0
+
+sysdeps/unix/bsd/sun/sparc/sigtramp.c,203
+#define	KERNEL26,1004
+#define	sigvec	27,1019
+#define	sigstack	28,1046
+#define	sigcontext	29,1076
+#define mytramp 59,1672
+#define handlers 63,1749
+DEFUN(trampoline,73,2062
+DEFUN(__sigvec,202,5655
+
+sysdeps/unix/bsd/sun/sunos4/sys_wait4.S,32
+PSEUDO (__wait4_syscall,21,852
+
+sysdeps/unix/bsd/sun/sunos4/sys_mmap.S,31
+PSEUDO (__mmap_syscall,21,846
+
+sysdeps/unix/bsd/sun/m68k/sigtramp.c,201
+#define	KERNEL26,992
+#define	sigvec	27,1007
+#define	sigstack	28,1034
+#define	sigcontext	29,1064
+#define mytramp 59,1660
+#define handlers 63,1737
+DEFUN(trampoline,73,2050
+DEFUN(__sigvec,98,2687
+
+sysdeps/unix/bsd/ultrix4/getsysinfo.S,30
+SYSCALL__ (getsysinfo,24,948
+
+sysdeps/unix/bsd/ultrix4/mips/sigtramp.c,100
+typedef void (*handler_type) (int sig, int code, struct sigcontext 37,1486
+DEFUN(__sigvec,51,1876
+
+sysdeps/unix/bsd/ultrix4/mips/__handler.S,29
+   function returns,31,1387
+
+sysdeps/unix/sysv/sysv_termio.h,3001
+#define _SYSV_NCC 25,1134
+#define _SYSV_VINTR 27,1155
+#define _SYSV_VQUIT 28,1177
+#define _SYSV_VERASE 29,1199
+#define _SYSV_VKILL 30,1222
+#define _SYSV_VEOF 31,1244
+#define _SYSV_VMIN 33,1318
+#define _SYSV_VEOL 34,1339
+#define _SYSV_VTIME 36,1414
+#define _SYSV_VEOL2 37,1436
+#define _SYSV_IGNBRK 40,1484
+#define _SYSV_BRKINT 41,1507
+#define _SYSV_IGNPAR 42,1530
+#define _SYSV_PARMRK 43,1553
+#define _SYSV_INPCK 44,1576
+#define _SYSV_ISTRIP 45,1601
+#define _SYSV_INLCR 46,1627
+#define _SYSV_IGNCR 47,1652
+#define _SYSV_ICRNL 48,1677
+#define _SYSV_IUCLC 49,1703
+#define _SYSV_IXON 50,1729
+#define _SYSV_IXANY 51,1754
+#define _SYSV_IXOFF 52,1780
+#define _SYSV_IMAXBEL 53,1807
+#define _SYSV_CBAUD 56,1862
+#define _SYSV_CIBAUD 57,1886
+#define _SYSV_IBSHIFT 58,1936
+#define _SYSV_B0 60,1997
+#define _SYSV_B50 61,2016
+#define _SYSV_B75 62,2036
+#define _SYSV_B110 63,2056
+#define _SYSV_B134 64,2077
+#define _SYSV_B150 65,2098
+#define _SYSV_B200 66,2119
+#define _SYSV_B300 67,2140
+#define _SYSV_B600 68,2161
+#define _SYSV_B1200 69,2182
+#define _SYSV_B1800 70,2204
+#define _SYSV_B2400 71,2227
+#define _SYSV_B4800 72,2250
+#define _SYSV_B9600 73,2273
+#define _SYSV_B19200 74,2296
+#define _SYSV_B38400 75,2320
+#define _SYSV_CS5 77,2345
+#define _SYSV_CS6 78,2365
+#define _SYSV_CS7 79,2388
+#define _SYSV_CS8 80,2411
+#define _SYSV_CSIZE 81,2434
+#define _SYSV_CSTOPB 82,2459
+#define _SYSV_CREAD 83,2485
+#define _SYSV_PARENB 84,2510
+#define _SYSV_PARODD 85,2537
+#define _SYSV_HUPCL 86,2564
+#define _SYSV_CLOCAL 87,2590
+#define _SYSV_ISIG 90,2643
+#define _SYSV_ICANON 91,2664
+#define _SYSV_ECHO 92,2687
+#define _SYSV_ECHOE 93,2708
+#define _SYSV_ECHOK 94,2733
+#define _SYSV_ECHONL 95,2758
+#define _SYSV_NOFLSH 96,2784
+#define _SYSV_TOSTOP 97,2810
+#define _SYSV_ECHOCTL 98,2837
+#define _SYSV_ECHOPRT 99,2865
+#define _SYSV_ECHOKE 100,2893
+#define _SYSV_FLUSHO 101,2920
+#define _SYSV_PENDIN 102,2948
+#define _SYSV_IEXTEN 103,2976
+#define _SYSV_OPOST 106,3030
+#define _SYSV_OLCUC 107,3052
+#define _SYSV_ONLCR 108,3074
+#define _SYSV_NLDLY 109,3096
+#define _SYSV_NL0 110,3122
+#define _SYSV_NL1 111,3142
+#define _SYSV_CRDLY 112,3166
+#define _SYSV_CR0 113,3192
+#define _SYSV_CR1 114,3212
+#define _SYSV_CR2 115,3236
+#define _SYSV_CR3 116,3260
+#define _SYSV_TABDLY 117,3284
+#define _SYSV_TAB0 118,3312
+#define _SYSV_TAB1 119,3333
+#define _SYSV_TAB2 120,3359
+#define _SYSV_TAB3 123,3490
+#define _SYSV_XTABS 124,3516
+#define _SYSV_BSDLY 125,3543
+#define _SYSV_BS0 126,3570
+#define _SYSV_BS1 127,3590
+#define _SYSV_VTDLY 128,3615
+#define _SYSV_VT0 129,3642
+#define _SYSV_VT1 130,3662
+#define _SYSV_FFDLY 131,3687
+#define _SYSV_FF0 132,3714
+#define _SYSV_FF1 133,3734
+#define _TCGETA 137,3777
+#define _TCSETA 138,3800
+#define _TCSETAW 139,3823
+#define _TCSETAF 140,3847
+#define _TCSBRK 141,3871
+#define _TCXONC 142,3894
+#define _TCFLSH 143,3917
+#define _TIOCGPGRP 144,3940
+#define _TIOCSPGRP 145,3966
+struct __sysv_termio147,3993
+
+sysdeps/unix/sysv/utmp.h,39
+#define _UTMP_H	3,17
+struct utmp7,55
+
+sysdeps/unix/sysv/s_getdents.S,28
+SYSCALL__ (getdents,21,846
+
+sysdeps/unix/sysv/sysv4/sysconfig.h,130
+#define __SYSCONFIG_H21,888
+#define _CONFIG_OPEN_FILES 23,911
+#define _CONFIG_PAGESIZE 24,974
+#define _CONFIG_CLK_TCK 25,1021
+
+sysdeps/unix/sysv/sysv4/sysconfig.S,29
+SYSCALL__ (sysconfig,21,857
+
+sysdeps/unix/sysv/sysv4/pgrpsys.S,27
+SYSCALL__ (pgrpsys,21,846
+
+sysdeps/unix/sysv/sysv4/__waitid.S,53
+#define SYS_waitid 22,867
+SYSCALL__ (waitid,24,899
+
+sysdeps/unix/sysv/sysv4/siginfo.h,233
+#define	_SIGINFO_H	21,902
+#define EXITED 29,1231
+#define KILLED	30,1250
+#define CORED	31,1268
+#define TRAPPED	32,1285
+#define STOPPED	33,1304
+#define CONTINUED	34,1323
+typedef struct __siginfo36,1344
+  } __siginfo_t;55,1607
+
+sysdeps/unix/sysv/sysv4/__getpgid.c,25
+DEFUN(__getpgid,28,1018
+
+sysdeps/unix/sysv/sysv4/__setpgid.c,25
+DEFUN(__setpgid,28,1018
+
+sysdeps/unix/sysv/sysv4/sysinfo.S,26
+PSEUDO (__sysinfo,21,857
+
+sysdeps/unix/sysv/sysv4/solaris2/sparc/sys-sig.S,70
+PSEUDO (__sigaction_syscall,21,857
+PSEUDO (__context_syscall,24,906
+
+sysdeps/unix/sysv/sysv4/i386/sys-sig.S,115
+.globl C_SYMBOL_NAME(21,846
+ENTRY (__sigaction_syscall)23,881
+	DO_CALL 25,949
+PSEUDO (__context_syscall,29,997
+
+sysdeps/unix/sysv/sco3.2/__fltused.c,0
+
+sysdeps/unix/sysv/sco3.2.4/pgrpsys.S,0
+
+sysdeps/unix/sysv/sco3.2.4/sco_getgrp.S,32
+PSEUDO (__sco_getgroups,21,846
+
+sysdeps/unix/sysv/irix4/syssgi.S,26
+SYSCALL__ (syssgi,21,846
+
+sysdeps/unix/sysv/irix4/sysmp.S,25
+SYSCALL__ (sysmp,21,846
+
+sysdeps/unix/sysv/irix4/__handler.S,29
+   function returns,31,1394
+
+sysdeps/unix/sysv/irix4/sigtramp.c,98
+typedef void (*handler_type) (int sig, int code, struct sigcontext 37,1486
+DEFUN(signal,50,1862
+
+sysdeps/vax/DEFS.h,338
+#define R0	36,1871
+#define R1	37,1888
+#define R2	38,1905
+#define R3	39,1922
+#define R4	40,1939
+#define R5	41,1956
+#define R6	42,1973
+#define	R7 43,1990
+#define	R8	44,2008
+#define	R9	45,2025
+#define	R10	46,2042
+#define	R11	47,2060
+#define	ENTRY(50,2091
+#define	ASENTRY(53,2216
+#define	ENTRY(57,2339
+#define	ASENTRY(59,2409
+
+sysdeps/mips/setjmp_aux.c,28
+DEFUN(__setjmp_aux,32,1210
+
+sysdeps/alpha/setjmp_aux.c,46
+#define jmp_buf 21,870
+__setjmp_aux 41,1426
+
+sysdeps/alpha/DEFS.h,90
+#define FUNC__(2,16
+#define FUNC__(11,192
+#define NAME__(22,393
+#define NAME__(25,432
+
+sysdeps/alpha/divl.S,15
+FUNC__(23,456
+
+sysdeps/alpha/divlu.S,15
+FUNC__(23,456
+
+sysdeps/alpha/divq.S,15
+FUNC__(23,456
+
+sysdeps/alpha/divqu.S,15
+FUNC__(23,456
+
+sysdeps/alpha/reml.S,15
+FUNC__(23,456
+
+sysdeps/alpha/remlu.S,15
+FUNC__(23,456
+
+sysdeps/alpha/remq.S,15
+FUNC__(23,456
+
+sysdeps/alpha/remqu.S,15
+FUNC__(23,456
+
+sysdeps/standalone/filedesc.h,163
+#define __FILEDESC_h28,1091
+#define FILEDESC_EXTERN 33,1174
+#define FILEDESC_EXTERN 35,1211
+}   __no_os_file_descriptor;41,1360
+#define __FD_Is_valid(43,1390
+
+sysdeps/standalone/standalone.h,29
+#define _STANDALONE_H23,967
+
+sysdeps/standalone/m68k/m68020/m68020.h,352
+#define m68020_h__30,1161
+typedef void ( *mc68020_isr )( void 32,1181
+#define disable_intr(34,1221
+#define enable_intr(41,1419
+#define flash_intr(46,1556
+#define get_vbr(52,1736
+#define set_vbr(58,1877
+#define enable_caching(64,2059
+#define delay(70,2226
+#define enable_tracing(81,2593
+#define cause_intr(82,2619
+#define clear_intr(83,2644
+
+sysdeps/standalone/i960/i960ca.h,713
+#define i960ca_h__31,1190
+typedef unsigned char   unsigned8;33,1210
+typedef unsigned short  unsigned16;34,1245
+typedef unsigned int    unsigned32;35,1281
+struct i80960ca_prcb 41,1370
+struct i80960ca_ctltbl 62,2422
+#define disable_intr(100,4737
+#define enable_intr(107,4938
+#define flash_intr(114,5172
+#define atomic_modify(123,5484
+#define delay(132,5792
+#define enable_tracing(144,6213
+#define unmask_intr(149,6343
+#define mask_intr(154,6489
+#define clear_intr(159,6637
+#define reload_ctl_group(167,6893
+#define cause_intr(172,7043
+#define soft_reset(177,7179
+static inline unsigned32 pend_intrs(188,7592
+static inline unsigned32 mask_intrs(194,7749
+static inline unsigned32 get_fp(200,7903
+
+assert/TAGS,include
+
+bare/TAGS,include
+
+ctype/TAGS,include
+
+dirent/TAGS,include
+
+gnulib/TAGS,include
+
+grp/TAGS,include
+
+hurd/TAGS,include
+
+inet/TAGS,include
+
+io/TAGS,include
+
+locale/TAGS,include
+
+mach/TAGS,include
+
+malloc/TAGS,include
+
+manual/TAGS,include
+
+math/TAGS,include
+
+misc/TAGS,include
+
+posix/TAGS,include
+
+pwd/TAGS,include
+
+resolv/TAGS,include
+
+resource/TAGS,include
+
+setjmp/TAGS,include
+
+signal/TAGS,include
+
+socket/TAGS,include
+
+stdio/TAGS,include
+
+stdlib/TAGS,include
+
+string/TAGS,include
+
+sunrpc/TAGS,include
+
+termios/TAGS,include
+
+time/TAGS,include

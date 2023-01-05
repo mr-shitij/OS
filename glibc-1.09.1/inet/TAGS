@@ -1,0 +1,649 @@
+
+../sysdeps/generic/ntohl.c,20
+DEFUN(ntohl,25,904
+
+../sysdeps/vax/ntohl.s,0
+
+../sysdeps/generic/ntohs.c,20
+DEFUN(ntohs,25,905
+
+../sysdeps/vax/ntohs.s,0
+
+../sysdeps/generic/htonl.c,20
+DEFUN(htonl,25,904
+
+../sysdeps/vax/htonl.s,0
+
+../sysdeps/generic/htons.c,20
+DEFUN(htons,25,905
+
+../sysdeps/vax/htons.s,0
+
+inet_addr.c,38
+inet_addr(72,3317
+inet_aton(90,3754
+
+inet_lnaof.c,20
+inet_lnaof(48,2171
+
+inet_mkadr.c,23
+inet_makeaddr(47,2177
+
+inet_netof.c,20
+inet_netof(47,2144
+
+inet_ntoa.c,19
+inet_ntoa(48,2150
+
+inet_net.c,22
+inet_network(49,2201
+
+getnetbyad.c,22
+getnetbyaddr(43,2029
+
+getnetbynm.c,22
+getnetbyname(44,2050
+
+getnetent.c,85
+#define	MAXALIASES	46,2117
+setnetent(55,2276
+endnetent(66,2407
+getnetent(76,2507
+
+getproto.c,26
+getprotobynumber(43,2029
+
+getprtent.c,91
+#define	MAXALIASES	45,2092
+setprotoent(54,2268
+endprotoent(65,2410
+getprotoent(75,2522
+
+getprtname.c,24
+getprotobyname(44,2054
+
+getsrvbynm.c,23
+getservbyname(44,2053
+
+getsrvbypt.c,23
+getservbyport(44,2053
+
+getservent.c,88
+#define	MAXALIASES	45,2091
+setservent(54,2262
+endservent(65,2398
+getservent(75,2504
+
+res_comp.c,159
+dn_expand(77,3626
+dn_comp(157,5531
+__dn_skipname(235,7075
+dn_find(267,7740
+_getshort(321,8782
+_getlong(331,8890
+__putshort(342,9039
+__putlong(353,9201
+
+res_debug.c,251
+dewks(115,3873
+deproto(170,5276
+do_rrset(191,5716
+__p_query(218,6265
+__fp_resstat(229,6422
+__fp_query(250,6838
+p_cdname(344,9008
+p_fqname(363,9328
+p_rr(389,9775
+__p_type(598,14157
+__p_class(660,15505
+p_option(681,15832
+__p_time(703,16356
+
+res_init.c,18
+res_init(99,4436
+
+res_mkqry.c,21
+res_mkquery(72,3367
+
+res_query.c,142
+#define MAXPACKET	73,3385
+#define MAXPACKET	75,3418
+res_query(89,3876
+res_search(164,5716
+res_querydomain(239,8063
+__hostalias(273,8864
+
+res_send.c,192
+#define	NFDBITS	81,3566
+#define	FD_SETSIZE	82,3586
+#define	FD_SET(83,3608
+#define	FD_CLR(84,3684
+#define	FD_ISSET(85,3761
+#define FD_ZERO(86,3838
+res_send(89,3898
+_res_close(472,12592
+
+gethstnmad.c,496
+#define	MAXALIASES	73,3408
+#define	MAXADDRS	74,3430
+#define	MAXPACKET	89,3773
+#define	MAXPACKET	91,3806
+} querybuf;97,3896
+} align;102,3954
+getanswer(107,4009
+gethostbyname(253,7107
+gethostbyaddr(311,8444
+_sethtent(353,9486
+_endhtent(364,9612
+_gethtent(373,9716
+_gethtbyname(424,10782
+_gethtbyaddr(444,11110
+ht_sethostent(461,11469
+ht_endhostent(468,11540
+ht_gethostbyname(474,11592
+ht_gethostbyaddr(481,11678
+gethostent(489,11808
+dns_service(495,11852
+dn_skipname(501,11899
+
+sethostent.c,40
+sethostent(45,2083
+endhostent(52,2173
+
+rcmd.c,94
+rcmd(53,2249
+rresvport(194,5271
+ruserok(224,5823
+_validuser(283,7093
+_checkhost(317,7807
+
+rexec.c,15
+rexec(36,1170
+
+herror.c,36
+herror(82,3615
+hstrerror(106,4042
+
+netdb.h,426
+#define _NETDB_H_62,3058
+#define	_PATH_HEQUIV	72,3225
+#define	_PATH_HOSTS	73,3265
+#define	_PATH_NETWORKS	74,3298
+#define	_PATH_PROTOCOLS	75,3337
+#define	_PATH_SERVICES	76,3378
+struct	hostent 83,3593
+struct	netent 96,4000
+struct	servent 103,4177
+struct	protoent 110,4342
+#define	HOST_NOT_FOUND	121,4579
+#define	TRY_AGAIN	122,4646
+#define	NO_RECOVERY	123,4718
+#define	NO_DATA	124,4795
+#define	NO_ADDRESS	125,4865
+
+resolv.h,1201
+#define	_RESOLV_H_62,3061
+#define _PATH_RESCONF 80,3432
+#define	MAXNS	86,3546
+#define	MAXDFLSRCH	87,3601
+#define	MAXDNSRCH	88,3660
+#define	LOCALDOMAINPARTS	89,3716
+#define	RES_TIMEOUT	91,3785
+struct __res_state 94,3884
+#define RES_INIT	110,4519
+#define RES_DEBUG	111,4570
+#define RES_AAONLY	112,4623
+#define RES_USEVC	113,4683
+#define RES_PRIMARY	114,4735
+#define RES_IGNTC	115,4795
+#define RES_RECURSE	116,4851
+#define RES_DEFNAMES	117,4903
+#define RES_STAYOPEN	118,4962
+#define RES_DNSRCH	119,5018
+#define RES_DEFAULT	121,5080
+#define RES_PRF_STATS	126,5193
+#define RES_PRF_CLASS 128,5237
+#define RES_PRF_CMD	129,5268
+#define RES_PRF_QUES	130,5295
+#define RES_PRF_ANS	131,5323
+#define RES_PRF_AUTH	132,5350
+#define RES_PRF_ADD	133,5378
+#define RES_PRF_HEAD1	134,5405
+#define RES_PRF_HEAD2	135,5434
+#define RES_PRF_TTLID	136,5463
+#define RES_PRF_HEADX	137,5492
+#define RES_PRF_QUERY	138,5521
+#define RES_PRF_REPLY	139,5550
+#define RES_PRF_INIT 140,5579
+#define	dn_skipname	146,5735
+#define	fp_query	147,5769
+#define	hostalias	148,5797
+#define	putlong	149,5827
+#define	putshort	150,5854
+#define p_class	151,5882
+#define p_time	152,5909
+#define p_type	153,5934
+
+netinet/in.h,1264
+#define	_NETINET_IN_H	20,817
+#define	IMPLINK_IP	84,2828
+#define	IMPLINK_LOWEXPER	85,2852
+#define	IMPLINK_HIGHEXPER	86,2881
+struct in_addr90,2938
+#define	IN_CLASSA(101,3157
+#define	IN_CLASSA_NET	102,3218
+#define	IN_CLASSA_NSHIFT	103,3252
+#define	IN_CLASSA_HOST	104,3280
+#define	IN_CLASSA_MAX	105,3334
+#define	IN_CLASSB(107,3362
+#define	IN_CLASSB_NET	108,3432
+#define	IN_CLASSB_NSHIFT	109,3466
+#define	IN_CLASSB_HOST	110,3494
+#define	IN_CLASSB_MAX	111,3548
+#define	IN_CLASSC(113,3578
+#define	IN_CLASSC_NET	114,3648
+#define	IN_CLASSC_NSHIFT	115,3682
+#define	IN_CLASSC_HOST	116,3709
+#define	IN_CLASSD(118,3764
+#define	IN_MULTICAST(119,3833
+#define	IN_EXPERIMENTAL(121,3872
+#define	IN_BADCLASS(122,3946
+#define	INADDR_ANY	125,4066
+#define	INADDR_BROADCAST	127,4156
+#define	INADDR_NONE	129,4257
+#define	IN_LOOPBACKNET	132,4337
+#define	INADDR_LOOPBACK	135,4442
+struct sockaddr_in140,4577
+#define	IP_OPTIONS	157,5152
+#define	IP_HDRINCL	158,5212
+#define	IP_TOS	159,5275
+#define	IP_TTL	160,5340
+#define	IP_RECVOPTS	161,5387
+#define	IP_RECVRETOPTS	162,5457
+#define	IP_RECVDSTADDR	163,5528
+#define	IP_RETOPTS	164,5598
+struct ip_opts 169,5868
+#define	ntohl(188,6488
+#define	ntohs(189,6509
+#define	htonl(190,6530
+#define	htons(191,6551
+
+sys/bitypes.h,239
+#define _BITYPES61,2997
+typedef	int		int32_t;63,3015
+typedef	short		int16_t;64,3084
+typedef	char		int8_t;65,3108
+typedef	unsigned int	u_int32_t;66,3130
+typedef	unsigned short	u_int16_t;67,3162
+typedef	unsigned char	u_int8_t;68,3196
+
+arpa/ftp.h,680
+#define	_FTP_H_37,1881
+#define PRELIM	44,1962
+#define COMPLETE	45,2007
+#define CONTINUE	46,2052
+#define TRANSIENT	47,2099
+#define ERROR	48,2155
+#define	TYPE_A	53,2230
+#define	TYPE_E	54,2260
+#define	TYPE_I	55,2291
+#define	TYPE_L	56,2321
+#define	FORM_N	65,2474
+#define	FORM_T	66,2508
+#define	FORM_C	67,2556
+#define	STRU_F	75,2725
+#define	STRU_R	76,2776
+#define	STRU_P	77,2817
+#define	MODE_S	85,2957
+#define	MODE_B	86,2988
+#define	MODE_C	87,3018
+#define	REC_ESC	95,3164
+#define	REC_EOR	96,3213
+#define REC_EOF	97,3269
+#define	BLK_EOR	102,3347
+#define	BLK_EOF	103,3398
+#define BLK_ERRORS	104,3447
+#define	BLK_RESTART	105,3517
+#define	BLK_BYTECOUNT	107,3573
+
+arpa/inet.h,25
+#define	_INET_H_62,3030
+
+arpa/nameser.h,1844
+#define	_NAMESER_H_62,3052
+#define PACKETSZ	75,3264
+#define MAXDNAME	76,3312
+#define MAXCDNAME	77,3360
+#define MAXLABEL	78,3420
+#define QFIXEDSZ	80,3539
+#define RRFIXEDSZ	82,3619
+#define NAMESERVER_PORT	87,3683
+#define QUERY	92,3747
+#define IQUERY	93,3788
+#define STATUS	94,3829
+#define UPDATEA	97,3989
+#define UPDATED	98,4037
+#define UPDATEDA	99,4099
+#define UPDATEM	100,4160
+#define UPDATEMA	101,4222
+#define ZONEINIT	103,4284
+#define ZONEREF	104,4334
+#define NOERROR	109,4432
+#define FORMERR	110,4467
+#define SERVFAIL	111,4506
+#define NXDOMAIN	112,4547
+#define NOTIMP	113,4593
+#define REFUSED	114,4634
+#define NOCHANGE	116,4694
+#define T_A	121,4798
+#define T_NS	122,4833
+#define T_MD	123,4877
+#define T_MF	124,4917
+#define T_CNAME	125,4955
+#define T_SOA	126,4997
+#define T_MB	127,5045
+#define T_MG	128,5088
+#define T_MR	129,5129
+#define T_NULL	130,5169
+#define T_WKS	131,5216
+#define T_PTR	132,5260
+#define T_HINFO	133,5305
+#define T_MINFO	134,5349
+#define T_MX	135,5396
+#define T_TXT	136,5445
+#define	T_RP	137,5483
+#define T_UINFO	139,5546
+#define T_UID	140,5600
+#define T_GID	141,5634
+#define T_UNSPEC	142,5669
+#define T_AXFR	144,5795
+#define T_MAILB	145,5849
+#define T_MAILA	146,5902
+#define T_ANY	147,5958
+#define C_IN	153,6034
+#define C_CHAOS	154,6075
+#define C_HS	155,6121
+#define C_ANY	157,6239
+#define CONV_SUCCESS 162,6344
+#define CONV_OVERFLOW 163,6367
+#define CONV_BADFMT 164,6392
+#define CONV_BADCKSUM 165,6415
+#define CONV_BADBUFLEN 166,6440
+#define	LITTLE_ENDIAN	169,6486
+#define	BIG_ENDIAN	170,6558
+#define	PDP_ENDIAN	171,6627
+#define BYTE_ORDER	176,6896
+#define BYTE_ORDER	184,7255
+} HEADER;238,9224
+#define INDIR_MASK	243,9290
+struct rrec 248,9372
+#define GETSHORT(268,9951
+#define GETLONG(276,10112
+#define PUTSHORT(286,10352
+#define PUTLONG(298,10650
+
+arpa/telnet.h,4642
+#define	_TELNET_H_37,1882
+#define	IAC	42,1949
+#define	DONT	43,1994
+#define	DO	44,2044
+#define	WONT	45,2089
+#define	WILL	46,2132
+#define	SB	47,2174
+#define	GA	48,2224
+#define	EL	49,2271
+#define	EC	50,2316
+#define	AYT	51,2366
+#define	AO	52,2403
+#define	IP	53,2459
+#define	BREAK	54,2512
+#define	DM	55,2543
+#define	NOP	56,2598
+#define	SE	57,2625
+#define EOR 58,2667
+#define	ABORT	59,2738
+#define	SUSP	60,2777
+#define	xEOF	61,2817
+#define SYNCH	63,2878
+#define	TELCMD_FIRST	75,3144
+#define	TELCMD_LAST	76,3170
+#define	TELCMD_OK(77,3194
+#define	TELCMD(78,3259
+#define TELOPT_BINARY	81,3325
+#define TELOPT_ECHO	82,3371
+#define	TELOPT_RCP	83,3404
+#define	TELOPT_SGA	84,3452
+#define	TELOPT_NAMS	85,3497
+#define	TELOPT_STATUS	86,3550
+#define	TELOPT_TM	87,3592
+#define	TELOPT_RCTE	88,3630
+#define TELOPT_NAOL 89,3698
+#define TELOPT_NAOP 90,3761
+#define TELOPT_NAOCRD	91,3823
+#define TELOPT_NAOHTS	92,3885
+#define TELOPT_NAOHTD	93,3952
+#define TELOPT_NAOFFD	94,4026
+#define TELOPT_NAOVTS	95,4094
+#define TELOPT_NAOVTD	96,4160
+#define TELOPT_NAOLFD	97,4232
+#define TELOPT_XASCII	98,4301
+#define	TELOPT_LOGOUT	99,4361
+#define	TELOPT_BM	100,4405
+#define	TELOPT_DET	101,4443
+#define	TELOPT_SUPDUP	102,4491
+#define	TELOPT_SUPDUPOUTPUT 103,4538
+#define	TELOPT_SNDLOC	104,4589
+#define	TELOPT_TTYPE	105,4634
+#define	TELOPT_EOR	106,4678
+#define	TELOPT_TUID	107,4720
+#define	TELOPT_OUTMRK	108,4776
+#define	TELOPT_TTYLOC	109,4822
+#define	TELOPT_3270REGIME 110,4878
+#define	TELOPT_X3PAD	111,4925
+#define	TELOPT_NAWS	112,4963
+#define	TELOPT_TSPEED	113,5004
+#define	TELOPT_LFLOW	114,5050
+#define TELOPT_LINEMODE	115,5100
+#define TELOPT_XDISPLOC	116,5149
+#define TELOPT_ENVIRON	117,5201
+#define	TELOPT_AUTHENTICATION 118,5255
+#define	TELOPT_ENCRYPT	119,5306
+#define	TELOPT_EXOPL	120,5356
+#define	NTELOPTS	123,5411
+#define	TELOPT_FIRST	138,5982
+#define	TELOPT_LAST	139,6017
+#define	TELOPT_OK(140,6052
+#define	TELOPT(141,6117
+#define	TELQUAL_IS	145,6197
+#define	TELQUAL_SEND	146,6237
+#define	TELQUAL_INFO	147,6278
+#define	TELQUAL_REPLY	148,6344
+#define	TELQUAL_NAME	149,6411
+#define	LM_MODE	155,6509
+#define	LM_FORWARDMASK	156,6528
+#define	LM_SLC	157,6553
+#define	MODE_EDIT	159,6572
+#define	MODE_TRAPSIG	160,6595
+#define	MODE_ACK	161,6621
+#define MODE_SOFT_TAB	162,6643
+#define MODE_LIT_ECHO	163,6670
+#define	MODE_MASK	165,6698
+#define MODE_FLOW	168,6783
+#define MODE_ECHO	169,6809
+#define MODE_INBIN	170,6835
+#define MODE_OUTBIN	171,6862
+#define MODE_FORCE	172,6890
+#define	SLC_SYNCH	174,6918
+#define	SLC_BRK	175,6938
+#define	SLC_IP	176,6957
+#define	SLC_AO	177,6975
+#define	SLC_AYT	178,6993
+#define	SLC_EOR	179,7012
+#define	SLC_ABORT	180,7031
+#define	SLC_EOF	181,7051
+#define	SLC_SUSP	182,7070
+#define	SLC_EC	183,7089
+#define	SLC_EL	184,7108
+#define	SLC_EW	185,7127
+#define	SLC_RP	186,7146
+#define	SLC_LNEXT	187,7165
+#define	SLC_XON	188,7186
+#define	SLC_XOFF	189,7206
+#define	SLC_FORW1	190,7226
+#define	SLC_FORW2	191,7247
+#define	NSLC	193,7269
+#define	SLC_NAMELIST	199,7402
+#define	SLC_NAMES 208,7661
+#define	SLC_NAME_OK(211,7700
+#define SLC_NAME(212,7748
+#define	SLC_NOSUPPORT	214,7782
+#define	SLC_CANTCHANGE	215,7806
+#define	SLC_VARIABLE	216,7831
+#define	SLC_DEFAULT	217,7854
+#define	SLC_LEVELBITS	218,7876
+#define	SLC_FUNC	220,7904
+#define	SLC_FLAGS	221,7923
+#define	SLC_VALUE	222,7943
+#define	SLC_ACK	224,7964
+#define	SLC_FLUSHIN	225,7986
+#define	SLC_FLUSHOUT	226,8011
+#define	ENV_VALUE	228,8038
+#define	ENV_VAR	229,8058
+#define	ENV_ESC	230,8077
+#define	AUTH_WHO_CLIENT	239,8174
+#define	AUTH_WHO_SERVER	240,8236
+#define	AUTH_WHO_MASK	241,8298
+#define	AUTH_HOW_ONE_WAY	246,8364
+#define	AUTH_HOW_MUTUAL	247,8391
+#define	AUTH_HOW_MASK	248,8418
+#define	AUTHTYPE_NULL	250,8444
+#define	AUTHTYPE_KERBEROS_V4	251,8469
+#define	AUTHTYPE_KERBEROS_V5	252,8500
+#define	AUTHTYPE_SPX	253,8531
+#define	AUTHTYPE_MINK	254,8555
+#define	AUTHTYPE_CNT	255,8580
+#define	AUTHTYPE_TEST	257,8605
+#define	AUTHTYPE_NAME_OK(267,8782
+#define	AUTHTYPE_NAME(268,8843
+#define	ENCRYPT_IS	273,8919
+#define	ENCRYPT_SUPPORT	274,8974
+#define	ENCRYPT_REPLY	275,9038
+#define	ENCRYPT_START	276,9092
+#define	ENCRYPT_END	277,9153
+#define	ENCRYPT_REQSTART	278,9202
+#define	ENCRYPT_REQEND	279,9264
+#define	ENCRYPT_ENC_KEYID	280,9324
+#define	ENCRYPT_DEC_KEYID	281,9352
+#define	ENCRYPT_CNT	282,9380
+#define	ENCTYPE_ANY	284,9404
+#define	ENCTYPE_DES_CFB64	285,9427
+#define	ENCTYPE_DES_OFB64	286,9455
+#define	ENCTYPE_CNT	287,9483
+#define	ENCRYPT_NAME_OK(304,9806
+#define	ENCRYPT_NAME(305,9865
+#define	ENCTYPE_NAME_OK(307,9908
+#define	ENCTYPE_NAME(308,9967
+
+arpa/tftp.h,483
+#define	_TFTP_H_37,1877
+#define	SEGSIZE	42,1946
+#define	RRQ	47,2017
+#define	WRQ	48,2053
+#define	DATA	49,2090
+#define	ACK	50,2126
+#define	ERROR	51,2165
+struct	tftphdr 53,2202
+#define	th_block	63,2437
+#define	th_code	64,2468
+#define	th_stuff	65,2498
+#define	th_msg	66,2529
+#define	EUNDEF	71,2577
+#define	ENOTFOUND	72,2614
+#define	EACCESS	73,2656
+#define	ENOSPACE	74,2699
+#define	EBADOP	75,2758
+#define	EBADID	76,2806
+#define	EEXISTS	77,2851
+#define	ENOUSER	78,2897
+
+protocols/routed.h,503
+#define	_ROUTED_H_37,1888
+#define	RIPVERSION	46,2095
+struct netinfo 48,2117
+struct rip 53,2229
+#define	RIPCMD_REQUEST	68,2592
+#define	RIPCMD_RESPONSE	69,2634
+#define	RIPCMD_TRACEON	70,2689
+#define	RIPCMD_TRACEOFF	71,2737
+#define	RIPCMD_MAX	73,2783
+#define	HOPCNT_INFINITY	79,2914
+#define	MAXPACKETSIZE	80,2961
+#define	TIMER_RATE	95,3620
+#define	SUPPLY_INTERVAL	97,3680
+#define	MIN_WAITTIME	98,3736
+#define	MAX_WAITTIME	99,3801
+#define	EXPIRE_TIME	101,3859
+#define	GARBAGE_TIME	102,3917
+
+protocols/rwhod.h,162
+#define	_RWHOD_H_37,1883
+struct	outmp 42,1941
+struct	whod 48,2060
+#define	WHODVERSION	63,2560
+#define	WHODTYPE_STATUS	64,2582
+#define	_PATH_RWHODIR	66,2628
+
+protocols/talkd.h,522
+#define	_TALKD_H_37,1879
+} CTL_MSG;74,3387
+} CTL_RESPONSE;86,3736
+#define	TALK_VERSION	88,3753
+#define LEAVE_INVITE	91,3827
+#define LOOK_UP	92,3885
+#define DELETE	93,3941
+#define ANNOUNCE	94,3993
+#define SUCCESS	97,4069
+#define NOT_HERE	98,4123
+#define FAILED	99,4169
+#define MACHINE_UNKNOWN	100,4233
+#define PERMISSION_DENIED 101,4295
+#define UNKNOWN_REQUEST	102,4366
+#define	BADVERSION	103,4429
+#define	BADADDR	104,4493
+#define	BADCTLADDR	105,4549
+#define MAX_LIFE	110,4646
+#define RING_WAIT	112,4767
+
+protocols/timed.h,897
+#define	_TIMED_H_37,1880
+#define	TSPVERSION	43,1940
+#define ANYADDR 44,1961
+struct tsp 46,1984
+#define	tsp_time	57,2154
+#define	tsp_hopcnt	58,2187
+#define	TSP_ANY	63,2251
+#define	TSP_ADJTIME	64,2293
+#define	TSP_ACK	65,2335
+#define	TSP_MASTERREQ	66,2385
+#define	TSP_MASTERACK	67,2439
+#define	TSP_SETTIME	68,2497
+#define	TSP_MASTERUP	69,2544
+#define	TSP_SLAVEUP	70,2606
+#define	TSP_ELECTION	71,2662
+#define	TSP_ACCEPT	72,2723
+#define	TSP_REFUSE	73,2781
+#define	TSP_CONFLICT	74,2839
+#define	TSP_RESOLVE	75,2898
+#define	TSP_QUIT	76,2957
+#define	TSP_DATE	77,3019
+#define	TSP_DATEREQ	78,3076
+#define	TSP_DATEACK	79,3139
+#define	TSP_TRACEON	80,3195
+#define	TSP_TRACEOFF	81,3241
+#define	TSP_MSITE	82,3289
+#define	TSP_MSITEREQ	83,3340
+#define	TSP_TEST	84,3400
+#define	TSP_SETDATE	85,3453
+#define	TSP_SETDATEREQ	86,3505
+#define	TSP_LOOP	87,3559
+#define	TSPTYPENUMBER	89,3609

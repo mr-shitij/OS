@@ -1,0 +1,97 @@
+
+../sysdeps/unix/common/getrlimit.S,27
+SYSCALL (getrlimit,21,852
+
+../sysdeps/stub/getrlimit.c,25
+DEFUN(getrlimit,26,1015
+
+../sysdeps/mach/hurd/getrlimit.c,99
+DEFUN(getrlimit,30,1101
+      enum __rlimit_resource resource AND struct rlimit *rlimits)31,1139
+
+../sysdeps/unix/common/setrlimit.S,27
+SYSCALL (setrlimit,21,852
+
+../sysdeps/stub/setrlimit.c,25
+DEFUN(setrlimit,27,1063
+
+../sysdeps/unix/sysv/setrlimit.c,99
+DEFUN(setrlimit,32,1230
+      enum __rlimit_resource resource AND struct rlimit *rlimits)33,1268
+
+../sysdeps/mach/hurd/setrlimit.c,25
+DEFUN(setrlimit,31,1157
+
+getrusage.c,32
+	       DEFUN(getrusage,25,978
+
+../sysdeps/unix/bsd/ulimit.c,46
+#define	 _etext	26,966
+DEFUN(ulimit,40,1409
+
+../sysdeps/stub/ulimit.c,24
+DEFUN(__ulimit,32,1285
+
+../sysdeps/unix/sysv/ulimit.S,24
+SYSCALL (ulimit,21,852
+
+../sysdeps/generic/vlimit.c,83
+DEFUN(vlimit,31,1211
+      enum __vlimit_resource resource AND int value)32,1244
+
+../sysdeps/generic/vtimes.c,142
+#define TIMEVAL_TO_VTIMES(26,1016
+DEFUN(vtimes_one,33,1260
+      struct vtimes *vt AND enum __rusage_who who)34,1289
+DEFUN(vtimes,59,2051
+
+../sysdeps/unix/common/getprio.S,29
+SYSCALL (getpriority,21,852
+
+../sysdeps/stub/getprio.c,27
+DEFUN(getpriority,28,1191
+
+../sysdeps/mach/hurd/getprio.c,27
+DEFUN(getpriority,29,1209
+
+../sysdeps/unix/common/setprio.S,29
+SYSCALL (setpriority,21,852
+
+../sysdeps/stub/setprio.c,27
+DEFUN(setpriority,26,1014
+
+../sysdeps/unix/common/__getrusag.S,29
+SYSCALL__ (getrusage,21,852
+
+../sysdeps/stub/__getrusag.c,27
+DEFUN(__getrusage,26,1031
+
+../sysdeps/unix/bsd/nice.c,20
+DEFUN(nice,27,1058
+
+../sysdeps/stub/nice.c,20
+DEFUN(nice,26,1032
+
+../sysdeps/unix/sysv/nice.S,22
+SYSCALL (nice,21,846
+
+sys/resource.h,248
+#define	_SYS_RESOURCE_H	21,856
+enum __rlimit_resource28,953
+struct rlimit55,1742
+#define RLIM_INFINITY 64,1920
+enum __rusage_who79,2464
+struct rusage95,3001
+#define	PRIO_MIN	154,5452
+#define	PRIO_MAX	155,5517
+enum __priority_which159,5720
+
+sys/vlimit.h,87
+#define _SYS_VLIMIT_H	21,860
+enum __vlimit_resource29,1029
+#define INFINITY 58,1685
+
+sys/vtimes.h,93
+#define _SYS_VTIMES_H	21,860
+#define	VTIMES_UNITS_PER_SECOND	30,1129
+struct vtimes32,1165

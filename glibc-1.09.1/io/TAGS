@@ -1,0 +1,1014 @@
+
+../sysdeps/unix/common/__access.S,26
+SYSCALL__ (access,21,852
+
+../sysdeps/stub/__access.c,23
+DEFUN(__access,26,943
+
+../sysdeps/mach/hurd/__access.c,24
+DEFUN(__access,28,1034
+
+../sysdeps/unix/__chdir.S,25
+SYSCALL__ (chdir,21,852
+
+../sysdeps/stub/__chdir.c,70
+DEFUN(__chdir,26,956
+DEFUN(__chdir, (path), CONST char *path)26,956
+
+../sysdeps/mach/hurd/__chdir.c,22
+DEFUN(__chdir,27,995
+
+../sysdeps/unix/__chmod.S,25
+SYSCALL__ (chmod,21,852
+
+../sysdeps/stub/__chmod.c,92
+DEFUN(__chmod,27,983
+DEFUN(__chmod, (file, mode), CONST char *file AND mode_t mode)27,983
+
+../sysdeps/mach/hurd/__chmod.c,22
+DEFUN(__chmod,27,984
+
+../sysdeps/unix/__chown.S,25
+SYSCALL__ (chown,21,852
+
+../sysdeps/stub/__chown.c,86
+DEFUN(__chown,27,983
+      CONST char *file AND uid_t owner AND gid_t group)28,1020
+
+../sysdeps/mach/hurd/__chown.c,22
+DEFUN(__chown,27,978
+
+../sysdeps/unix/__close.S,25
+SYSCALL__ (close,21,852
+
+../sysdeps/stub/__close.c,58
+DEFUN(__close,25,928
+DEFUN(__close, (fd), int fd)25,928
+
+../sysdeps/mach/hurd/__close.c,22
+DEFUN(__close,27,985
+
+../sysdeps/unix/__dup.S,23
+SYSCALL__ (dup,21,852
+
+../sysdeps/posix/__dup.c,20
+DEFUN(__dup,27,987
+
+../sysdeps/stub/__dup.c,20
+DEFUN(__dup,26,986
+
+../sysdeps/unix/common/__dup2.S,24
+SYSCALL__ (dup2,21,852
+
+../sysdeps/posix/__dup2.c,22
+DEFUN(__dup2,29,1060
+
+../sysdeps/stub/__dup2.c,75
+DEFUN(__dup2,28,1028
+DEFUN(__dup2, (fd, fd2), int fd AND int fd2)28,1028
+
+../sysdeps/unix/sysv/sysv4/__dup2.c,0
+
+../sysdeps/mach/hurd/__dup2.c,22
+DEFUN(__dup2,30,1088
+
+../sysdeps/unix/common/__fchmod.S,26
+SYSCALL__ (fchmod,21,852
+
+../sysdeps/stub/__fchmod.c,84
+DEFUN(__fchmod,27,1006
+DEFUN(__fchmod, (fd, mode), int fd AND mode_t mode)27,1006
+
+../sysdeps/mach/hurd/__fchmod.c,24
+DEFUN(__fchmod,28,1028
+
+../sysdeps/unix/common/__fchown.S,26
+SYSCALL__ (fchown,21,852
+
+../sysdeps/stub/__fchown.c,78
+DEFUN(__fchown,27,1005
+      int fd AND uid_t owner AND gid_t group)28,1041
+
+../sysdeps/mach/hurd/__fchown.c,24
+DEFUN(__fchown,28,1033
+
+../sysdeps/unix/__fcntl.S,25
+SYSCALL__ (fcntl,21,852
+
+../sysdeps/stub/__fcntl.c,80
+DEFUN(__fcntl,25,936
+DEFUN(__fcntl, (fd, cmd), int fd AND int cmd DOTS)25,936
+
+../sysdeps/mach/hurd/__fcntl.c,23
+DEFUN(__fcntl,29,1008
+
+../sysdeps/unix/bsd/__flock.S,25
+SYSCALL__ (flock,21,846
+
+../sysdeps/posix/__flock.c,23
+DEFUN(__flock,32,1224
+
+../sysdeps/stub/__flock.c,22
+DEFUN(__flock,26,987
+
+../sysdeps/mach/hurd/__flock.c,23
+DEFUN(__flock,27,1014
+
+../sysdeps/unix/__fstat.S,25
+SYSCALL__ (fstat,21,852
+
+../sysdeps/stub/__fstat.c,84
+DEFUN(__fstat,26,973
+DEFUN(__fstat, (fd, buf), int fd AND struct stat *buf)26,973
+
+../sysdeps/unix/sysv/sysv4/i386/__fstat.S,69
+#define	_STAT_VER	26,1208
+ENTRY (__fstat)29,1250
+	DO_CALL 33,1423
+
+../sysdeps/mach/hurd/__fstat.c,23
+DEFUN(__fstat,28,1024
+
+../sysdeps/unix/bsd/__isatty.c,23
+DEFUN(__isatty,26,961
+
+../sysdeps/posix/__isatty.c,23
+DEFUN(__isatty,26,959
+
+../sysdeps/stub/__isatty.c,23
+DEFUN(__isatty,25,938
+
+../sysdeps/unix/__link.S,24
+SYSCALL__ (link,21,852
+
+../sysdeps/stub/__link.c,91
+DEFUN(__link,27,950
+DEFUN(__link, (from, to), CONST char *from AND CONST char *to)27,950
+
+../sysdeps/mach/hurd/__link.c,21
+DEFUN(__link,27,979
+
+../sysdeps/unix/__lseek.S,25
+SYSCALL__ (lseek,21,852
+
+../sysdeps/stub/__lseek.c,106
+DEFUN(__lseek,26,967
+DEFUN(__lseek, (fd, offset, whence), int fd AND off_t offset AND int whence)26,967
+
+../sysdeps/mach/hurd/__lseek.c,23
+DEFUN(__lseek,27,1001
+
+../sysdeps/unix/common/__lstat.S,25
+SYSCALL__ (lstat,21,852
+
+../sysdeps/generic/__lstat.c,24
+		DEFUN(__lstat,26,989
+
+../sysdeps/stub/__lstat.c,98
+DEFUN(__lstat,27,1009
+DEFUN(__lstat, (file, buf), CONST char *file AND struct stat *buf)27,1009
+
+../sysdeps/unix/sysv/sysv4/i386/__lstat.S,69
+#define	_STAT_VER	26,1208
+ENTRY (__lstat)29,1250
+	DO_CALL 33,1423
+
+../sysdeps/mach/hurd/__lstat.c,22
+DEFUN(__lstat,27,956
+
+../sysdeps/unix/common/__mkdir.S,25
+SYSCALL__ (mkdir,21,852
+
+../sysdeps/stub/__mkdir.c,92
+DEFUN(__mkdir,28,997
+DEFUN(__mkdir, (path, mode), CONST char *path AND mode_t mode)28,997
+
+../sysdeps/unix/sysv/__mkdir.c,23
+DEFUN(__mkdir,30,1064
+
+../sysdeps/mach/hurd/__mkdir.c,23
+DEFUN(__mkdir,27,1003
+
+../sysdeps/unix/__open.S,24
+SYSCALL__ (open,21,852
+
+../sysdeps/stub/__open.c,22
+DEFUN(__open,28,1038
+
+../sysdeps/mach/hurd/__open.c,22
+DEFUN(__open,29,1069
+
+../sysdeps/unix/bsd/m68k/__pipe.S,24
+SYSCALL__ (pipe,21,858
+
+../sysdeps/stub/__pipe.c,22
+DEFUN(__pipe,29,1127
+
+../sysdeps/unix/bsd/vax/__pipe.S,24
+SYSCALL__ (pipe,21,852
+
+../sysdeps/unix/bsd/ultrix4/mips/__pipe.S,24
+SYSCALL__ (pipe,21,857
+
+../sysdeps/unix/bsd/osf1/alpha/__pipe.S,24
+SYSCALL__ (pipe,21,857
+
+../sysdeps/unix/i386/__pipe.S,24
+SYSCALL__ (pipe,21,858
+
+../sysdeps/unix/sparc/__pipe.S,46
+ENTRY (__pipe)21,852
+PSEUDO (__Spipe,23,902
+
+../sysdeps/mach/hurd/__pipe.c,22
+DEFUN(__pipe,34,1232
+
+../sysdeps/unix/__read.S,24
+SYSCALL__ (read,21,852
+
+../sysdeps/stub/__read.c,21
+DEFUN(__read,26,983
+
+../sysdeps/mach/hurd/__read.c,22
+DEFUN(__read,27,1008
+
+../sysdeps/unix/common/__readlink.S,28
+SYSCALL__ (readlink,21,852
+
+../sysdeps/stub/__readlink.c,26
+DEFUN(__readlink,27,1080
+
+../sysdeps/mach/hurd/__readlink.c,26
+DEFUN(__readlink,30,1164
+
+../sysdeps/unix/common/__rmdir.S,25
+SYSCALL__ (rmdir,21,852
+
+../sysdeps/stub/__rmdir.c,70
+DEFUN(__rmdir,27,946
+DEFUN(__rmdir, (path), CONST char *path)27,946
+
+../sysdeps/unix/sysv/__rmdir.c,23
+DEFUN(__rmdir,30,1058
+
+../sysdeps/mach/hurd/__rmdir.c,22
+DEFUN(__rmdir,27,981
+
+../sysdeps/unix/__stat.S,24
+SYSCALL__ (stat,21,852
+
+../sysdeps/stub/__stat.c,94
+DEFUN(__stat,26,960
+DEFUN(__stat, (file, buf), CONST char *file AND struct stat *buf)26,960
+
+../sysdeps/unix/sysv/sysv4/i386/__stat.S,68
+#define	_STAT_VER	26,1208
+ENTRY (__stat)29,1250
+	DO_CALL 33,1422
+
+../sysdeps/mach/hurd/__stat.c,21
+DEFUN(__stat,27,984
+
+../sysdeps/unix/common/__symlink.S,27
+SYSCALL__ (symlink,21,852
+
+../sysdeps/stub/__symlink.c,97
+DEFUN(__symlink,27,950
+DEFUN(__symlink, (from, to), CONST char *from AND CONST char *to)27,950
+
+../sysdeps/mach/hurd/__symlink.c,25
+DEFUN(__symlink,28,1009
+
+../sysdeps/unix/__umask.S,25
+SYSCALL__ (umask,21,852
+
+../sysdeps/stub/__umask.c,22
+DEFUN(__umask,26,986
+
+../sysdeps/mach/hurd/__umask.c,22
+DEFUN(__umask,25,968
+
+../sysdeps/unix/__unlink.S,26
+SYSCALL__ (unlink,21,852
+
+../sysdeps/stub/__unlink.c,72
+DEFUN(__unlink,27,947
+DEFUN(__unlink, (name), CONST char *name)27,947
+
+../sysdeps/mach/hurd/__unlink.c,23
+DEFUN(__unlink,28,983
+
+../sysdeps/unix/__write.S,25
+SYSCALL__ (write,21,852
+
+../sysdeps/stub/__write.c,23
+DEFUN(__write,27,1004
+
+../sysdeps/mach/hurd/__write.c,22
+DEFUN(__write,26,952
+
+access.c,29
+	       DEFUN(access,25,957
+
+chdir.c,28
+	       DEFUN(chdir,26,949
+
+chmod.c,28
+	       DEFUN(chmod,26,963
+
+chown.c,28
+	       DEFUN(chown,26,969
+
+close.c,28
+	       DEFUN(close,25,946
+
+creat.c,20
+DEFUN(creat,27,950
+
+dup.c,26
+	       DEFUN(dup,27,960
+
+dup2.c,27
+	       DEFUN(dup2,28,987
+
+../sysdeps/stub/fchdir.c,21
+DEFUN(fchdir,26,954
+
+../sysdeps/unix/bsd/bsd4.4/fchdir.S,24
+SYSCALL (fchdir,21,846
+
+../sysdeps/unix/sysv/sysv4/fchdir.S,0
+
+../sysdeps/mach/hurd/fchdir.c,22
+DEFUN(fchdir,29,1036
+
+fchmod.c,29
+	       DEFUN(fchmod,27,987
+
+fchown.c,29
+	       DEFUN(fchown,27,993
+
+fcntl.c,21
+DEFUN(fcntl,40,1238
+
+flock.c,28
+	       DEFUN(flock,25,959
+
+fstat.c,28
+	       DEFUN(fstat,25,953
+
+ftw.c,70
+#define PATH_MAX 32,1075
+DEFUN (ftw_dir,39,1176
+DEFUN(ftw,154,3230
+
+../sysdeps/posix/getcwd.c,536
+#define	NULL	50,1326
+#define DIRENT54,1390
+#define SYSNDIR57,1466
+#define D_NAMLEN(63,1615
+#define	HAVE_D_NAMLEN65,1661
+#define D_NAMLEN(66,1683
+#define	dirent	69,1758
+#define D_NAMLEN(70,1781
+#define	HAVE_D_NAMLEN71,1817
+#define	ANSI_STRING91,2259
+#define	ANSI_STRING100,2394
+#define	memcpy(132,2797
+#define	memmove 133,2842
+#define	alloca(140,2980
+#define	__alloca	151,3268
+#define	PATH_MAX 164,3485
+#define	PATH_MAX 166,3519
+#define	size_t	172,3591
+#define const176,3661
+#define	__lstat	180,3707
+getcwd 191,4113
+
+../sysdeps/stub/getcwd.c,22
+DEFUN(getcwd,32,1285
+
+../sysdeps/mach/hurd/getcwd.c,16
+getcwd 39,1436
+
+getdirname.c,41
+DEFUN_VOID(get_current_dir_name)30,1103
+
+getwd.c,60
+DEFUN(getwd,29,1146
+DEFUN(getwd, (buf), char *buf)29,1146
+
+isatty.c,29
+	       DEFUN(isatty,26,950
+
+link.c,27
+	       DEFUN(link,26,950
+
+lseek.c,28
+	       DEFUN(lseek,26,985
+
+lstat.c,28
+	       DEFUN(lstat,25,955
+
+mkdir.c,28
+	       DEFUN(mkdir,25,962
+
+../sysdeps/unix/mkfifo.c,21
+DEFUN(mkfifo,26,955
+
+../sysdeps/stub/mkfifo.c,92
+DEFUN(mkfifo,28,1005
+DEFUN(mkfifo, (path, mode), CONST char *path AND mode_t mode)28,1005
+
+open.c,92
+DEFUN(open,37,1068
+DEFUN(open, (file, oflag), CONST char *file AND int oflag DOTS)37,1068
+
+pipe.c,27
+	       DEFUN(pipe,27,968
+
+read.c,27
+	       DEFUN(read,26,983
+
+readlink.c,31
+	       DEFUN(readlink,26,968
+
+rmdir.c,28
+	       DEFUN(rmdir,26,949
+
+stat.c,27
+	       DEFUN(stat,25,958
+
+symlink.c,30
+	       DEFUN(symlink,26,959
+
+../sysdeps/posix/ttyname.c,23
+DEFUN(ttyname,35,1228
+
+../sysdeps/stub/ttyname.c,23
+DEFUN(ttyname,30,1092
+
+../sysdeps/mach/hurd/ttyname.c,17
+ttyname 37,1256
+
+umask.c,28
+	       DEFUN(umask,26,962
+
+unlink.c,29
+	       DEFUN(unlink,25,951
+
+../sysdeps/unix/bsd/utime.c,21
+DEFUN(utime,31,1103
+
+../sysdeps/stub/utime.c,107
+DEFUN(utime,27,1020
+DEFUN(utime, (file, times), CONST char *file AND CONST struct utimbuf *times)27,1020
+
+../sysdeps/unix/sysv/utime.S,23
+SYSCALL (utime,21,846
+
+write.c,28
+	       DEFUN(write,26,983
+
+../sysdeps/unix/bsd/statbuf.h,426
+#define	_GNU_STAT_H	21,852
+struct stat26,949
+#define	__S_IFMT	63,2270
+#define	__S_IFDIR	66,2354
+#define	__S_IFCHR	67,2398
+#define	__S_IFBLK	68,2449
+#define	__S_IFREG	69,2496
+#define	__S_IFLNK	70,2543
+#define	__S_IFSOCK	71,2591
+#define	__S_IFIFO	72,2633
+#define	__S_ISUID	76,2698
+#define	__S_ISGID	77,2755
+#define	__S_ISVTX	78,2813
+#define	__S_IREAD	79,2882
+#define	__S_IWRITE	80,2927
+#define	__S_IEXEC	81,2974
+
+../sysdeps/stub/statbuf.h,344
+#define	_STATBUF_H	24,962
+struct stat29,1058
+#define	__S_IFMT	53,1894
+#define	__S_IFDIR	56,1978
+#define	__S_IFCHR	57,2022
+#define	__S_IFBLK	58,2073
+#define	__S_IFREG	59,2120
+#define	__S_IFIFO	60,2167
+#define	__S_ISUID	64,2232
+#define	__S_ISGID	65,2289
+#define	__S_IREAD	66,2347
+#define	__S_IWRITE	67,2392
+#define	__S_IEXEC	68,2439
+
+../sysdeps/unix/bsd/osf1/alpha/statbuf.h,424
+#define	_STATBUF_H20,855
+struct stat25,949
+#define	__S_IFMT	54,1877
+#define	__S_IFDIR	57,1961
+#define	__S_IFCHR	58,2005
+#define	__S_IFBLK	59,2056
+#define	__S_IFREG	60,2103
+#define	__S_IFIFO	61,2150
+#define	__S_IFLNK	63,2190
+#define	__S_IFSOCK	64,2238
+#define	__S_ISUID	68,2306
+#define	__S_ISGID	69,2363
+#define	__S_ISVTX	70,2421
+#define	__S_IREAD	71,2490
+#define	__S_IWRITE	72,2535
+#define	__S_IEXEC	73,2582
+
+../sysdeps/unix/sysv/statbuf.h,424
+#define	_STATBUF_H20,844
+struct stat22,864
+#define	__S_IFMT	39,1206
+#define	__S_IFDIR	42,1290
+#define	__S_IFCHR	43,1334
+#define	__S_IFBLK	44,1385
+#define	__S_IFREG	45,1432
+#define	__S_IFIFO	46,1479
+#define	__S_IFLNK	49,1596
+#define	__S_IFSOCK	50,1644
+#define	__S_ISUID	54,1712
+#define	__S_ISGID	55,1769
+#define	__S_ISVTX	56,1827
+#define	__S_IREAD	57,1896
+#define	__S_IWRITE	58,1941
+#define	__S_IEXEC	59,1988
+
+../sysdeps/unix/sysv/sysv4/solaris2/statbuf.h,424
+#define	_STATBUF_H20,855
+struct stat25,949
+#define	__S_IFMT	60,2184
+#define	__S_IFDIR	63,2268
+#define	__S_IFCHR	64,2312
+#define	__S_IFBLK	65,2363
+#define	__S_IFREG	66,2410
+#define	__S_IFIFO	67,2457
+#define	__S_IFLNK	70,2574
+#define	__S_IFSOCK	71,2622
+#define	__S_ISUID	75,2690
+#define	__S_ISGID	76,2747
+#define	__S_ISVTX	77,2805
+#define	__S_IREAD	78,2874
+#define	__S_IWRITE	79,2919
+#define	__S_IEXEC	80,2966
+
+../sysdeps/unix/sysv/sysv4/i386/statbuf.h,424
+#define	_STATBUF_H20,855
+struct stat25,949
+#define	__S_IFMT	62,2189
+#define	__S_IFDIR	65,2273
+#define	__S_IFCHR	66,2317
+#define	__S_IFBLK	67,2368
+#define	__S_IFREG	68,2415
+#define	__S_IFIFO	69,2462
+#define	__S_IFLNK	72,2579
+#define	__S_IFSOCK	73,2627
+#define	__S_ISUID	77,2695
+#define	__S_ISGID	78,2752
+#define	__S_ISVTX	79,2810
+#define	__S_IREAD	80,2879
+#define	__S_IWRITE	81,2924
+#define	__S_IEXEC	82,2971
+
+../sysdeps/mach/hurd/statbuf.h,592
+#define	_STATBUF_H	21,857
+struct stat33,1343
+#define	__S_IFMT	74,2678
+#define	__S_IFDIR	77,2762
+#define	__S_IFCHR	78,2806
+#define	__S_IFBLK	79,2857
+#define	__S_IFREG	80,2904
+#define	__S_IFLNK	81,2951
+#define	__S_IFSOCK	82,2999
+#define	__S_IFIFO	83,3041
+#define	__S_ISUID	87,3106
+#define	__S_ISGID	88,3163
+#define	__S_ISVTX	89,3221
+#define	__S_IREAD	90,3290
+#define	__S_IWRITE	91,3336
+#define	__S_IEXEC	92,3384
+#define S_INOCACHE	97,3525
+#define S_IUSEUNK	102,3770
+#define S_IUNKNOWN 104,3877
+#define S_IUNKSHIFT	107,4027
+#define	S_ISPARE	110,4079
+#define	CMASK	115,4204
+
+sys/stat.h,884
+#define	_SYS_STAT_H	25,923
+#define	S_IFMT	35,1109
+#define	S_IFDIR	36,1134
+#define	S_IFCHR	37,1161
+#define	S_IFBLK	38,1188
+#define	S_IFREG	39,1215
+#define	S_IFLNK	40,1242
+#define	S_IFSOCK	41,1269
+#define	S_IFIFO	42,1297
+#define	__S_ISTYPE(47,1367
+#define	S_ISDIR(49,1431
+#define	S_ISCHR(50,1483
+#define	S_ISBLK(51,1535
+#define	S_ISREG(52,1587
+#define	S_ISFIFO(53,1639
+#define	S_ISLNK(56,1710
+#define	S_ISSOCK(57,1762
+#define	S_ISUID 63,1850
+#define	S_ISGID	64,1909
+#define	S_ISVTX	68,2096
+#define	S_IRUSR	71,2130
+#define	S_IWUSR	72,2178
+#define	S_IXUSR	73,2228
+#define	S_IRWXU	75,2321
+#define	S_IREAD	78,2417
+#define	S_IWRITE	79,2442
+#define	S_IEXEC	80,2467
+#define	S_IRGRP	83,2500
+#define	S_IWGRP	84,2553
+#define	S_IXGRP	85,2607
+#define	S_IRWXG	87,2705
+#define	S_IROTH	89,2737
+#define	S_IWOTH	90,2791
+#define	S_IXOTH	91,2846
+#define	S_IRWXO	93,2946
+
+../sysdeps/unix/bsd/fcntlbits.h,1057
+#define	_FCNTLBITS_H	22,892
+#define	O_RDONLY	26,966
+#define	O_WRONLY	27,1008
+#define	O_RDWR	28,1051
+#define	O_CREAT	32,1146
+#define	O_EXCL	33,1210
+#define	O_TRUNC	34,1269
+#define	O_NOCTTY	37,1468
+#define	O_ASYNC	39,1579
+#define	O_FSYNC	40,1650
+#define	O_SYNC	41,1701
+#define	O_APPEND	45,1782
+#define	O_NONBLOCK	46,1840
+#define	O_NDELAY	51,1993
+#define FREAD	59,2261
+#define	FWRITE	60,2278
+#define FASYNC	63,2340
+#define FCREAT	64,2364
+#define FEXCL	65,2388
+#define FTRUNC	66,2410
+#define FNOCTTY	67,2434
+#define FFSYNC	68,2460
+#define FSYNC	69,2484
+#define FAPPEND	70,2506
+#define FNONBLOCK	71,2532
+#define FNDELAY	72,2561
+#define	O_ACCMODE	77,2729
+#define	F_DUPFD	80,2825
+#define	F_GETFD	81,2880
+#define	F_SETFD	82,2933
+#define	F_GETFL	83,2986
+#define	F_SETFL	84,3035
+#define	F_GETOWN	86,3101
+#define	F_SETOWN	87,3158
+#define	F_GETLK	89,3222
+#define	F_SETLK	90,3273
+#define	F_SETLKW	91,3339
+#define	FD_CLOEXEC	94,3462
+struct flock101,3684
+#define	F_RDLCK	112,4154
+#define	F_WRLCK	113,4190
+#define	F_UNLCK	114,4227
+
+../sysdeps/stub/fcntlbits.h,689
+#define	_FCNTLBITS_H	24,974
+#define	O_RDONLY	28,1048
+#define	O_WRONLY	29,1090
+#define	O_RDWR	30,1133
+#define	O_CREAT	34,1228
+#define	O_EXCL	35,1292
+#define	O_TRUNC	36,1351
+#define	O_NOCTTY	37,1412
+#define	O_APPEND	40,1530
+#define	O_NONBLOCK	41,1588
+#define	O_NDELAY	44,1657
+#define	O_ACCMODE	49,1827
+#define	F_DUPFD	52,1923
+#define	F_GETFD	53,1978
+#define	F_SETFD	54,2031
+#define	F_GETFL	55,2084
+#define	F_SETFL	56,2133
+#define	F_GETOWN	58,2199
+#define	F_SETOWN	59,2256
+#define	F_GETLK	61,2320
+#define	F_SETLK	62,2371
+#define	F_SETLKW	63,2422
+#define	FD_CLOEXEC	66,2540
+struct flock73,2762
+#define	F_RDLCK	83,3177
+#define	F_WRLCK	84,3213
+#define	F_UNLCK	85,3250
+
+../sysdeps/unix/bsd/sun/sunos4/fcntlbits.h,1259
+#define	_FCNTLBITS_H	22,892
+#define	O_RDONLY	26,966
+#define	O_WRONLY	27,1008
+#define	O_RDWR	28,1051
+#define	O_CREAT	32,1146
+#define	O_EXCL	33,1210
+#define	O_TRUNC	34,1269
+#define	O_NOCTTY	35,1330
+#define	O_ASYNC	37,1446
+#define	O_FSYNC	38,1517
+#define	O_SYNC	39,1568
+#define	O_APPEND	43,1649
+#define	O_NONBLOCK	44,1707
+#define	O_NDELAY	50,1998
+#define	O_NDELAY	53,2077
+#define FREAD	61,2341
+#define	FWRITE	62,2358
+#define FASYNC	65,2421
+#define FCREAT	66,2445
+#define FEXCL	67,2469
+#define FTRUNC	68,2491
+#define FNOCTTY	69,2515
+#define FFSYNC	70,2541
+#define FSYNC	71,2565
+#define FAPPEND	72,2587
+#define FNONBLOCK	73,2613
+#define FNONBIO	74,2642
+#define FNDELAY	75,2670
+#define	FNBIO	76,2715
+#define	O_ACCMODE	81,2905
+#define	F_DUPFD	84,3001
+#define	F_GETFD	85,3056
+#define	F_SETFD	86,3109
+#define	F_GETFL	87,3162
+#define	F_SETFL	88,3211
+#define	F_GETOWN	90,3277
+#define	F_SETOWN	91,3334
+#define	F_GETLK	93,3398
+#define	F_SETLK	94,3449
+#define	F_SETLKW	95,3515
+#define	F_RGETLK	97,3594
+#define	F_RSETLK	98,3653
+#define	F_CNVT	99,3720
+#define	F_RSETLKW	100,3779
+#define	FD_CLOEXEC	104,3911
+struct flock111,4133
+struct eflock124,4719
+#define	F_RDLCK	140,5328
+#define	F_WRLCK	141,5364
+#define	F_UNLCK	142,5401
+
+../sysdeps/unix/bsd/ultrix4/fcntlbits.h,1349
+#define	_FCNTLBITS_H	22,893
+#define	O_RDONLY	26,967
+#define	O_WRONLY	27,1009
+#define	O_RDWR	28,1052
+#define	O_CREAT	32,1147
+#define	O_EXCL	33,1211
+#define	O_TRUNC	34,1270
+#define	O_ASYNC	36,1349
+#define	O_FSYNC	37,1420
+#define	O_SYNC	38,1471
+#define	O_BLKINUSE	39,1495
+#define	O_BLKANDSET	40,1547
+#define	O_TERMIO	41,1616
+#define	O_NOCTTY	43,1679
+#define	O_APPEND	46,1798
+#define	O_NONBLOCK	47,1856
+#define	O_NDELAY	50,1926
+#define FREAD	58,2190
+#define	FWRITE	59,2207
+#define FASYNC	62,2269
+#define FCREAT	63,2293
+#define FEXCL	64,2317
+#define FTRUNC	65,2339
+#define FNOCTTY	66,2363
+#define FFSYNC	67,2389
+#define FSYNC	68,2413
+#define FAPPEND	69,2435
+#define FNONBLOCK	70,2461
+#define FNDELAY	71,2490
+#define	FNBLOCK	72,2516
+#define	FTERMIO	73,2544
+#define	FNOCTTY	74,2570
+#define	FSYNCRON	75,2596
+#define	FBLKINUSE	76,2621
+#define FBLKANDSET	77,2650
+#define	O_ACCMODE	82,2823
+#define	F_DUPFD	85,2919
+#define	F_GETFD	86,2974
+#define	F_SETFD	87,3027
+#define	F_GETFL	88,3080
+#define	F_SETFL	89,3129
+#define	F_GETOWN	91,3195
+#define	F_SETOWN	92,3252
+#define	F_GETLK	94,3316
+#define	F_SETLK	95,3367
+#define	F_SETLKW	96,3433
+#define	F_SETSYN	98,3513
+#define	F_CLRSYN	99,3565
+#define	FD_CLOEXEC	103,3687
+struct flock110,3909
+#define	F_RDLCK	120,4324
+#define	F_WRLCK	121,4360
+#define	F_UNLCK	122,4397
+
+../sysdeps/unix/bsd/bsd4.4/fcntlbits.h,1109
+#define	_FCNTLBITS_H	22,892
+#define	O_RDONLY	26,966
+#define	O_WRONLY	27,1008
+#define	O_RDWR	28,1051
+#define	O_CREAT	32,1146
+#define	O_EXCL	33,1210
+#define	O_TRUNC	34,1269
+#define	O_NOCTTY	37,1468
+#define	O_ASYNC	39,1549
+#define	O_FSYNC	40,1620
+#define	O_SYNC	41,1671
+#define	O_SHLOCK	42,1695
+#define	O_EXLOCK	43,1754
+#define	O_APPEND	47,1875
+#define	O_NONBLOCK	48,1933
+#define	O_NDELAY	51,2002
+#define FREAD	59,2270
+#define	FWRITE	60,2287
+#define FASYNC	63,2349
+#define FCREAT	64,2373
+#define FEXCL	65,2397
+#define FTRUNC	66,2419
+#define FNOCTTY	67,2443
+#define FFSYNC	68,2469
+#define FSYNC	69,2493
+#define FAPPEND	70,2515
+#define FNONBLOCK	71,2541
+#define FNDELAY	72,2570
+#define	O_ACCMODE	77,2738
+#define	F_DUPFD	80,2834
+#define	F_GETFD	81,2889
+#define	F_SETFD	82,2942
+#define	F_GETFL	83,2995
+#define	F_SETFL	84,3044
+#define	F_GETOWN	86,3110
+#define	F_SETOWN	87,3167
+#define	F_GETLK	89,3231
+#define	F_SETLK	90,3282
+#define	F_SETLKW	91,3348
+#define	FD_CLOEXEC	94,3471
+struct flock101,3693
+#define	F_RDLCK	111,4110
+#define	F_WRLCK	112,4146
+#define	F_UNLCK	113,4183
+
+../sysdeps/unix/sysv/fcntlbits.h,634
+#define	_FCNTLBITS_H	22,893
+#define	O_RDONLY	26,967
+#define	O_WRONLY	27,1009
+#define	O_RDWR	28,1052
+#define	O_CREAT	32,1147
+#define	O_EXCL	33,1210
+#define	O_TRUNC	34,1268
+#define	O_SYNC	36,1376
+#define	O_APPEND	40,1482
+#define	O_NONBLOCK	41,1540
+#define	O_NDELAY	45,1684
+#define	O_ACCMODE	50,1854
+#define	F_DUPFD	53,1950
+#define	F_GETFD	54,2005
+#define	F_SETFD	55,2058
+#define	F_GETFL	56,2111
+#define	F_SETFL	57,2160
+#define	F_GETLK	58,2209
+#define	F_SETLK	59,2260
+#define	F_SETLKW	60,2311
+#define	FD_CLOEXEC	63,2429
+struct flock70,2651
+#define	F_RDLCK	81,3138
+#define	F_WRLCK	82,3174
+#define	F_UNLCK	83,3211
+
+../sysdeps/unix/sysv/sysv4/fcntlbits.h,1161
+#define	_FCNTLBITS_H	22,889
+#define	O_RDONLY	26,963
+#define	O_WRONLY	27,1005
+#define	O_RDWR	28,1048
+#define	O_CREAT	32,1143
+#define	O_EXCL	33,1207
+#define	O_TRUNC	34,1266
+#define	O_NOCTTY	35,1327
+#define	O_ASYNC	37,1413
+#define	O_FSYNC	38,1484
+#define	O_SYNC	39,1535
+#define	O_APPEND	43,1616
+#define	O_NONBLOCK	44,1674
+#define	O_NDELAY	47,1744
+#define FREAD	55,2009
+#define	FWRITE	56,2026
+#define FASYNC	59,2089
+#define FCREAT	60,2113
+#define FEXCL	61,2137
+#define FTRUNC	62,2159
+#define FNOCTTY	63,2183
+#define FFSYNC	64,2209
+#define FSYNC	65,2233
+#define FAPPEND	66,2255
+#define FNONBLOCK	67,2281
+#define FNONBIO	68,2310
+#define FNDELAY	69,2338
+#define	O_ACCMODE	74,2506
+#define	F_DUPFD	77,2602
+#define	F_GETFD	78,2657
+#define	F_SETFD	79,2710
+#define	F_GETFL	80,2763
+#define	F_SETFL	81,2812
+#define	F_GETOWN	83,2878
+#define	F_SETOWN	84,2936
+#define	F_GETLK	86,3001
+#define	F_SETLK	87,3053
+#define	F_SETLKW	88,3119
+#define	F_RGETLK	90,3199
+#define	F_RSETLK	91,3258
+#define	F_RSETLKW	92,3325
+#define	FD_CLOEXEC	96,3457
+struct flock103,3679
+#define	F_RDLCK	115,4217
+#define	F_WRLCK	116,4253
+#define	F_UNLCK	117,4290
+
+../sysdeps/mach/hurd/fcntlbits.h,1346
+#define	_FCNTLBITS_H	22,882
+#define	O_READ	32,1265
+#define O_WRITE	33,1315
+#define	O_EXEC	34,1366
+#define	O_RDONLY	37,1454
+#define	O_WRONLY	38,1501
+#define	O_RDWR	39,1549
+#define	O_ACCMODE	40,1621
+#define	O_CREAT	48,1870
+#define	O_EXCL	49,1934
+#define	O_NOLINK	51,2010
+#define	O_NOTRANS	52,2078
+#define	O_APPEND	62,2478
+#define	O_ASYNC	63,2543
+#define	O_FSYNC	64,2614
+#define	O_SYNC	65,2665
+#define	O_NOATIME	67,2706
+#define	O_NONBLOCK	85,3496
+#define	O_NDELAY	87,3585
+#define O_HURD	93,3695
+#define	O_TRUNC	101,3937
+#define	O_SHLOCK	103,4020
+#define	O_EXLOCK	104,4083
+#define	O_IGNORE_CTTY	112,4307
+#define	O_NOCTTY	115,4445
+#define FREAD	120,4585
+#define	FWRITE	121,4609
+#define FASYNC	124,4678
+#define FCREAT	125,4702
+#define FEXCL	126,4726
+#define FTRUNC	127,4748
+#define FNOCTTY	128,4772
+#define FFSYNC	129,4798
+#define FSYNC	130,4822
+#define FAPPEND	131,4844
+#define FNONBLOCK	132,4870
+#define FNDELAY	133,4899
+#define	F_DUPFD	138,4984
+#define	F_GETFD	139,5039
+#define	F_SETFD	140,5092
+#define	F_GETFL	141,5145
+#define	F_SETFL	142,5194
+#define	F_GETOWN	144,5260
+#define	F_SETOWN	145,5317
+#define	F_GETLK	147,5381
+#define	F_SETLK	148,5432
+#define	F_SETLKW	149,5498
+#define	FD_CLOEXEC	152,5621
+struct flock159,5843
+#define	F_RDLCK	169,6247
+#define	F_WRLCK	170,6283
+#define	F_UNLCK	171,6320
+
+fcntl.h,136
+#define	_FCNTL_H	25,920
+#define	R_OK	39,1331
+#define	W_OK	40,1380
+#define	X_OK	41,1430
+#define	F_OK	42,1482
+#define	creat(64,2354
+
+utime.h,75
+#define	_UTIME_H	25,938
+#define	__need_NULL30,995
+struct utimbuf36,1100
+
+ftw.h,118
+#define	_FTW_H	26,911
+#define FTW_F	32,1034
+#define FTW_D	33,1072
+#define FTW_DNR	34,1107
+#define FTW_NS	35,1155
+
+sys/fcntl.h,0

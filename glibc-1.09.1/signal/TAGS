@@ -1,0 +1,568 @@
+
+../sysdeps/posix/signal.c,22
+DEFUN(signal,29,1063
+
+../sysdeps/stub/signal.c,22
+DEFUN(signal,27,1008
+
+../sysdeps/unix/sysv/signal.S,24
+SYSCALL (signal,21,852
+
+../sysdeps/unix/sysv/i386/signal.S,53
+	.globl C_SYMBOL_NAME(25,992
+ENTRY (signal)26,1027
+
+../sysdeps/posix/raise.c,20
+DEFUN(raise,25,921
+
+../sysdeps/stub/raise.c,20
+DEFUN(raise,25,920
+
+../sysdeps/unix/bsd/killpg.S,24
+SYSCALL (killpg,21,852
+
+../sysdeps/posix/killpg.c,83
+DEFUN(killpg,28,1043
+DEFUN(killpg, (pgrp, sig), __pid_t pgrp AND int sig)28,1043
+
+../sysdeps/stub/killpg.c,22
+DEFUN(killpg,28,1043
+
+../sysdeps/unix/bsd/osf1/alpha/killpg.S,51
+#define SYS_killpg 22,886
+SYSCALL (killpg,24,921
+
+sigaction.c,32
+	       DEFUN(sigaction,26,983
+
+sigproc.c,34
+	       DEFUN(sigprocmask,26,983
+
+kill.c,27
+	       DEFUN(kill,26,956
+
+../sysdeps/unix/bsd/__sigact.c,27
+DEFUN(__sigaction,29,1055
+
+../sysdeps/stub/__sigact.c,109
+DEFUN(__sigaction,27,1015
+      int sig AND CONST struct sigaction *act AND struct sigaction *OACT)28,1052
+
+../sysdeps/unix/sysv/__sigact.c,27
+DEFUN(__sigaction,29,1061
+
+../sysdeps/unix/sysv/sysv4/__sigact.c,47
+trampoline 30,1089
+DEFUN(__sigaction,39,1360
+
+../sysdeps/unix/sysv/sco3.2.4/__sigact.S,29
+SYSCALL__ (sigaction,21,846
+
+../sysdeps/mach/hurd/__sigact.c,27
+DEFUN(__sigaction,28,1075
+
+../sysdeps/unix/bsd/__sigproc.c,29
+DEFUN(__sigprocmask,29,1131
+
+../sysdeps/stub/__sigproc.c,95
+DEFUN(__sigprocmask,28,1105
+      int how AND CONST sigset_t *set AND sigset_t *oset)29,1144
+
+../sysdeps/unix/sysv/sysv4/__sigproc.S,31
+SYSCALL__ (sigprocmask,21,857
+
+../sysdeps/unix/sysv/sco3.2.4/__sigproc.S,31
+SYSCALL__ (sigprocmask,21,846
+
+../sysdeps/mach/hurd/__sigproc.c,29
+DEFUN(__sigprocmask,30,1166
+
+../sysdeps/unix/__kill.S,24
+SYSCALL__ (kill,21,852
+
+../sysdeps/stub/__kill.c,22
+DEFUN(__kill,28,1093
+
+../sysdeps/mach/hurd/__kill.c,16
+__kill 30,1177
+
+../sysdeps/stub/sigpending.c,72
+DEFUN(sigpending,27,974
+DEFUN(sigpending, (set), sigset_t *set)27,974
+
+../sysdeps/unix/sysv/sco3.2.4/sigpending.S,28
+SYSCALL (sigpending,21,846
+
+../sysdeps/mach/hurd/sigpending.c,26
+DEFUN(sigpending,28,1009
+
+../sysdeps/unix/bsd/sigsuspend.c,26
+DEFUN(sigsuspend,29,1053
+
+../sysdeps/posix/sigsuspend.c,26
+DEFUN(sigsuspend,29,1053
+
+../sysdeps/stub/sigsuspend.c,26
+DEFUN(sigsuspend,27,1013
+
+../sysdeps/unix/sysv/sysv4/sigsuspend.S,28
+SYSCALL (sigsuspend,21,846
+
+../sysdeps/unix/sysv/sco3.2.4/sigsuspend.S,0
+
+../sysdeps/mach/hurd/sigsuspend.c,26
+DEFUN(sigsuspend,28,1054
+
+sigblock.c,31
+	       DEFUN(sigblock,26,958
+
+sigsetmask.c,33
+	       DEFUN(sigsetmask,26,964
+
+sigpause.c,31
+	       DEFUN(sigpause,26,958
+
+sigvec.c,29
+	       DEFUN(sigvec,26,974
+
+../sysdeps/unix/bsd/__sigblock.S,28
+SYSCALL__ (sigblock,21,852
+
+../sysdeps/posix/__sigblock.c,25
+DEFUN(__sigblock,25,951
+
+../sysdeps/stub/__sigblock.c,25
+DEFUN(__sigblock,25,945
+
+../sysdeps/unix/bsd/bsd4.4/__sigblock.c,0
+
+../sysdeps/unix/bsd/__sigstmsk.S,30
+SYSCALL__ (sigsetmask,21,852
+
+../sysdeps/posix/__sigstmsk.c,27
+DEFUN(__sigsetmask,25,969
+
+../sysdeps/stub/__sigstmsk.c,27
+DEFUN(__sigsetmask,24,891
+
+../sysdeps/unix/bsd/bsd4.4/__sigstmsk.c,0
+
+../sysdeps/unix/bsd/osf1/alpha/__sigstmsk.S,61
+#define SYS_sigsetmask 22,886
+SYSCALL__ (sigsetmask,24,929
+
+../sysdeps/unix/bsd/__sigpause.S,28
+SYSCALL__ (sigpause,21,852
+
+../sysdeps/posix/__sigpause.c,26
+DEFUN(__sigpause,26,1010
+
+../sysdeps/stub/__sigpause.c,25
+DEFUN(__sigpause,24,891
+
+../sysdeps/unix/bsd/osf1/alpha/__sigpause.S,57
+#define SYS_sigpause 22,886
+SYSCALL__ (sigpause,24,925
+
+../sysdeps/unix/bsd/__sigvec.S,26
+SYSCALL__ (sigvec,21,852
+
+../sysdeps/posix/__sigvec.c,83
+DEFUN(wrapper_handler,31,1074
+DEFUN(convert_mask,51,1406
+DEFUN(__sigvec,78,2126
+
+../sysdeps/stub/__sigvec.c,24
+DEFUN(__sigvec,29,1250
+
+../sysdeps/unix/bsd/sun/__sigvec.S,29
+PSEUDO (__raw_sigvec,23,895
+
+../sysdeps/unix/bsd/sequent/i386/__sigvec.S,70
+	call C_SYMBOL_NAME 31,1204
+ENTRY (__sigvec)34,1260
+	pushl 36,1340
+
+../sysdeps/unix/bsd/ultrix4/mips/__sigvec.S,29
+PSEUDO (__raw_sigvec,23,895
+
+../sysdeps/unix/bsd/bsd4.4/__sigvec.c,0
+
+../sysdeps/unix/bsd/osf1/alpha/__sigvec.S,53
+#define SYS_sigvec 22,886
+SYSCALL__ (sigvec,24,921
+
+../sysdeps/unix/bsd/sigstack.S,26
+SYSCALL (sigstack,21,852
+
+../sysdeps/stub/sigstack.c,24
+DEFUN(sigstack,26,1036
+
+../sysdeps/mach/hurd/sigstack.c,24
+DEFUN(sigstack,27,1054
+
+../sysdeps/stub/sigaltstk.c,27
+DEFUN(sigaltstack,26,1036
+
+../sysdeps/unix/bsd/bsd4.4/sigaltstk.S,29
+SYSCALL (sigaltstack,21,852
+
+../sysdeps/unix/sysv/sysv4/sigaltstk.S,0
+
+../sysdeps/mach/hurd/sigaltstk.c,27
+DEFUN(sigaltstack,27,1071
+
+../sysdeps/posix/sigintr.c,28
+DEFUN(siginterrupt,27,1075
+
+../sysdeps/stub/sigintr.c,28
+DEFUN(siginterrupt,27,1074
+
+sigempty.c,74
+DEFUN(sigemptyset,23,888
+DEFUN(sigemptyset, (set), sigset_t *set)23,888
+
+sigfillset.c,72
+DEFUN(sigfillset,23,884
+DEFUN(sigfillset, (set), sigset_t *set)23,884
+
+sigaddset.c,91
+DEFUN(sigaddset,23,878
+DEFUN(sigaddset, (set, signo), sigset_t *set AND int signo)23,878
+
+sigdelset.c,91
+DEFUN(sigdelset,23,878
+DEFUN(sigdelset, (set, signo), sigset_t *set AND int signo)23,878
+
+sigismem.c,101
+DEFUN(sigismember,23,899
+DEFUN(sigismember, (set, signo), CONST sigset_t *set AND int signo)23,899
+
+sigret.c,32
+	       DEFUN(sigreturn,26,964
+
+../sysdeps/stub/__sigret.c,26
+DEFUN(__sigreturn,24,891
+
+../sysdeps/unix/bsd/sun/__sigret.S,59
+#define SYS_sigreturn 22,868
+SYSCALL__ (sigreturn,25,902
+
+../sysdeps/unix/bsd/ultrix4/mips/__sigret.S,26
+ENTRY(__sigreturn)21,857
+
+../sysdeps/unix/sysv/i386/__sigret.S,27
+ENTRY (__sigreturn)22,852
+
+../sysdeps/unix/i386/__sigret.S,27
+ENTRY (__sigreturn)22,858
+
+gsignal.c,30
+	       DEFUN(gsignal,26,950
+
+ssignal.c,30
+	       DEFUN(ssignal,26,974
+
+signal.h,633
+#define	_SIGNAL_H	26,988
+#define	 __need_size_t32,1053
+typedef __sig_atomic_t sig_atomic_t;43,1431
+typedef void (*__sighandler_t) __P ((int)50,1625
+#define	sigmask(97,3279
+#define	NSIG	106,3481
+typedef __sighandler_t sighandler_t;110,3525
+typedef __sigset_t sigset_t;120,3717
+#define	__sigset_t_defined	121,3746
+#define	sigemptyset(144,4431
+#define	sigfillset(145,4475
+#define	sigaddset(146,4518
+#define	sigdelset(147,4572
+#define	sigismember(148,4626
+struct sigvec181,5777
+#define	SV_ONSTACK	191,6042
+#define	SV_INTERRUPT	192,6113
+#define	SV_RESETHAND	193,6178
+struct sigstack214,7093
+struct sigaltstack226,7494
+
+sys/signal.h,0
+
+../sysdeps/unix/bsd/signum.h,939
+#define	SIG_ERR	26,1049
+#define	SIG_DFL	27,1108
+#define	SIG_IGN	28,1168
+#define	SIGHUP	32,1245
+#define	SIGINT	33,1286
+#define	SIGQUIT	34,1329
+#define	SIGILL	35,1369
+#define	SIGABRT	36,1422
+#define	SIGTRAP	37,1467
+#define	SIGIOT	38,1513
+#define	SIGEMT	39,1558
+#define	SIGFPE	40,1603
+#define	SIGKILL	41,1661
+#define	SIGBUS	42,1714
+#define	SIGSEGV	43,1761
+#define	SIGSYS	44,1819
+#define	SIGPIPE	45,1881
+#define	SIGALRM	46,1929
+#define	SIGTERM	47,1977
+#define	SIGURG	48,2024
+#define	SIGSTOP	49,2086
+#define	SIGTSTP	50,2140
+#define	SIGCONT	51,2190
+#define	SIGCHLD	52,2235
+#define	SIGCLD	53,2296
+#define	SIGTTIN	54,2355
+#define	SIGTTOU	55,2416
+#define	SIGIO	56,2476
+#define	SIGPOLL	57,2529
+#define	SIGXCPU	58,2582
+#define	SIGXFSZ	59,2639
+#define	SIGVTALRM	60,2702
+#define	SIGPROF	61,2761
+#define	SIGWINCH	62,2821
+#define SIGINFO	63,2883
+#define	SIGUSR1	64,2941
+#define	SIGUSR2	65,2999
+#define	_NSIG	69,3094
+
+../sysdeps/stub/signum.h,518
+#define	SIG_ERR	25,956
+#define	SIG_DFL	26,1015
+#define	SIG_IGN	27,1064
+#define	SIGABRT	31,1134
+#define	SIGFPE	32,1181
+#define	SIGILL	33,1237
+#define	SIGINT	34,1282
+#define	SIGSEGV	35,1336
+#define	SIGTERM	36,1388
+#define	SIGHUP	39,1457
+#define	SIGQUIT	40,1489
+#define	SIGPIPE	41,1520
+#define	SIGKILL	42,1558
+#define	SIGALRM	43,1629
+#define	SIGSTOP	44,1668
+#define	SIGTSTP	45,1740
+#define	SIGCONT	46,1781
+#define	SIGCHLD	47,1817
+#define	SIGTTIN	48,1872
+#define	SIGTTOU	49,1937
+#define	_NSIG	53,2038
+
+../sysdeps/unix/sysv/signum.h,613
+#define	SIG_ERR	26,1038
+#define	SIG_DFL	27,1097
+#define	SIG_IGN	28,1157
+#define	SIGHUP	32,1234
+#define	SIGINT	33,1275
+#define	SIGQUIT	34,1318
+#define	SIGILL	35,1358
+#define	SIGABRT	36,1411
+#define	SIGTRAP	37,1456
+#define	SIGIOT	38,1502
+#define	SIGEMT	39,1547
+#define	SIGFPE	40,1592
+#define	SIGKILL	41,1650
+#define	SIGBUS	42,1703
+#define	SIGSEGV	43,1750
+#define	SIGSYS	44,1808
+#define	SIGPIPE	45,1870
+#define	SIGALRM	46,1918
+#define	SIGTERM	47,1966
+#define	SIGUSR1	48,2013
+#define SIGUSR2	49,2071
+#define SIGCHLD	50,2129
+#define SIGCLD	51,2190
+#define	SIGPWR	52,2249
+#define	_NSIG	56,2346
+
+../sysdeps/unix/sysv/sysv4/signum.h,936
+#define	SIG_ERR	23,915
+#define	SIG_DFL	24,974
+#define	SIG_IGN	25,1034
+#define	SIGHUP	29,1111
+#define	SIGINT	30,1152
+#define	SIGQUIT	31,1195
+#define	SIGILL	32,1235
+#define	SIGABRT	33,1288
+#define	SIGTRAP	34,1333
+#define	SIGIOT	35,1379
+#define	SIGEMT	36,1424
+#define	SIGFPE	37,1469
+#define	SIGKILL	38,1527
+#define	SIGBUS	39,1580
+#define	SIGSEGV	40,1627
+#define	SIGSYS	41,1685
+#define	SIGPIPE	42,1747
+#define	SIGALRM	43,1795
+#define	SIGTERM	44,1843
+#define	SIGUSR1	45,1890
+#define	SIGUSR2	46,1948
+#define	SIGCHLD	47,2006
+#define	SIGCLD	48,2067
+#define	SIGPWR	49,2126
+#define	SIGWINCH	50,2186
+#define	SIGURG	51,2248
+#define	SIGPOLL	52,2310
+#define	SIGIO	53,2373
+#define	SIGSTOP	54,2431
+#define	SIGTSTP	55,2485
+#define	SIGCONT	56,2535
+#define	SIGTTIN	57,2580
+#define	SIGTTOU	58,2641
+#define	SIGVTALRM	59,2701
+#define	SIGPROF	60,2760
+#define	SIGXCPU	61,2820
+#define	SIGXFSZ	62,2877
+#define	_NSIG	66,2977
+
+../sysdeps/unix/sysv/sysv4/solaris2/signum.h,1094
+#define	SIG_ERR	23,920
+#define	SIG_DFL	24,979
+#define	SIG_IGN	25,1039
+#define	SIGHUP	29,1116
+#define	SIGINT	30,1157
+#define	SIGQUIT	31,1200
+#define	SIGILL	32,1240
+#define	SIGABRT	33,1293
+#define	SIGTRAP	34,1338
+#define	SIGIOT	35,1384
+#define	SIGEMT	36,1429
+#define	SIGFPE	37,1474
+#define	SIGKILL	38,1532
+#define	SIGBUS	39,1585
+#define	SIGSEGV	40,1632
+#define	SIGSYS	41,1690
+#define	SIGPIPE	42,1752
+#define	SIGALRM	43,1800
+#define	SIGTERM	44,1848
+#define	SIGUSR1	45,1895
+#define	SIGUSR2	46,1953
+#define	SIGCHLD	47,2011
+#define	SIGCLD	48,2072
+#define	SIGPWR	49,2131
+#define	SIGWINCH	50,2191
+#define	SIGURG	51,2253
+#define	SIGPOLL	52,2315
+#define	SIGIO	53,2378
+#define	SIGSTOP	54,2436
+#define	SIGTSTP	55,2490
+#define	SIGCONT	56,2540
+#define	SIGTTIN	57,2585
+#define	SIGTTOU	58,2646
+#define	SIGVTALRM	59,2706
+#define	SIGPROF	60,2765
+#define	SIGXCPU	61,2825
+#define	SIGXFSZ	62,2882
+#define	SIGWAITING	64,2996
+#define	SIGLWP	65,3053
+#define	SIGFREEZE	66,3118
+#define	SIGTHAW	67,3174
+#define	_SIGRTMIN	68,3229
+#define	_SIGRTMAX	69,3298
+#define	_NSIG	73,3403
+
+../sysdeps/stub/sigcontext.h,25
+struct sigcontext20,880
+
+../sysdeps/unix/bsd/sun/sparc/sigcontext.h,25
+struct sigcontext20,899
+
+../sysdeps/unix/bsd/sun/m68k/sigcontext.h,25
+struct sigcontext20,899
+
+../sysdeps/unix/bsd/ultrix4/mips/sigcontext.h,25
+struct sigcontext21,916
+
+../sysdeps/mach/hurd/i386/sigcontext.h,530
+struct sigcontext23,998
+#define FPE_INTOVF_TRAP	65,1867
+#define FPE_INTDIV_FAULT	66,1919
+#define FPE_FLTOVF_FAULT	67,1977
+#define FPE_FLTDIV_FAULT	68,2030
+#define FPE_FLTUND_FAULT	69,2089
+#define FPE_SUBRNG_FAULT	70,2143
+#define FPE_FLTDNR_FAULT	71,2204
+#define FPE_FLTINX_FAULT	72,2260
+#define FPE_EMERR_FAULT	73,2322
+#define FPE_EMBND_FAULT	74,2387
+#define ILL_INVOPR_FAULT	77,2484
+#define ILL_STACK_FAULT	78,2537
+#define ILL_FPEOPR_FAULT	79,2606
+#define DBG_SINGLE_TRAP	82,2695
+#define DBG_BRKPNT_FAULT	83,2742
+
+../sysdeps/generic/sigaction.h,224
+struct sigaction26,1219
+#define	SA_ONSTACK	40,1470
+#define	SA_RESTART	41,1529
+#define	SA_DISABLE	42,1599
+#define	SA_NOCLDSTOP	44,1668
+#define	SIG_BLOCK	48,1794
+#define	SIG_UNBLOCK	49,1836
+#define	SIG_SETMASK	50,1882
+
+../sysdeps/unix/bsd/osf1/sigaction.h,223
+struct sigaction21,991
+#define	SA_ONSTACK	35,1242
+#define	SA_RESTART	36,1301
+#define	SA_DISABLE	37,1371
+#define	SA_NOCLDSTOP	39,1440
+#define	SIG_BLOCK	43,1566
+#define	SIG_UNBLOCK	44,1608
+#define	SIG_SETMASK	45,1654
+
+../sysdeps/unix/sysv/minix/sigaction.h,366
+struct sigaction20,905
+#define	SA_ONSTACK	34,1157
+#define	SA_RESETHAND	35,1216
+#define	SA_NODEFER	36,1289
+#define	SA_RESTART	37,1357
+#define	SA_SIGINFO	38,1427
+#define	SA_NOCLDWAIT	39,1484
+#define	SA_COMPAT	40,1539
+#define	SA_DISABLE	41,1608
+#define	SA_NOCLDSTOP	43,1679
+#define	SIG_BLOCK	47,1806
+#define	SIG_UNBLOCK	48,1848
+#define	SIG_SETMASK	49,1894
+
+../sysdeps/unix/sysv/sysv4/sigaction.h,311
+struct sigaction21,956
+#define	SA_ONSTACK	38,1249
+#define SA_RESETHAND	39,1308
+#define	SA_RESTART	40,1378
+#define SA_SIGINFO	41,1448
+#define SA_NODEFER	42,1518
+#define SA_NOCLDWAIT	44,1630
+#define	SA_NOCLDSTOP	46,1702
+#define	SIG_BLOCK	49,1831
+#define	SIG_UNBLOCK	50,1873
+#define	SIG_SETMASK	51,1919
+
+../sysdeps/generic/sigset.h,284
+#define	_SIGSET_H	21,930
+typedef int __sig_atomic_t;23,951
+#define	__sigmask(28,1105
+typedef unsigned long int __sigset_t;31,1208
+#define	__sigemptyset(33,1247
+#define	__sigfillset(34,1293
+#define	__sigaddset(35,1339
+#define	__sigdelset(36,1402
+#define	__sigismember(37,1466
+
+../sysdeps/unix/sysv/sysv4/sigset.h,337
+#define	_SIGSET_H_types	21,923
+typedef int __sig_atomic_t;23,950
+  } __sigset_t;29,1081
+#define _SIGSET_H_fns 40,1536
+#define	__sigmask(43,1606
+#define	__NSSBITS	47,1713
+#define	__SSELT(48,1757
+#define	__SSMASK(49,1794
+__sigemptyset 52,1860
+__sigfillset 60,2029
+__sigaddset 71,2402
+__sigdelset 78,2539
+__sigismember 85,2677

@@ -1,0 +1,44 @@
+
+ctype.h,604
+#define	_CTYPE_H	25,920
+#define	__isctype(66,2700
+#define	__isascii(69,2783
+#define	__toascii(70,2855
+#define	__tolower(72,2916
+#define	__toupper(73,2972
+#define	__exctype(75,3029
+#define	isalnum(124,4206
+#define	isalpha(125,4250
+#define	iscntrl(126,4294
+#define	isdigit(127,4338
+#define	islower(128,4382
+#define	isgraph(129,4426
+#define	isprint(130,4470
+#define	ispunct(131,4514
+#define	isspace(132,4558
+#define	isupper(133,4602
+#define	isxdigit(134,4646
+#define	isblank(137,4710
+#define	tolower(140,4762
+#define	toupper(141,4794
+#define	isascii(144,4874
+#define	toascii(145,4906
+
+ctype.c,107
+#define	__NO_CTYPE21,854
+#define	func(26,957
+func(29,1046
+DEFUN(tolower,42,1317
+DEFUN(toupper,48,1377
+
+ctype-extn.c,162
+#define	__NO_CTYPE21,848
+int DEFUN(isblank,26,951
+int DEFUN(_tolower,28,1021
+int DEFUN(_toupper,29,1078
+int DEFUN(toascii,31,1136
+int DEFUN(isascii,32,1192
+
+ctype-info.c,0
+
+../hp300/ctype-glue.c,0

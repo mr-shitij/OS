@@ -1,0 +1,209 @@
+
+valloc.c,81
+#define	 __getpagesize(28,1118
+#define	_MALLOC_INTERNAL32,1190
+valloc 39,1276
+
+malloc.c,177
+#define _MALLOC_INTERNAL24,1009
+__ptr_t 29,1100
+align 66,2045
+initialize 91,2581
+morecore 115,3272
+malloc 159,4521
+_malloc 344,10280
+_free 351,10356
+_realloc 358,10413
+
+free.c,72
+#define _MALLOC_INTERNAL24,1022
+_free_internal 37,1339
+free 190,5995
+
+cfree.c,76
+#define _MALLOC_INTERNAL20,862
+	       DEFUN(cfree,32,1030
+cfree 37,1081
+
+realloc.c,116
+#define _MALLOC_INTERNAL24,1041
+safe_bcopy 38,1387
+#define memmove(91,2765
+#define min(96,2841
+__ptr_t 99,2919
+
+calloc.c,48
+#define	_MALLOC_INTERNAL22,939
+calloc 29,1110
+
+../sysdeps/generic/morecore.c,105
+#define	_MALLOC_INTERNAL19,813
+#define	__sbrk	24,890
+#define NULL 34,1137
+__default_morecore 41,1326
+
+../sysdeps/stub/morecore.c,66
+#define	_MALLOC_INTERNAL23,893
+DEFUN(__default_morecore,30,1105
+
+memalign.c,49
+#define _MALLOC_INTERNAL19,807
+memalign 24,868
+
+mcheck.c,405
+#define	_MALLOC_INTERNAL24,1020
+static __ptr_t 31,1166
+static __ptr_t 32,1221
+#define MAGICWORD	38,1433
+#define MAGICFREE	39,1462
+#define MAGICBYTE	40,1491
+#define MALLOCFLOOD	41,1523
+#define FREEFLOOD	42,1557
+struct hdr44,1590
+#define flood 51,1802
+flood 55,1889
+checkhdr 68,2115
+freehook 94,2604
+mallochook 108,2897
+reallochook 128,3357
+mabort 157,4116
+mcheck 191,4800
+mprobe 212,5336
+
+mtrace.c,222
+#define	_MALLOC_INTERNAL25,1075
+static __ptr_t 51,1645
+static __ptr_t 52,1703
+tr_break 61,2045
+tr_where 67,2109
+tr_freehook 78,2306
+tr_mallochook 92,2613
+tr_reallochook 113,3038
+mtrace 148,3953
+muntrace 176,4617
+
+mstats.c,49
+#define _MALLOC_INTERNAL24,1016
+mstats 29,1083
+
+vm-limit.c,149
+typedef size_t SIZE;30,1065
+typedef void *POINTER;31,1086
+#define EXCEEDS_LISP_PTR(32,1109
+check_memory_limits 53,1577
+memory_warnings 122,3254
+
+ralloc.c,717
+typedef void *POINTER;41,1504
+typedef char *POINTER;48,1583
+typedef char *POINTER;54,1674
+typedef unsigned long SIZE;56,1698
+typedef size_t SIZE;68,1910
+typedef void *POINTER;69,1931
+#define safe_bcopy(75,2016
+#define NIL 79,2085
+#define PAGE 114,3369
+#define ALIGNED(115,3399
+#define ROUNDUP(116,3475
+#define ROUND_TO_PAGE(118,3574
+obtain 129,3999
+get_more_space 155,4538
+relinquish 169,4820
+typedef struct bp200,5805
+} *bloc_ptr;207,5913
+#define NIL_BLOC 209,5927
+#define BLOC_PTR_SIZE 210,5959
+find_bloc 219,6205
+get_bloc 240,6601
+relocate_some_blocs 282,7487
+free_bloc 308,8050
+r_alloc_sbrk 352,9124
+r_alloc 411,10938
+r_alloc_free 436,11372
+r_re_alloc 460,11961
+r_alloc_init 495,12740
+
+obstack.c,678
+#define POINTER 39,1691
+#define POINTER 41,1720
+struct fooalign 45,1787
+#define DEFAULT_ALIGNMENT 46,1824
+union fooround 51,2132
+#define DEFAULT_ROUNDING 52,2168
+#define COPYING_UNIT 59,2473
+#define CALL_CHUNKFUN(73,2986
+#define CALL_FREEFUN(78,3129
+_obstack_begin 97,3727
+_obstack_begin_1 148,5261
+_obstack_newchunk 207,7120
+_obstack_allocated_p 281,9538
+_obstack_free 309,10397
+obstack_free 343,11388
+int (obstack_object_size)400,13107
+int (obstack_room)406,13218
+void (obstack_grow)412,13315
+void (obstack_grow0)420,13479
+void (obstack_1grow)428,13645
+void (obstack_blank)435,13780
+void (obstack_1grow_fast)442,13906
+void (obstack_blank_fast)449,14051
+
+malloc.h,101
+#define _MALLOC_H	25,1015
+#define	memset(37,1211
+#define	memcpy(40,1277
+#define	CHAR_BIT	47,1415
+
+obstack.h,1807
+#define __OBSTACK_H__108,4938
+#define __PTR_TO_INT(115,5167
+#define __INT_TO_PTR(119,5238
+#define __need_ptrdiff_t132,5777
+#define PTR_INT_TYPE 140,5861
+#define PTR_INT_TYPE 142,5898
+struct _obstack_chunk	145,5932
+struct obstack	152,6160
+#define obstack_base(235,9512
+#define obstack_chunk_size(239,9625
+#define obstack_next_free(243,9739
+#define obstack_alignment_mask(247,9889
+#define obstack_init(249,9946
+#define obstack_begin(253,10078
+#define obstack_specify_allocation(257,10222
+#define obstack_specify_allocation_with_arg(261,10403
+#define obstack_chunkfun(265,10607
+#define obstack_freefun(268,10718
+#define obstack_1grow_fast(271,10807
+#define obstack_blank_fast(273,10874
+#define __extension__277,10994
+#define obstack_object_size(285,11226
+#define obstack_room(291,11431
+#define obstack_grow(296,11594
+#define obstack_grow0(309,12013
+#define obstack_1grow(323,12486
+#define obstack_ptr_grow(336,12952
+#define obstack_int_grow(345,13286
+#define obstack_ptr_grow_fast(354,13610
+#define obstack_int_grow_fast(355,13694
+#define obstack_blank(357,13774
+#define obstack_alloc(367,14100
+#define obstack_copy(373,14278
+#define obstack_copy0(379,14467
+#define obstack_finish(387,14756
+#define obstack_free(408,15487
+#define obstack_object_size(418,15836
+#define obstack_room(421,15942
+#define obstack_grow(430,16278
+#define obstack_grow0(438,16591
+#define obstack_1grow(447,16947
+#define obstack_ptr_grow(453,17151
+#define obstack_int_grow(459,17432
+#define obstack_ptr_grow_fast(465,17698
+#define obstack_int_grow_fast(466,17782
+#define obstack_blank(468,17862
+#define obstack_alloc(475,18112
+#define obstack_copy(478,18207
+#define obstack_copy0(481,18314
+#define obstack_finish(484,18423
+#define obstack_free(500,19027
+#define obstack_free(507,19364

@@ -1,0 +1,213 @@
+
+speed.c,226
+DEFUN(cfgetospeed,27,1062
+DEFUN(cfgetispeed,34,1226
+DEFUN(cfsetospeed,41,1393
+      struct termios *termios_p AND speed_t speed)42,1432
+DEFUN(cfsetispeed,56,1674
+      struct termios *termios_p AND speed_t speed)57,1713
+
+../sysdeps/generic/speed.c,226
+DEFUN(cfgetospeed,32,1057
+DEFUN(cfgetispeed,39,1221
+DEFUN(cfsetospeed,46,1388
+      struct termios *termios_p AND speed_t speed)47,1427
+DEFUN(cfsetispeed,61,1669
+      struct termios *termios_p AND speed_t speed)62,1708
+
+../sysdeps/unix/bsd/sun/sunos4/speed.c,108
+DEFUN(cfgetospeed,48,1242
+DEFUN(cfgetispeed,55,1413
+DEFUN(cfsetospeed,62,1601
+DEFUN(cfsetispeed,91,2254
+
+cfsetspeed.c,25
+DEFUN(cfsetspeed,26,998
+
+../sysdeps/unix/bsd/tcsetattr.c,25
+DEFUN(tcsetattr,50,1173
+
+../sysdeps/stub/tcsetattr.c,182
+DEFUN(tcsetattr,28,1001
+      int fd AND int optional_actions AND CONST struct termios *termios_p)29,1053
+DEFUN(bad_speed,67,1689
+DEFUN(bad_speed, (speed), speed_t speed)67,1689
+
+../sysdeps/unix/bsd/sun/sunos4/tcsetattr.c,24
+DEFUN(tcsetattr,27,977
+
+../sysdeps/unix/bsd/bsd4.4/tcsetattr.c,24
+DEFUN(tcsetattr,28,978
+
+../sysdeps/unix/sysv/tcsetattr.c,25
+DEFUN(tcsetattr,51,1196
+
+tcgetattr.c,32
+	       DEFUN(tcgetattr,27,972
+
+../sysdeps/unix/bsd/tcgetpgrp.c,24
+DEFUN(tcgetpgrp,27,992
+
+../sysdeps/stub/tcgetpgrp.c,62
+DEFUN(tcgetpgrp,26,969
+DEFUN(tcgetpgrp, (fd), int fd)26,969
+
+../sysdeps/unix/sysv/tcgetpgrp.c,25
+DEFUN(tcgetpgrp,29,1038
+
+../sysdeps/unix/bsd/tcsetpgrp.c,24
+DEFUN(tcsetpgrp,27,999
+
+../sysdeps/stub/tcsetpgrp.c,64
+DEFUN(tcsetpgrp,26,976
+      int fd AND pid_t pgrp_id)27,1008
+
+../sysdeps/unix/sysv/tcsetpgrp.c,25
+DEFUN(tcsetpgrp,28,1024
+
+../sysdeps/unix/bsd/tcdrain.c,23
+DEFUN(tcdrain,29,1005
+
+../sysdeps/stub/tcdrain.c,58
+DEFUN(tcdrain,25,944
+DEFUN(tcdrain, (fd), int fd)25,944
+
+../sysdeps/unix/bsd/bsd4.4/tcdrain.c,23
+DEFUN(tcdrain,28,1007
+
+../sysdeps/unix/sysv/tcdrain.c,23
+DEFUN(tcdrain,29,1032
+
+../sysdeps/unix/bsd/tcflow.c,81
+DEFUN(tcflow,29,1005
+DEFUN(tcflow, (fd, action), int fd AND int action)29,1005
+
+../sysdeps/stub/tcflow.c,79
+DEFUN(tcflow,25,938
+DEFUN(tcflow, (fd, action), int fd AND int action)25,938
+
+../sysdeps/unix/bsd/sun/sunos4/tcflow.c,21
+DEFUN(tcflow,26,961
+
+../sysdeps/unix/sysv/tcflow.c,81
+DEFUN(tcflow,30,1027
+DEFUN(tcflow, (fd, action), int fd AND int action)30,1027
+
+../sysdeps/unix/bsd/tcflush.c,23
+DEFUN(tcflush,29,1013
+
+../sysdeps/stub/tcflush.c,97
+DEFUN(tcflush,25,925
+DEFUN(tcflush, (fd, queue_selector), int fd AND int queue_selector)25,925
+
+../sysdeps/unix/bsd/sun/sunos4/tcflush.c,22
+DEFUN(tcflush,26,948
+
+../sysdeps/unix/sysv/tcflush.c,99
+DEFUN(tcflush,30,1014
+DEFUN(tcflush, (fd, queue_selector), int fd AND int queue_selector)30,1014
+
+../sysdeps/unix/bsd/tcsendbrk.c,27
+DEFUN(tcsendbreak,32,1074
+
+../sysdeps/stub/tcsendbrk.c,93
+DEFUN(tcsendbreak,25,921
+DEFUN(tcsendbreak, (fd, duration), int fd AND int duration)25,921
+
+../sysdeps/unix/bsd/sun/sunos4/tcsendbrk.c,26
+DEFUN(tcsendbreak,27,993
+
+../sysdeps/unix/sysv/tcsendbrk.c,27
+DEFUN(tcsendbreak,30,1029
+
+../sysdeps/unix/bsd/__tcgetatr.c,27
+DEFUN(__tcgetattr,30,1052
+
+../sysdeps/stub/__tcgetatr.c,77
+DEFUN(__tcgetattr,26,956
+      int fd AND struct termios *termios_p)27,992
+
+../sysdeps/unix/bsd/sun/sunos4/__tcgetatr.c,26
+DEFUN(__tcgetattr,27,979
+
+../sysdeps/unix/bsd/bsd4.4/__tcgetatr.c,26
+DEFUN(__tcgetattr,27,985
+
+../sysdeps/unix/sysv/__tcgetatr.c,27
+DEFUN(__tcgetattr,28,1004
+
+cfmakeraw.c,24
+DEFUN(cfmakeraw,24,910
+
+termios.h,54
+#define	_TERMIOS_H	25,935
+#define	tcgetattr(57,2080
+
+../sysdeps/generic/termbits.h,457
+typedef unsigned long int tcflag_t;27,1275
+typedef unsigned char cc_t;30,1347
+typedef long int speed_t;33,1413
+struct termios36,1475
+#define _IOT_termios 182,6819
+#define	TCSANOW	186,7005
+#define	TCSADRAIN	187,7051
+#define	TCSAFLUSH	188,7117
+#define	TCSASOFT	190,7198
+#define	TCIFLUSH	194,7329
+#define	TCOFLUSH	195,7395
+#define	TCIOFLUSH	196,7460
+#define	TCOOFF	199,7565
+#define	TCOON	200,7606
+#define	TCIOFF	201,7656
+#define	TCION	202,7704
+
+../sysdeps/unix/bsd/sun/sunos4/termbits.h,459
+typedef unsigned long int tcflag_t;21,923
+typedef unsigned char cc_t;24,995
+typedef unsigned int speed_t;27,1061
+struct termios30,1127
+#define _IOT_termios 191,6431
+#define	TCSANOW	195,6617
+#define	TCSADRAIN	196,6663
+#define	TCSAFLUSH	197,6729
+#define	TCSASOFT	199,6810
+#define	TCIFLUSH	203,6941
+#define	TCOFLUSH	204,7007
+#define	TCIOFLUSH	205,7072
+#define	TCOOFF	208,7177
+#define	TCOON	209,7218
+#define	TCIOFF	210,7268
+#define	TCION	211,7316
+
+sys/ttydefaults.h,698
+#define	_TTYDEFAULTS_H_40,1953
+#define	TTYDEF_IFLAG	45,2014
+#define TTYDEF_OFLAG	46,2086
+#define TTYDEF_LFLAG	47,2132
+#define TTYDEF_CFLAG	48,2208
+#define TTYDEF_SPEED	49,2260
+#define CTRL(54,2327
+#define	CEOF	55,2351
+#define	CEOL	56,2375
+#define	CERASE	57,2440
+#define	CINTR	58,2461
+#define	CSTATUS	59,2486
+#define	CKILL	60,2554
+#define	CMIN	61,2579
+#define	CQUIT	62,2595
+#define	CSUSP	63,2628
+#define	CTIME	64,2653
+#define	CDSUSP	65,2670
+#define	CSTART	66,2696
+#define	CSTOP	67,2722
+#define	CLNEXT	68,2747
+#define	CDISCARD 69,2773
+#define	CWERASE 70,2801
+#define	CREPRINT 71,2828
+#define	CEOT	72,2856
+#define	CBRK	74,2888
+#define CRPRNT	75,2907
+#define	CFLUSH	76,2932
+
+sys/termios.h,28
+#define _SYS_TERMIOS_H2,23

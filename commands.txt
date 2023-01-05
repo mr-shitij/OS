@@ -1,0 +1,29 @@
+file = get the type of the file
+objdump = to get the information form the object file eg. objdump -f object.o
+hexdump = The hexdump utility is a filter which displays the specified files in a user specified format. In case no files are specified, it reads input from standard input.
+ifconfig = ifconfig(interface configuration) command is used to configure the kernel-resident network interfaces.
+ping = Ping is a command-line utility, available on virtually any operating system with network connectivity, that acts as a test to see if a networked device is reachable.
+gdb = gdb is the acronym for GNU Debugger. This tool helps to debug the programs written in C, C++, Ada, Fortran, etc. The console can be opened using the gdb command on terminal.
+lspci = This includes information about the devices connected to the PCI subsystem (PCI=Peripheral Component Interconnect).
+lsusb = The lsusb command in Linux is used to display the information about USB buses and the devices connected to them.
+dmsg = dmesg is a display message command that display kernel-related messages on Unix-like systems. It used to control the kernel ring buffer. The output contains messages produced by the device drivers.
+	(The kernel ring buffer is a data structure that records messages related to the operation of the kernel. A ring buffer is a special kind of buffer that is always a constant size, removing the oldest messages when new messages are received.)
+mks = "mkfs" is just a front-end for the various specific file system creation programs that are available in Linux, such as mke2fs, mkfs.ext3 and mkfs.vfat, etc.
+fdisk = fdisk also known as format disk is a dialog-driven command in Linux used for creating and manipulating disk partition table. It is used for the view, create, delete, change, resize, copy and move partitions on a hard drive using the dialog-driven interface. 
+gparted = A disk device can be subdivided into one or more partitions. The gparted application enables you to change the partition organization on a disk device while preserving the contents of the partition.
+apt install = install packages.
+apt-get = used to install, remove, and perform other operations on installed software packages. 
+apt-get source = to donwload the source package.
+lshw = command is a small tool to display a complete picture of hardware configuration.
+lsmod = lsmod is a command on Linux systems. It shows which loadable kernel modules are currently loaded ("Module" denotes the name of the module. "Size" denotes the size of the module (not memory used) in Bytes.[1] "Used by" shows that number of times the module is currently in use by running programs. )
+*lsblk = lsblk lists information about all or the specified block devices. The lsblk command reads the sysfs filesystem to gather information. 
+lsof = returns the user processes that are actively using a file system. It is sometimes helpful in determining why a file system remains in use and cannot be unmounted.
+netstat = displays the contents of various network-related data structures for active connections.
+iostat = The iostat command in Linux is used for monitoring system input/output statistics for devices and partitions.
+ecryptfs = is a package of disk encryption software for Linux.
+*mount = command is used to mount the filesystem found on a device to big tree structure
+wget = The wget is a free non-interactive file downloader command. Non-interactive means it can work in background when user is not logged in. This allows user to get disconnected with the system while wget finish its work.
+w3m = terminal based webbrowser
+adduser = command in Linux is used to add a new user to your current Linux machine. This command allows you to modify the configurations of the user which is to be created. 
+id = used to find out user and group names and numeric ID's (UID or group ID) of the current user or any other user in the server.
+ld = command also called the linkage editor or binder, combines object files, archives, and import files into one output object file, resolving external references. It produces an executable object file that can be run.

@@ -1,0 +1,2 @@
+Total,Mean,Median
+200,100,2

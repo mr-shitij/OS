@@ -1,0 +1,32 @@
+
+pwdopen.c,29
+DEFUN_VOID(__pwdopen)25,945
+
+pwdread.c,82
+  } pwdread_info;39,1269
+DEFUN_VOID(__pwdalloc)44,1370
+DEFUN(__pwdread,56,1622
+
+fgetpwent.c,25
+DEFUN(fgetpwent,29,1024
+
+getpw.c,21
+DEFUN(getpw,29,1108
+
+getpwent.c,86
+DEFUN_VOID(setpwent)28,964
+DEFUN_VOID(endpwent)37,1063
+DEFUN_VOID(getpwent)49,1238
+
+getpwnam.c,23
+DEFUN(getpwnam,27,989
+
+getpwuid.c,23
+DEFUN(getpwuid,27,991
+
+putpwent.c,24
+DEFUN(putpwent,28,1008
+
+pwd.h,51
+#define	_PWD_H	25,915
+#define	__need_FILE47,1353

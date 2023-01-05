@@ -1,0 +1,200 @@
+
+atof.c,19
+DEFUN(atof,27,926
+
+atoi.c,19
+DEFUN(atoi,27,921
+
+atol.c,19
+DEFUN(atol,27,930
+
+../sysdeps/generic/abort.c,26
+DEFUN_VOID(abort)29,1030
+
+../sysdeps/i386/abort.c,25
+DEFUN_VOID(abort)25,945
+
+bsearch.c,23
+DEFUN(bsearch,26,1016
+
+qsort.c,203
+#define SWAP(25,992
+#define MAX_THRESH 40,1521
+  } stack_node;47,1670
+#define STACK_SIZE	50,1762
+#define PUSH(51,1813
+#define	POP(52,1893
+#define	STACK_NOT_EMPTY	53,1968
+DEFUN(_quicksort,80,3184
+
+msort.c,74
+#define MEMCPY(26,999
+DEFUN(msort_with_tmp,32,1147
+DEFUN(qsort,74,1780
+
+../sysdeps/posix/getenv.c,48
+#define	__environ	26,953
+DEFUN(getenv,31,1052
+
+../sysdeps/stub/getenv.c,21
+DEFUN(getenv,25,952
+
+../sysdeps/posix/putenv.c,48
+#define	__environ	26,947
+DEFUN(putenv,31,1059
+
+../sysdeps/stub/putenv.c,22
+DEFUN(putenv,26,1022
+
+../sysdeps/posix/setenv.c,47
+#define	__environ	25,928
+DEFUN(setenv,29,966
+
+../sysdeps/stub/setenv.c,21
+DEFUN(setenv,24,891
+
+exit.c,20
+DEFUN(exit,38,1252
+
+on_exit.c,22
+DEFUN(on_exit,25,939
+
+atexit.c,54
+DEFUN(atexit,26,938
+DEFUN_VOID(__new_exitfn)43,1268
+
+abs.c,18
+DEFUN(abs,27,936
+
+labs.c,19
+DEFUN(labs,28,943
+
+div.c,19
+DEFUN(div,62,2855
+
+ldiv.c,20
+DEFUN(ldiv,62,2857
+
+mblen.c,21
+DEFUN(mblen,28,1003
+
+mbstowcs.c,24
+DEFUN(mbstowcs,31,1173
+
+mbtowc.c,22
+DEFUN(mbtowc,34,1174
+
+wcstombs.c,24
+DEFUN(wcstombs,32,1194
+
+wctomb.c,22
+DEFUN(wctomb,32,1126
+
+__random.c,670
+#define	TYPE_0	73,3873
+#define	BREAK_0	74,3891
+#define	DEG_0	75,3910
+#define	SEP_0	76,3927
+#define	TYPE_1	79,3969
+#define	BREAK_1	80,3987
+#define	DEG_1	81,4007
+#define	SEP_1	82,4024
+#define	TYPE_2	85,4064
+#define	BREAK_2	86,4082
+#define	DEG_2	87,4102
+#define	SEP_2	88,4120
+#define	TYPE_3	91,4163
+#define	BREAK_3	92,4181
+#define	DEG_3	93,4202
+#define	SEP_3	94,4220
+#define	TYPE_4	97,4260
+#define	BREAK_4	98,4278
+#define	DEG_4	99,4299
+#define	SEP_4	100,4317
+#define	MAX_TYPES	106,4445
+static long int *end_ptr = &randtbl[sizeof(164,7010
+DEFUN(__srandom,175,7681
+DEFUN(__initstate,202,8776
+DEFUN(__setstate,268,10443
+DEFUN_VOID(__random)321,12072
+
+random.c,131
+	       DEFUN_VOID(random)30,1002
+	       DEFUN(srandom,32,1079
+	       DEFUN(initstate,34,1193
+	       DEFUN(setstate,37,1341
+
+rand.c,24
+DEFUN_VOID(rand)27,941
+
+srand.c,28
+	       DEFUN(srand,27,953
+
+strtod.c,22
+DEFUN(strtod,32,1145
+
+strtol.c,71
+#define	UNSIGNED	27,951
+#define	strtol	38,1381
+DEFUN(strtol,42,1426
+
+strtoul.c,25
+#define	UNSIGNED	19,825
+
+../sysdeps/unix/system.c,23
+#define	NO_WAITPID1,0
+
+../sysdeps/posix/system.c,105
+#define	__environ	29,1000
+#define	SHELL_PATH	32,1034
+#define	SHELL_NAME	33,1089
+DEFUN(system,37,1205
+
+../sysdeps/stub/system.c,21
+DEFUN(system,26,938
+
+../sysdeps/unix/bsd/sun/sunos4/system.c,0
+
+../sysdeps/unix/bsd/ultrix4/system.c,0
+
+../sysdeps/unix/bsd/bsd4.4/system.c,0
+
+../sysdeps/unix/bsd/osf1/system.c,0
+
+../sysdeps/unix/sysv/sysv4/system.c,0
+
+../sysdeps/unix/sysv/sco3.2.4/system.c,0
+
+stdlib.h,751
+#define	_STDLIB_H	25,922
+#define	__need_size_t29,1018
+#define	__need_wchar_t30,1040
+#define	__need_NULL31,1063
+#define	__need_Emath34,1104
+  } div_t;44,1271
+  } ldiv_t;51,1403
+#define	RAND_MAX	55,1479
+#define	EXIT_FAILURE	60,1628
+#define	EXIT_SUCCESS	61,1679
+#define	MB_CUR_MAX	66,1869
+#define	atof(86,2603
+#define	atoi(87,2653
+#define	atol(88,2691
+#define	random(124,4346
+#define	srandom(125,4375
+#define	initstate(126,4414
+#define	setstate(127,4468
+#define	rand(132,4581
+#define	srand(133,4616
+#define	cfree(152,5305
+typedef int (*__compar_fn_t) __P ((__const __ptr_t, __const __ptr_t)208,7105
+typedef __compar_fn_t comparison_fn_t;211,7194
+#define	__CONSTVALUE	230,7906
+#define	__CONSTVALUE232,7941
+#define	mblen(259,8932
+
+alloca.h,105
+#define	_ALLOCA_H	20,849
+#define	__need_size_t23,892
+#define	__alloca(37,1206
+#define	alloca(40,1272

@@ -1,0 +1,302 @@
+
+../sysdeps/generic/strcat.c,21
+DEFUN(strcat,25,934
+
+../sysdeps/vax/strcat.s,0
+
+../sysdeps/generic/strchr.c,22
+DEFUN(strchr,30,1192
+
+../sysdeps/vax/strchr.s,31
+Lzero:78,2770
+Lreent:91,3208
+
+../sysdeps/alpha/strchr.c,15
+strchr 24,955
+
+../sysdeps/generic/strcmp.c,22
+DEFUN(strcmp,27,1042
+
+../sysdeps/vax/strcmp.s,0
+
+strcoll.c,23
+DEFUN(strcoll,30,1128
+
+../sysdeps/generic/strcpy.c,21
+DEFUN(strcpy,26,941
+
+../sysdeps/vax/strcpy.s,0
+
+../sysdeps/generic/strcspn.c,22
+DEFUN(strcspn,26,981
+
+../sysdeps/vax/strcspn.s,0
+
+strdup.c,21
+DEFUN(strdup,27,976
+
+strerror.c,24
+DEFUN(strerror,29,1141
+
+../sysdeps/generic/_strerror.c,89
+#define _sys_errlist 24,911
+#define _sys_nerr 25,944
+DEFUN(_strerror_internal,30,1046
+
+../sysdeps/mach/_strerror.c,34
+DEFUN(_strerror_internal,27,1005
+
+../sysdeps/generic/strlen.c,22
+DEFUN(strlen,29,1116
+
+../sysdeps/i386/strlen.c,21
+DEFUN(strlen,25,972
+
+../sysdeps/vax/strlen.s,0
+
+../sysdeps/alpha/strlen.c,15
+strlen 24,949
+
+../sysdeps/generic/strncat.c,22
+DEFUN(strncat,24,896
+
+../sysdeps/vax/strncat.s,14
+done:81,2901
+
+../sysdeps/generic/strncmp.c,23
+DEFUN(strncmp,28,1074
+
+../sysdeps/vax/strncmp.s,0
+
+../sysdeps/generic/strncpy.c,22
+DEFUN(strncpy,24,896
+
+../sysdeps/vax/strncpy.s,14
+done:82,2989
+
+../sysdeps/generic/strrchr.c,22
+DEFUN(strrchr,25,918
+
+../sysdeps/vax/strrchr.s,31
+Lzero:81,2881
+Lreent:94,3290
+
+../sysdeps/generic/strpbrk.c,22
+DEFUN(strpbrk,25,941
+
+../sysdeps/vax/strpbrk.s,0
+
+strsignal.c,101
+#define	_sys_siglist	26,928
+DEFUN(strsignal,35,1129
+DEFUN(strsignal, (signum), int signum)35,1129
+
+../sysdeps/generic/strspn.c,21
+DEFUN(strspn,26,982
+
+../sysdeps/vax/strspn.s,0
+
+../sysdeps/generic/strstr.c,21
+DEFUN(strstr,25,958
+
+../sysdeps/vax/strstr.s,0
+
+strtok.c,22
+DEFUN(strtok,36,1225
+
+strxfrm.c,23
+DEFUN(strxfrm,32,1245
+
+../sysdeps/generic/__memccpy.c,25
+DEFUN(__memccpy,29,1102
+
+../sysdeps/vax/__memccpy.c,25
+DEFUN(__memccpy,27,1078
+
+../sysdeps/generic/memchr.c,22
+DEFUN(memchr,30,1181
+
+../sysdeps/i386/memchr.c,22
+DEFUN(memchr,28,1029
+
+../sysdeps/vax/memchr.s,0
+
+../sysdeps/alpha/memchr.c,15
+memchr 23,867
+
+../sysdeps/generic/memcmp.c,337
+#define	__ptr_t	25,969
+#define	const28,1037
+#define	__ptr_t	29,1051
+#define	op_t	47,1441
+#define OPSIZ	48,1472
+#define	OP_T_THRES	51,1563
+typedef unsigned char byte;54,1631
+#define MERGE(57,1684
+#define MERGE(59,1762
+memcmp_bytes 86,2560
+memcmp_common_alignment 112,3080
+memcmp_not_common_alignment 219,5253
+memcmp 341,7832
+
+../sysdeps/vax/memcmp.s,0
+
+../sysdeps/generic/memmove.c,161
+#define	a1	28,1124
+#define	a1const29,1166
+#define	a2	30,1182
+#define	a2const	31,1223
+#define	RETURN(34,1294
+#define	rettype	35,1343
+DEFUN(memmove,39,1380
+
+../sysdeps/vax/memmove.s,0
+
+../sysdeps/generic/memset.c,21
+DEFUN(memset,24,893
+
+../sysdeps/i386/memset.c,22
+DEFUN(memset,28,1015
+
+../sysdeps/vax/memset.s,0
+
+../sysdeps/generic/bcopy.c,157
+#define	memmove	23,875
+#define	rettype	24,898
+#define	RETURN(25,920
+#define	a1	26,945
+#define	a1const	27,961
+#define	a2	28,984
+#define	a2const29,1001
+
+../sysdeps/vax/bcopy.s,0
+
+../sysdeps/generic/bzero.c,20
+DEFUN(bzero,27,980
+
+../sysdeps/i386/bzero.c,21
+DEFUN(bzero,30,1018
+
+../sysdeps/vax/bzero.s,0
+
+../sysdeps/m68k/ffs.c,19
+DEFUN(ffs,29,1062
+
+../sysdeps/generic/ffs.c,18
+DEFUN(ffs,28,959
+
+../sysdeps/am29k/ffs.c,19
+DEFUN(ffs,29,1013
+
+../sysdeps/i386/ffs.c,19
+DEFUN(ffs,29,1027
+
+../sysdeps/m88k/ffs.c,19
+DEFUN(ffs,29,1019
+
+../sysdeps/rs6000/ffs.c,19
+DEFUN(ffs,29,1015
+
+../sysdeps/vax/ffs.s,0
+
+../sysdeps/generic/stpcpy.c,21
+DEFUN(stpcpy,25,956
+
+stpncpy.c,30
+	       DEFUN(stpncpy,27,967
+
+../sysdeps/generic/__stpncpy.c,25
+DEFUN(__stpncpy,29,1093
+
+../sysdeps/generic/strcasecmp.c,26
+DEFUN(strcasecmp,27,1061
+
+../sysdeps/generic/strncase.c,27
+DEFUN(strncasecmp,28,1088
+
+rindex.c,29
+	       DEFUN(rindex,28,976
+
+../sysdeps/vax/rindex.s,13
+tbl:78,2805
+
+index.c,28
+	       DEFUN(index,28,979
+
+../sysdeps/vax/index.s,13
+tbl:76,2720
+
+bcmp.c,27
+	       DEFUN(bcmp,27,958
+
+../sysdeps/vax/bcmp.s,0
+
+memccpy.c,30
+	       DEFUN(memccpy,27,967
+
+../sysdeps/generic/memcpy.c,22
+DEFUN(memcpy,26,1031
+
+../sysdeps/generic/wordcopy.c,161
+DEFUN(_wordcopy_fwd_aligned,31,1220
+DEFUN(_wordcopy_fwd_dest_aligned,137,3526
+DEFUN(_wordcopy_bwd_aligned,222,5633
+DEFUN(_wordcopy_bwd_dest_aligned,328,7959
+
+../sysdeps/generic/strsep.c,21
+DEFUN(strsep,23,881
+
+../sysdeps/vax/strsep.s,0
+
+swab.c,76
+DEFUN(swab,23,873
+      CONST char *from AND char *to AND size_t n)24,900
+
+strfry.c,21
+DEFUN(strfry,25,913
+
+memfrob.c,22
+DEFUN(memfrob,23,872
+
+../sysdeps/generic/memmem.c,21
+DEFUN(memmem,26,963
+
+string.h,135
+#define	_STRING_H	25,920
+#define	__need_size_t31,1022
+#define	__need_NULL32,1044
+#define	memccpy(53,1864
+#define stpncpy(174,6801
+
+strings.h,27
+#define	_STRINGS_H	23,893
+
+memory.h,26
+#define	_MEMORY_H	25,860
+
+endian.h,234
+#define	_ENDIAN_H	20,843
+#define	__LITTLE_ENDIAN	29,1202
+#define	__BIG_ENDIAN	30,1231
+#define	__PDP_ENDIAN	31,1257
+#define	LITTLE_ENDIAN	37,1391
+#define	BIG_ENDIAN	38,1429
+#define	PDP_ENDIAN	39,1461
+#define	BYTE_ORDER	40,1493
+
+../hp300/bytesex.h,26
+#define __BYTE_ORDER 1,0
+
+../sysdeps/m68k/bytesex.h,27
+#define __BYTE_ORDER 3,28
+
+../sysdeps/stub/bytesex.h,0
+
+../sysdeps/i386/bytesex.h,27
+#define __BYTE_ORDER 3,31
+
+../sysdeps/sparc/bytesex.h,27
+#define __BYTE_ORDER 3,29
+
+../sysdeps/alpha/bytesex.h,27
+#define __BYTE_ORDER 3,32

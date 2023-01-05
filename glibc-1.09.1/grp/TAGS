@@ -1,0 +1,40 @@
+
+grpopen.c,29
+DEFUN_VOID(__grpopen)25,942
+
+grpread.c,82
+  } grpread_info;39,1288
+DEFUN_VOID(__grpalloc)44,1389
+DEFUN(__grpread,66,1807
+
+fgetgrent.c,25
+DEFUN(fgetgrent,30,1018
+
+getgrent.c,86
+DEFUN_VOID(setgrent)28,964
+DEFUN_VOID(endgrent)37,1063
+DEFUN_VOID(getgrent)49,1227
+
+getgrgid.c,23
+DEFUN(getgrgid,27,995
+
+getgrnam.c,23
+DEFUN(getgrnam,27,988
+
+initgroups.c,26
+DEFUN(initgroups,31,1123
+
+../sysdeps/unix/common/setgroups.S,27
+SYSCALL (setgroups,21,846
+
+../sysdeps/stub/setgroups.c,24
+DEFUN(setgroups,26,980
+
+../sysdeps/mach/hurd/setgroups.c,25
+DEFUN(setgroups,28,1025
+
+grp.h,102
+#define	_GRP_H	25,916
+struct group34,1024
+#define	__need_FILE44,1246
+#define	__need_size_t86,2420

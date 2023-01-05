@@ -1,0 +1,722 @@
+
+../sysdeps/posix/ctermid.c,23
+DEFUN(ctermid,28,1079
+
+../sysdeps/stub/ctermid.c,23
+DEFUN(ctermid,28,1078
+
+../sysdeps/posix/cuserid.c,23
+DEFUN(cuserid,31,1133
+
+../sysdeps/stub/cuserid.c,23
+DEFUN(cuserid,27,1076
+
+feof.c,19
+DEFUN(feof,28,964
+
+ferror.c,21
+DEFUN(ferror,28,968
+
+clearerr.c,23
+DEFUN(clearerr,28,963
+
+fileno.c,21
+DEFUN(fileno,25,967
+
+newstream.c,32
+DEFUN_VOID(__newstream)31,1182
+
+fopen.c,70
+#define	badmode(27,958
+DEFUN(__getmode,31,1066
+DEFUN(fopen,81,1907
+
+freopen.c,22
+DEFUN(freopen,26,941
+
+../sysdeps/posix/fdopen.c,22
+DEFUN(fdopen,29,1078
+
+../sysdeps/stub/fdopen.c,21
+DEFUN(fdopen,25,953
+
+../sysdeps/mach/hurd/fdopen.c,21
+DEFUN(fdopen,26,977
+
+fopncook.c,27
+DEFUN(fopencookie,28,1038
+
+fmemopen.c,24
+DEFUN(fmemopen,43,1796
+
+setbuf.c,22
+DEFUN(setbuf,27,1004
+
+setvbuf.c,23
+DEFUN(setvbuf,29,1091
+
+setbuffer.c,24
+DEFUN(setbuffer,27,999
+
+setlinebuf.c,25
+DEFUN(setlinebuf,25,907
+
+fseek.c,21
+DEFUN(fseek,29,1104
+
+ftell.c,21
+DEFUN(ftell,26,1001
+
+rewind.c,21
+DEFUN(rewind,28,976
+
+fgetpos.c,22
+DEFUN(fgetpos,28,958
+
+fsetpos.c,95
+DEFUN(fsetpos,28,955
+DEFUN(fsetpos, (stream, pos), FILE *stream AND CONST fpos_t *pos)28,955
+
+vfprintf.c,263
+#define	RETURN(36,1208
+#define	outchar(43,1368
+#define	castarg(54,1709
+#define	nextarg(57,1850
+#define	HAVE_LONGLONG64,2010
+#define	LONGLONG	65,2032
+#define	LONGLONG	67,2065
+DEFUN(vfprintf,72,2100
+#define	RETURN	626,13604
+DEFUN(printf_unknown,629,13638
+
+vprintf.c,23
+DEFUN(vprintf,30,1088
+
+printf_fp.c,347
+#define MPN_DUMP(38,1373
+#define MPN_DUMP(40,1419
+#define	outchar(43,1451
+#define MPN_VAR(68,2263
+#define MPN_ASSIGN(69,2342
+#define MPN_POW2(71,2436
+#define MPN_GT(80,2770
+#define MPN_LT(82,2871
+#define MPN_GE(84,2972
+#define MPN_LE(86,3074
+#define MPN_EQ(88,3176
+#define MPN_NE(90,3255
+DEFUN(__printf_fp,94,3299
+mpn_dump 698,16792
+
+reg-printf.c,40
+DEFUN(register_printf_function,32,1189
+
+printf-prs.c,64
+#define	HAVE_LONGLONG27,968
+DEFUN(parse_printf_format,33,1064
+
+_itoa.c,21
+DEFUN(_itoa,29,1127
+
+vsnprintf.c,25
+DEFUN(vsnprintf,31,1073
+
+vsprintf.c,24
+DEFUN(vsprintf,30,1066
+
+vasprintf.c,54
+DEFUN(enlarge_buffer,30,999
+DEFUN(vasprintf,59,1849
+
+fprintf.c,22
+DEFUN(fprintf,27,978
+
+printf.c,21
+DEFUN(printf,27,978
+
+snprintf.c,24
+DEFUN(snprintf,28,1027
+
+sprintf.c,22
+DEFUN(sprintf,27,984
+
+asprintf.c,24
+DEFUN(asprintf,28,1022
+
+dprintf.c,22
+DEFUN(dprintf,27,982
+
+vdprintf.c,24
+DEFUN(vdprintf,30,1088
+
+__vfscanf.c,218
+#define	HAVE_LONGLONG31,1038
+#define	LONGLONG	32,1060
+#define	LONGLONG	34,1093
+#define	inchar(38,1124
+#define	conv_error(39,1187
+#define input_error(40,1250
+#define	memory_error(41,1304
+DEFUN(__vfscanf,48,1541
+
+vfscanf.c,30
+	       DEFUN(vfscanf,28,991
+
+vscanf.c,22
+DEFUN(vscanf,29,1029
+
+__vsscanf.c,25
+DEFUN(__vsscanf,31,1062
+
+vsscanf.c,30
+	       DEFUN(vsscanf,29,992
+
+fscanf.c,21
+DEFUN(fscanf,27,986
+
+scanf.c,20
+DEFUN(scanf,27,985
+
+sscanf.c,21
+DEFUN(sscanf,27,982
+
+fread.c,50
+#define	default_func	25,913
+DEFUN(fread,29,1039
+
+fwrite.c,21
+DEFUN(fwrite,27,993
+
+ungetc.c,21
+DEFUN(ungetc,26,963
+
+fgetc.c,20
+DEFUN(fgetc,26,928
+
+getc.c,20
+#define	fgetc	4,53
+
+getchar.c,27
+DEFUN_VOID(getchar)27,924
+
+getw.c,19
+DEFUN(getw,25,910
+
+fputc.c,20
+DEFUN(fputc,26,931
+
+putc.c,20
+#define	fputc	4,53
+
+putchar.c,22
+DEFUN(putchar,27,928
+
+putw.c,19
+DEFUN(putw,25,913
+
+fgets.c,21
+DEFUN(fgets,31,1333
+
+gets.c,20
+DEFUN(gets,34,1162
+
+fputs.c,20
+DEFUN(fputs,27,954
+
+puts.c,19
+DEFUN(puts,29,979
+
+getdelim.c,26
+		DEFUN(getdelim,28,1016
+
+getline.c,24
+		DEFUN(getline,27,999
+
+__getdelim.c,26
+DEFUN(__getdelim,33,1292
+
+__getline.c,24
+DEFUN(__getline,27,973
+
+perror.c,22
+DEFUN(perror,29,1176
+
+psignal.c,52
+#define	_sys_siglist	25,914
+DEFUN(psignal,36,1249
+
+tmpfile.c,28
+DEFUN_VOID(tmpfile)28,1120
+
+tmpnam.c,21
+DEFUN(tmpnam,27,968
+
+tempnam.c,23
+DEFUN(tempnam,35,1428
+
+../sysdeps/posix/tempname.c,83
+DEFUN(diraccess,32,1108
+DEFUN(exists,40,1281
+DEFUN(__stdio_gen_tempname,80,3052
+
+../sysdeps/stub/tempname.c,36
+DEFUN(__stdio_gen_tempname,30,1223
+
+fclose.c,21
+DEFUN(fclose,28,955
+
+fflush.c,77
+DEFUN(fflush,27,1013
+DEFUN(fflush, (stream), register FILE *stream)27,1013
+
+remove.c,29
+	       DEFUN(remove,26,957
+
+../sysdeps/unix/common/rename.S,24
+SYSCALL (rename,21,852
+
+../sysdeps/posix/rename.c,21
+DEFUN(rename,26,951
+
+../sysdeps/stub/rename.c,91
+DEFUN(rename,26,926
+DEFUN(rename, (old, new), CONST char *old AND CONST char *new)26,926
+
+../sysdeps/unix/sysv/linux/rename.S,0
+
+../sysdeps/unix/sysv/isc2.2/rename.S,0
+
+../sysdeps/mach/hurd/rename.c,21
+DEFUN(rename,25,942
+
+memstream.c,193
+struct memstream_info24,913
+DEFUN(enlarge_buffer,32,1029
+DEFUN(seek,98,3001
+      PTR cookie AND fpos_t *pos AND int whence)99,3036
+DEFUN(free_info,120,3503
+DEFUN(open_memstream,140,3999
+
+obstream.c,241
+DEFUN(grow,28,990
+DEFUN(seek,85,3162
+      PTR cookie AND fpos_t *pos AND int whence)86,3197
+DEFUN(input,110,3780
+DEFUN(init_obstream,125,4098
+open_obstack_stream 154,4850
+DEFUN(obstack_vprintf,168,5064
+DEFUN(obstack_printf,178,5297
+
+internals.c,348
+DEFUN(__stdio_check_funcs,28,998
+DEFUN(__stdio_check_funcs, (fp), register FILE *fp)28,998
+#define	MIN_BUFSIZE	49,1724
+DEFUN(init_stream,54,1860
+DEFUN(__stdio_check_offset,99,2931
+DEFUN(seek_to_target,142,3993
+DEFUN(flushbuf,186,5059
+DEFUN(fillbuf,367,10374
+DEFUN(__flshfp,483,13348
+DEFUN(__fillbf,564,15689
+DEFUN(__invalidate,648,17983
+
+../sysdeps/posix/sysd-stdio.c,175
+DEFUN(__stdio_read,32,1088
+DEFUN(__stdio_write,60,1584
+DEFUN(__stdio_seek,92,2250
+DEFUN(__stdio_close,106,2504
+DEFUN(__stdio_fileno,115,2790
+DEFUN(__stdio_open,123,2941
+
+../sysdeps/stub/sysd-stdio.c,172
+DEFUN(__stdio_read,27,1014
+DEFUN(__stdio_write,37,1257
+DEFUN(__stdio_seek,48,1564
+DEFUN(__stdio_close,58,1785
+DEFUN(__stdio_fileno,68,2069
+DEFUN(__stdio_open,79,2321
+
+../sysdeps/unix/sysv/sysd-stdio.c,25
+#define	EINTR_REPEAT1,0
+
+../sysdeps/mach/hurd/sysd-stdio.c,382
+DEFUN(__stdio_read,32,1101
+DEFUN(__stdio_write,55,1642
+DEFUN(__stdio_seek,71,2067
+DEFUN(__stdio_close,83,2380
+DEFUN(__stdio_open,95,2624
+DEFUN(__stdio_errmsg,126,3261
+DEFUN(__stdio_fileno,140,3704
+#define __stdio_read	147,3800
+#define __stdio_write	148,3837
+#define __stdio_seek	149,3876
+#define __stdio_close	150,3913
+#define __stdio_open	151,3952
+fork_stdio 165,4269
+
+../sysdeps/unix/pipestream.c,23
+#define	NO_WAITPID1,0
+
+../sysdeps/posix/pipestream.c,271
+#define	SH_PATH	30,1042
+#define	SH_NAME	31,1089
+struct child34,1179
+#define FUNC(45,1495
+#define readdecl 55,1849
+#define writedecl 57,1957
+#define seekdecl 59,2073
+#define closedecl 61,2172
+#define filenodecl 63,2229
+DEFUN(popen,72,2513
+DEFUN(pclose,191,5580
+
+../sysdeps/stub/pipestream.c,43
+DEFUN(popen,29,1043
+DEFUN(pclose,44,1399
+
+../sysdeps/unix/sysv/sysv4/pipestream.c,0
+
+../sysdeps/posix/stdio_init.c,35
+DEFUN(__stdio_init_stream,30,1148
+
+../sysdeps/stub/stdio_init.c,35
+DEFUN(__stdio_init_stream,27,1071
+
+../sysdeps/mach/hurd/stdio_init.c,222
+struct mapped27,954
+DEFUN(get_it,47,1427
+DEFUN(release_it,84,2126
+DEFUN(mapped_close,105,2586
+DEFUN(mapped_seek,134,3337
+DEFUN(mapped_input,202,4432
+DEFUN(mapped_output,328,7784
+DEFUN(__stdio_init_stream,424,10370
+
+../sysdeps/posix/libc_fatal.c,27
+DEFUN(__libc_fatal,26,939
+
+../sysdeps/stub/libc_fatal.c,27
+DEFUN(__libc_fatal,25,919
+
+../sysdeps/generic/add_1.c,44
+#define __mpn_add_1 1,0
+__mpn_add_1 9,119
+
+../sysdeps/generic/add_n.c,21
+__mpn_add_n 30,1127
+
+../sysdeps/i386/add_n.S,28
+ENTRY (__mpn_add_n)34,1230
+
+../sysdeps/m68k/m68020/add_n.S,13
+LAB(40,1260
+
+../sysdeps/m88k/m88100/add_n.S,53
+ENTRY (__mpn_add_n)37,1251
+	or	r12,r0,lo16(46,1461
+
+../sysdeps/sparc/add_n.S,100
+! License, or 15,608
+ENTRY (__mpn_add_n)36,1246
+Lzero:	sub	%g1,1,%g1	! add 0 + 16r limbs 66,1809
+
+../sysdeps/generic/addmul_1.c,24
+__mpn_addmul_1 33,1360
+
+../sysdeps/i386/addmul_1.S,170
+#define res_ptr 36,1237
+#define s1_ptr 37,1257
+#define size 38,1276
+#define s2_limb 39,1293
+ENTRY (__mpn_addmul_1)41,1314
+	INSN2(mov,l	,R(res_ptr),MEM_DISP(48,1431
+
+../sysdeps/m68k/m68020/addmul_1.S,109
+LAB(40,1264
+#define res_ptr 42,1286
+#define s1_ptr 43,1305
+#define size 44,1323
+#define s2_limb 45,1339
+
+../sysdeps/sparc/addmul_1.S,73
+! License, or 15,614
+ENTRY (__mpn_addmul_1)36,1249
+	! and put 38,1332
+
+../sysdeps/sparc/sparc8/addmul_1.S,53
+! License, or 15,617
+ENTRY (__mpn_addmul_1)36,1252
+
+../sysdeps/generic/cmp.c,19
+__mpn_cmp 35,1320
+
+../sysdeps/generic/divmod.c,22
+__mpn_divmod 43,1745
+
+../sysdeps/generic/divmod_1.c,120
+#define UMUL_TIME 36,1419
+#define UDIV_TIME 40,1465
+#define UDIV_NEEDS_NORMALIZATION 45,1563
+__mpn_divmod_1 50,1627
+
+../sysdeps/stub/udiv_qrnnd.c,0
+
+../sysdeps/sparc/udiv_qrnnd.S,47
+! Copyright 3,63
+ENTRY (__udiv_qrnnd)42,1315
+
+../sysdeps/sparc/sparc8/udiv_qrnnd.S,87
+! License, or 14,563
+ENTRY (__udiv_qrnnd)34,1187
+	or	%g2,%o2,%o2	! %o2 = lo(96,2127
+
+../sysdeps/alpha/udiv_qrnnd.S,139
+#define cnt	12,200
+#define tmp	13,215
+#define rem_ptr	14,230
+#define n1	15,250
+#define n0	16,265
+#define d	17,280
+#define qb	18,294
+
+../sysdeps/generic/lshift.c,22
+__mpn_lshift 40,1510
+
+../sysdeps/i386/lshift.S,29
+ENTRY (__mpn_lshift)34,1148
+
+../sysdeps/generic/rshift.c,22
+__mpn_rshift 39,1454
+
+../sysdeps/i386/rshift.S,29
+ENTRY (__mpn_rshift)34,1148
+
+../sysdeps/generic/mod_1.c,117
+#define UMUL_TIME 35,1352
+#define UDIV_TIME 39,1398
+#define UDIV_NEEDS_NORMALIZATION 44,1496
+__mpn_mod_1 49,1560
+
+../sysdeps/generic/mul.c,56
+#define KARATSUBA_THRESHOLD 46,1821
+__mpn_mul 51,1881
+
+../sysdeps/sparc/mul.S,29
+FUNC(14,273
+	! %o1 67,1640
+
+../sysdeps/generic/mul_1.c,21
+__mpn_mul_1 31,1186
+
+../sysdeps/i386/mul_1.S,167
+#define res_ptr 36,1236
+#define s1_ptr 37,1256
+#define size 38,1275
+#define s2_limb 39,1292
+ENTRY (__mpn_mul_1)41,1313
+	INSN2(mov,l	,R(res_ptr),MEM_DISP(48,1427
+
+../sysdeps/m68k/m68020/mul_1.S,109
+LAB(40,1260
+#define res_ptr 42,1279
+#define s1_ptr 43,1298
+#define size 44,1316
+#define s2_limb 45,1332
+
+../sysdeps/m88k/m88100/mul_1.S,105
+; With these techniques the 46,1823
+ENTRY (__mpn_mul_1)52,2030
+	mask	 r7,r5,0xffff		; r7 = lo(62,2265
+
+../sysdeps/m88k/m88110/mul_1.S,28
+ENTRY (__mpn_mul_1)31,1014
+
+../sysdeps/sparc/mul_1.S,71
+! License, or 15,613
+ENTRY (__mpn_mul_1)99,1970
+	! and put 101,2050
+
+../sysdeps/sparc/sparc8/mul_1.S,50
+! License, or 15,618
+ENTRY (__mpn_mul_1)36,1253
+
+../sysdeps/generic/mul_n.c,206
+#define KARATSUBA_THRESHOLD 40,1626
+#define KARATSUBA_THRESHOLD 46,1785
+___mpn_mul_n_basecase 65,2257
+___mpn_mul_n 116,3354
+___mpn_sqr_n_basecase 243,7249
+___mpn_sqr_n 293,8309
+__mpn_mul_n 391,11422
+
+../sysdeps/generic/sub_n.c,21
+__mpn_sub_n 30,1132
+
+../sysdeps/i386/sub_n.S,28
+ENTRY (__mpn_sub_n)35,1231
+
+../sysdeps/m68k/m68020/sub_n.S,13
+LAB(40,1272
+
+../sysdeps/m88k/m88100/sub_n.S,53
+ENTRY (__mpn_sub_n)37,1263
+	or	r12,r0,lo16(46,1473
+
+../sysdeps/sparc/sub_n.S,100
+! License, or 15,620
+ENTRY (__mpn_sub_n)36,1258
+Lzero:	sub	%g1,1,%g1	! add 0 + 16r limbs 66,1821
+
+../sysdeps/generic/submul_1.c,24
+__mpn_submul_1 33,1370
+
+../sysdeps/i386/submul_1.S,170
+#define res_ptr 36,1244
+#define s1_ptr 37,1264
+#define size 38,1283
+#define s2_limb 39,1300
+ENTRY (__mpn_submul_1)41,1321
+	INSN2(mov,l	,R(res_ptr),MEM_DISP(48,1438
+
+../sysdeps/m68k/m68020/submul_1.S,109
+LAB(40,1271
+#define res_ptr 42,1293
+#define s1_ptr 43,1312
+#define size 44,1330
+#define s2_limb 45,1346
+
+../sysdeps/sparc/submul_1.S,73
+! License, or 15,621
+ENTRY (__mpn_submul_1)36,1256
+	! and put 38,1339
+
+../sysdeps/sparc/sparc8/submul_1.S,53
+! License, or 15,624
+ENTRY (__mpn_submul_1)36,1259
+
+../sysdeps/ieee754/dbl2mpn.c,30
+__mpn_extract_double 29,1146
+
+../sysdeps/stub/dbl2mpn.c,30
+__mpn_extract_double 27,1096
+
+../hp300/errlist.c,53
+#define _sys_nerr	8,115
+#define _sys_errlist	9,142
+
+../sysdeps/stub/errlist.c,55
+#define	_sys_errlist	23,894
+#define	_sys_nerr	24,927
+
+../sysdeps/mach/hurd/errlist.c,52
+#define _sys_nerr 4,83
+#define _sys_errlist 5,110
+
+../hp300/siglist.c,27
+#define _sys_siglist	5,63
+
+../sysdeps/unix/siglist.c,27
+#define _sys_siglist 5,63
+
+../sysdeps/stub/siglist.c,0
+
+../sysdeps/posix/defs.c,155
+#define	READ	29,1055
+#define	WRITE	30,1074
+#define	BUFFERED	31,1094
+#define	UNBUFFERED	32,1113
+#define	stdstream(33,1134
+DEFUN_VOID(_cleanup)68,2522
+
+../sysdeps/stub/defs.c,29
+DEFUN_VOID(_cleanup)41,1572
+
+../sysdeps/mach/hurd/defs.c,49
+init_stdio 34,1113
+DEFUN_VOID(_cleanup)52,1899
+
+syms-stdio.c,0
+
+glue.c,158
+  } unix_FILE;55,1894
+DEFUN(_filbuf,77,2659
+DEFUN(_filbuf, (file), unix_FILE *file)77,2659
+DEFUN(_flsbuf,98,3149
+      int c AND unix_FILE *file)99,3175
+
+mp_clz_tab.c,0
+
+stdio.h,1232
+#define	_STDIO_H	26,940
+#define	__need_size_t31,997
+#define	__need_NULL32,1019
+#define	__need___va_list35,1060
+#define	__gnuc_va_list	38,1128
+typedef struct __stdio_file FILE;49,1301
+#define	__FILE_defined	51,1336
+typedef __off_t fpos_t;58,1479
+} __io_mode;70,1976
+				     size_t __nbytes)78,2223
+				      size_t __n)87,2708
+typedef int __io_seek_fn __P ((__ptr_t __cookie, fpos_t *__pos, int __w)95,3011
+typedef int __io_close_fn __P ((__ptr_t __cookie)98,3108
+typedef int __io_fileno_fn __P ((__ptr_t __cookie)102,3289
+} __io_functions;112,3677
+} __room_functions;121,3952
+struct __stdio_file147,4834
+#define	__validfp(189,6746
+#define	__clearerr(196,7040
+#define _IOFBF	208,7498
+#define _IOLBF	209,7541
+#define _IONBF	210,7584
+#define	BUFSIZ	214,7655
+#define	EOF	219,7768
+#define	SEEK_SET	224,7886
+#define	SEEK_CUR	225,7941
+#define	SEEK_END	226,7995
+#define	P_tmpdir	231,8119
+vprintf 365,13294
+vfscanf 418,15185
+vscanf 423,15310
+vsscanf 428,15425
+#define	__getc(450,16025
+#define	getc(456,16286
+getchar 460,16363
+#define	__putc(477,16734
+#define	putc(484,17058
+putchar 488,17146
+__getline 531,18555
+getdelim 537,18696
+getline 542,18859
+#define	feof(589,20367
+#define	ferror(590,20411
+
+../hp300/stdio_lim.h,145
+#define L_tmpnam 1,0
+#define TMP_MAX 2,20
+#define L_ctermid 4,62
+#define L_cuserid 5,82
+#define FOPEN_MAX 7,109
+#define FILENAME_MAX 8,130
+
+../sysdeps/stub/stdio_lim.h,142
+#define	L_tmpnam	1,0
+#define	TMPMAX	2,19
+#define	L_ctermid	3,37
+#define	L_cuserid	4,57
+#define	FOPEN_MAX	5,77
+#define	FILENAME_MAX	6,98
+
+printf.h,371
+#define	_PRINTF_H	21,862
+#define	__need_FILE26,920
+#define	__need_size_t28,959
+struct printf_info34,1046
+				  va_list * __args)59,1885
+					  int *__argtypes)62,2009
+#define	PA_FLAG_MASK	103,3565
+#define	PA_FLAG_LONG_LONG	104,3594
+#define	PA_FLAG_LONG_DOUBLE	105,3629
+#define	PA_FLAG_LONG	106,3675
+#define	PA_FLAG_SHORT	107,3706
+#define	PA_FLAG_PTR	108,3739

@@ -1,0 +1,915 @@
+
+../sysdeps/unix/__execve.S,82
+#define SYS_execve	23,974
+#define SYS_execve	26,1058
+SYSCALL__ (execve,29,1094
+
+../sysdeps/stub/__execve.c,24
+DEFUN(__execve,28,1056
+
+../sysdeps/mach/hurd/__execve.c,24
+DEFUN(__execve,27,1071
+
+../sysdeps/unix/__fork.S,24
+SYSCALL__ (fork,23,903
+
+../sysdeps/stub/__fork.c,27
+DEFUN_VOID(__fork)28,1058
+
+../sysdeps/unix/bsd/ultrix4/mips/__fork.S,24
+SYSCALL__ (fork,21,857
+
+../sysdeps/unix/bsd/osf1/alpha/__fork.S,24
+SYSCALL__ (fork,21,857
+
+../sysdeps/unix/i386/__fork.S,24
+SYSCALL__ (fork,21,858
+
+../sysdeps/unix/sparc/__fork.S,24
+SYSCALL__ (fork,21,852
+
+../sysdeps/mach/hurd/__fork.c,50
+start_threads 45,1306
+DEFUN_VOID(__fork)66,1887
+
+../sysdeps/posix/__fpathcon.c,85
+DEFUN(__fpathconf,28,995
+DEFUN(__fpathconf, (fd, name), int fd AND int name)28,995
+
+../sysdeps/stub/__fpathcon.c,85
+DEFUN(__fpathconf,27,975
+DEFUN(__fpathconf, (fd, name), int fd AND int name)27,975
+
+../sysdeps/unix/__getegid.S,67
+SYSCALL__ (getegid,22,871
+PSEUDO (__getegid,24,900
+	MOVE(25,930
+
+../sysdeps/stub/__getegid.c,29
+DEFUN_VOID(__getegid)25,959
+
+../sysdeps/mach/hurd/__getegid.c,29
+DEFUN_VOID(__getegid)27,996
+
+../sysdeps/unix/__geteuid.S,67
+SYSCALL__ (geteuid,22,871
+PSEUDO (__geteuid,24,900
+	MOVE(25,930
+
+../sysdeps/stub/__geteuid.c,29
+DEFUN_VOID(__geteuid)26,959
+
+../sysdeps/mach/hurd/__geteuid.c,29
+DEFUN_VOID(__geteuid)27,995
+
+../sysdeps/unix/__getgid.S,26
+SYSCALL__ (getgid,21,852
+
+../sysdeps/stub/__getgid.c,28
+DEFUN_VOID(__getgid)26,975
+
+../sysdeps/mach/hurd/__getgid.c,28
+DEFUN_VOID(__getgid)27,991
+
+../sysdeps/unix/common/__getgrps.S,29
+SYSCALL__ (getgroups,21,846
+
+../sysdeps/stub/__getgrps.c,27
+DEFUN(__getgroups,31,1161
+
+../sysdeps/unix/bsd/sequent/i386/__getgrps.S,74
+#define syscall_error 25,960
+SYSCALL__ (getgroups,26,990
+	tstl 30,1050
+
+../sysdeps/mach/hurd/__getgrps.c,20
+__getgroups 26,936
+
+../sysdeps/unix/common/__getpgrp.S,27
+SYSCALL__ (getpgrp,21,852
+
+../sysdeps/stub/__getpgrp.c,24
+DEFUN(__getpgrp,26,962
+
+../sysdeps/unix/sysv/sysv4/__getpgrp.c,25
+DEFUN(__getpgrp,28,1007
+
+../sysdeps/unix/sysv/sco3.2.4/__getpgrp.c,0
+
+../sysdeps/mach/hurd/__getpgrp.c,24
+DEFUN(__getpgrp,27,998
+
+../sysdeps/unix/__getpid.S,26
+SYSCALL__ (getpid,21,852
+
+../sysdeps/stub/__getpid.c,28
+DEFUN_VOID(__getpid)26,942
+
+../sysdeps/mach/hurd/__getpid.c,28
+DEFUN_VOID(__getpid)26,967
+
+../sysdeps/unix/__getppid.S,67
+SYSCALL__ (getppid,22,871
+PSEUDO (__getppid,24,900
+	MOVE(25,930
+
+../sysdeps/stub/__getppid.c,29
+DEFUN_VOID(__getppid)26,949
+
+../sysdeps/mach/hurd/__getppid.c,29
+DEFUN_VOID(__getppid)28,998
+
+../sysdeps/unix/__getuid.S,26
+SYSCALL__ (getuid,21,852
+
+../sysdeps/stub/__getuid.c,28
+DEFUN_VOID(__getuid)26,974
+
+../sysdeps/mach/hurd/__getuid.c,28
+DEFUN_VOID(__getuid)27,990
+
+../sysdeps/stub/__pathconf.c,95
+DEFUN(__pathconf,27,966
+DEFUN(__pathconf, (path, name), CONST char *path AND int name)27,966
+
+../sysdeps/unix/sysv/sco3.2.4/__pathconf.S,28
+SYSCALL__ (pathconf,21,846
+
+../sysdeps/unix/bsd/__setgid.c,24
+DEFUN(__setgid,30,1161
+
+../sysdeps/unix/__setgid.S,26
+SYSCALL__ (setgid,21,852
+
+../sysdeps/stub/__setgid.c,24
+DEFUN(__setgid,29,1141
+
+../sysdeps/mach/hurd/__setgid.c,24
+DEFUN(__setgid,31,1192
+
+../sysdeps/unix/common/__setpgrp.S,27
+SYSCALL__ (setpgrp,21,852
+
+../sysdeps/stub/__setpgrp.c,25
+DEFUN(__setpgrp,27,1085
+
+../sysdeps/unix/sysv/sysv4/__setpgrp.c,25
+DEFUN(__setpgrp,29,1130
+
+../sysdeps/unix/sysv/sco3.2.4/__setpgrp.c,0
+
+../sysdeps/mach/hurd/__setpgrp.c,25
+DEFUN(__setpgrp,29,1132
+
+../sysdeps/unix/bsd/__setsid.c,29
+DEFUN_VOID(__setsid)30,1160
+
+../sysdeps/stub/__setsid.c,29
+DEFUN_VOID(__setsid)28,1096
+
+../sysdeps/unix/bsd/sun/sunos4/__setsid.S,0
+
+../sysdeps/unix/bsd/ultrix4/__setsid.S,0
+
+../sysdeps/unix/bsd/bsd4.4/__setsid.S,26
+SYSCALL__ (setsid,21,852
+
+../sysdeps/unix/sysv/linux/__setsid.S,0
+
+../sysdeps/unix/sysv/sysv4/__setsid.c,29
+DEFUN_VOID(__setsid)29,1140
+
+../sysdeps/unix/sysv/sco3.2.4/__setsid.c,0
+
+../sysdeps/mach/hurd/__setsid.c,29
+DEFUN_VOID(__setsid)30,1143
+
+../sysdeps/unix/bsd/__setuid.c,24
+DEFUN(__setuid,30,1157
+
+../sysdeps/unix/__setuid.S,26
+SYSCALL__ (setuid,21,852
+
+../sysdeps/stub/__setuid.c,24
+DEFUN(__setuid,29,1137
+
+../sysdeps/mach/hurd/__setuid.c,24
+DEFUN(__setuid,31,1188
+
+../sysdeps/posix/__sysconf.c,68
+DEFUN(__sysconf,32,1121
+DEFUN(__sysconf, (name), int name)32,1121
+
+../sysdeps/stub/__sysconf.c,66
+DEFUN(__sysconf,28,991
+DEFUN(__sysconf, (name), int name)28,991
+
+../sysdeps/unix/bsd/ultrix4/__sysconf.c,95
+DEFUN(__sysconf,36,1336
+DEFUN(__sysconf, (name), int name)36,1336
+#define __sysconf 59,1779
+
+../sysdeps/unix/sysv/sysv4/__sysconf.c,68
+DEFUN(__sysconf,31,1076
+DEFUN(__sysconf, (name), int name)31,1076
+
+../sysdeps/unix/sysv/sco3.2.4/__sysconf.S,42
+ENTRY (__sysconf)23,894
+	DO_CALL 26,988
+
+../sysdeps/unix/bsd/__times.c,57
+DEFUN(timeval_to_clock_t,34,1085
+DEFUN(__times,45,1462
+
+../sysdeps/stub/__times.c,76
+DEFUN(__times,29,1136
+DEFUN(__times, (buffer), struct tms *buffer)29,1136
+
+../sysdeps/unix/sysv/__times.S,25
+SYSCALL__ (times,21,852
+
+../sysdeps/unix/bsd/hp/m68k/__vfork.S,26
+#define	SYS_vfork	22,864
+
+../sysdeps/generic/__vfork.c,73
+function_alias (__vfork, __fork, __pid_t, (), DEFUN_VOID(__vfork)26,964
+
+../sysdeps/unix/bsd/sun/m68k/__vfork.S,26
+#define	SYS_vfork	22,876
+
+../sysdeps/unix/bsd/vax/__vfork.S,47
+#define	SYS_vfork	22,870
+parent:	jmp 49,1540
+
+../sysdeps/unix/bsd/i386/__vfork.S,42
+ENTRY (__vfork)26,1036
+	DO_CALL 28,1108
+
+../sysdeps/unix/bsd/ultrix4/mips/__vfork.S,58
+#define        SYS_vfork 22,882
+SYSCALL__ (vfork,25,923
+
+../sysdeps/unix/sysv/sysv4/i386/__vfork.S,0
+
+../sysdeps/unix/sparc/__vfork.S,52
+#define	 SYS_vfork	22,871
+SYSCALL__ (vfork,25,901
+
+../sysdeps/mach/hurd/__vfork.c,28
+DEFUN_VOID(__vfork)37,1324
+
+../sysdeps/unix/bsd/m68k/__wait.S,39
+SYSCALL__ (wait,21,858
+	tst.l 23,898
+
+../sysdeps/posix/__wait.c,22
+DEFUN(__wait,26,1017
+
+../sysdeps/stub/__wait.c,22
+DEFUN(__wait,26,1035
+
+../sysdeps/unix/bsd/sun/sunos4/__wait.c,0
+
+../sysdeps/unix/bsd/sun/sunos3/m68k/__wait.S,0
+
+../sysdeps/unix/bsd/vax/__wait.S,24
+SYSCALL__ (wait,21,852
+
+../sysdeps/unix/bsd/ultrix4/__wait.S,21
+ENTRY(__wait)23,873
+
+../sysdeps/unix/bsd/bsd4.4/__wait.c,22
+DEFUN(__wait,28,1081
+
+../sysdeps/unix/sysv/i386/linux/__wait.S,22
+ENTRY (__wait)21,852
+
+../sysdeps/unix/i386/__wait.S,24
+SYSCALL__ (wait,21,858
+
+../sysdeps/unix/bsd/hp/m68k/__wait3.S,40
+ENTRY(__wait3)21,852
+	tstl sp@30,1029
+
+../sysdeps/posix/__wait3.c,107
+DEFUN(__wait3,31,1288
+      __WAIT_STATUS_DEFN stat_loc AND int options AND struct rusage *usage)32,1331
+
+../sysdeps/stub/__wait3.c,23
+DEFUN(__wait3,30,1268
+
+../sysdeps/unix/bsd/sun/sunos4/__wait3.c,0
+
+../sysdeps/unix/bsd/vax/__wait3.S,23
+ENTRY(___wait3)21,852
+
+../sysdeps/unix/bsd/i386/__wait3.S,66
+#define ARGS_2	27,1160
+ENTRY (__wait3)32,1239
+	DO_CALL 36,1386
+
+../sysdeps/unix/bsd/ultrix4/__wait3.S,25
+SYSCALL__ (wait3,21,857
+
+../sysdeps/unix/bsd/bsd4.4/__wait3.c,23
+DEFUN(__wait3,30,1274
+
+../sysdeps/stub/__wait4.c,22
+DEFUN(__wait4,25,924
+
+../sysdeps/unix/bsd/sun/sunos4/__wait4.c,75
+DEFUN(__wait4,32,1243
+      int options AND struct rusage *usage)34,1343
+
+../sysdeps/unix/bsd/bsd4.4/__wait4.S,25
+SYSCALL__ (wait4,21,846
+
+../sysdeps/unix/bsd/osf1/alpha/__wait4.S,0
+
+../sysdeps/unix/sysv/linux/__wait4.S,0
+
+../sysdeps/mach/hurd/__wait4.c,16
+__wait4 27,965
+
+../sysdeps/stub/__waitpid.c,25
+DEFUN(__waitpid,38,1580
+
+../sysdeps/unix/bsd/sun/sunos4/__waitpid.c,0
+
+../sysdeps/unix/bsd/ultrix4/__waitpid.S,27
+SYSCALL__ (waitpid,21,857
+
+../sysdeps/unix/bsd/bsd4.4/__waitpid.c,25
+DEFUN(__waitpid,38,1599
+
+../sysdeps/unix/bsd/osf1/alpha/__waitpid.c,0
+
+../sysdeps/unix/sysv/linux/__waitpid.S,27
+SYSCALL__ (waitpid,21,852
+
+../sysdeps/unix/sysv/sysv4/__waitpid.c,78
+typedef enum __idtype26,970
+  } __idtype_t;36,1194
+DEFUN(__waitpid,56,2025
+
+../sysdeps/unix/sysv/sco3.2.4/__waitpid.S,43
+ENTRY (__waitpid)21,852
+	DO_CALL 29,1204
+
+../sysdeps/unix/_exit.S,22
+PSEUDO (_exit,21,852
+
+../sysdeps/stub/_exit.c,21
+DEFUN(_exit,27,1056
+
+../sysdeps/mach/hurd/_exit.c,40
+_hurd_exit 27,962
+DEFUN(_exit,53,1488
+
+../sysdeps/unix/bsd/alarm.c,21
+DEFUN(alarm,31,1407
+
+../sysdeps/stub/alarm.c,21
+DEFUN(alarm,31,1398
+
+../sysdeps/unix/sysv/alarm.S,23
+SYSCALL (alarm,21,852
+
+confstr.c,23
+DEFUN(confstr,30,1135
+
+execl.c,47
+#define	__environ	25,934
+DEFUN(execl,31,1078
+
+execle.c,22
+DEFUN(execle,27,1032
+
+execlp.c,22
+DEFUN(execlp,28,1100
+
+execv.c,47
+#define	__environ	23,894
+DEFUN(execv,28,1004
+
+execve.c,29
+	       DEFUN(execve,25,960
+
+execvp.c,49
+#define	__environ	29,1019
+DEFUN(execvp,35,1205
+
+fnmatch.c,17
+fnmatch 52,1916
+
+fork.c,32
+	       DEFUN_VOID(fork)25,951
+
+fpathcon.c,32
+	       DEFUN(fpathconf,26,970
+
+getegid.c,75
+function_alias(getegid, __getegid, __gid_t, (), DEFUN_VOID(getegid)25,913
+
+geteuid.c,75
+function_alias(geteuid, __geteuid, __uid_t, (), DEFUN_VOID(geteuid)25,913
+
+getgid.c,72
+function_alias(getgid, __getgid, __gid_t, (), DEFUN_VOID(getgid)25,912
+
+getgrps.c,32
+	       DEFUN(getgroups,26,974
+
+../sysdeps/unix/getlogin.c,29
+DEFUN_VOID(getlogin)37,1221
+
+../sysdeps/stub/getlogin.c,29
+DEFUN_VOID(getlogin)27,1063
+
+../sysdeps/mach/hurd/getlogin.c,29
+DEFUN_VOID(getlogin)28,1099
+
+getopt.c,175
+#define _NO_PROTO32,1281
+#define const50,1762
+#define	my_index	179,6682
+my_index 188,6832
+exchange 237,8205
+_getopt_internal 349,12392
+getopt 683,20521
+main 702,20903
+
+getopt1.c,106
+#define const40,1494
+#define NULL 66,2285
+getopt_long 70,2312
+getopt_long_only 86,2815
+main 104,3171
+
+../sysdeps/unix/bsd/getpgrp.c,27
+DEFUN_VOID(getpgrp)28,965
+
+../sysdeps/stub/getpgrp.c,27
+DEFUN_VOID(getpgrp)26,948
+
+../sysdeps/unix/sysv/linux/getpgrp.S,25
+SYSCALL (getpgrp,21,852
+
+getpid.c,34
+	       DEFUN_VOID(getpid)25,957
+
+getppid.c,75
+function_alias(getppid, __getppid, __pid_t, (), DEFUN_VOID(getppid)25,913
+
+getuid.c,72
+function_alias(getuid, __getuid, __uid_t, (), DEFUN_VOID(getuid)25,912
+
+glob.c,647
+#define	POSIX50,1692
+#define	NULL	60,1823
+#define D_NAMLEN(66,1959
+#define D_NAMLEN(68,2027
+#define direct 71,2130
+#define D_NAMLEN(72,2152
+#define REAL_DIR_ENTRY(87,2551
+#define REAL_DIR_ENTRY(89,2586
+#define	ANSI_STRING95,2748
+#define	ANSI_STRING100,2844
+#define	memcpy(125,3201
+#define	strrchr	126,3247
+#define	memset(128,3335
+#define	strcoll	133,3500
+my_realloc 142,3602
+#define	realloc	152,3871
+#define	alloca(160,3990
+#define	__alloca	171,4278
+#define	size_t	177,4346
+__ptr_t 199,4881
+glob 220,5919
+globfree 408,10281
+collated_compare 424,10610
+prefix_array 446,11210
+glob_pattern_p 484,12141
+glob_in_dir 522,12779
+
+pathconf.c,31
+	       DEFUN(pathconf,26,969
+
+../sysdeps/unix/bsd/pause.c,25
+DEFUN_VOID(pause)28,996
+
+../sysdeps/stub/pause.c,26
+DEFUN_VOID(pause)28,1045
+
+../sysdeps/unix/sysv/pause.S,23
+SYSCALL (pause,21,852
+
+setgid.c,29
+	       DEFUN(setgid,26,957
+
+../sysdeps/stub/setlogin.c,23
+DEFUN(setlogin,25,941
+
+../sysdeps/unix/bsd/bsd4.4/setlogin.S,26
+SYSCALL (setlogin,21,852
+
+../sysdeps/mach/hurd/setlogin.c,23
+DEFUN(setlogin,26,977
+
+setpgid.c,30
+	       DEFUN(setpgid,26,988
+
+setpgrp.c,30
+	       DEFUN(setpgrp,25,957
+
+setsid.c,34
+	       DEFUN_VOID(setsid)25,957
+
+setuid.c,29
+	       DEFUN(setuid,26,957
+
+../sysdeps/posix/sleep.c,50
+DEFUN(sleep_handler,29,1072
+DEFUN(sleep,42,1645
+
+../sysdeps/stub/sleep.c,21
+DEFUN(sleep,33,1452
+
+../sysdeps/mach/sleep.c,21
+DEFUN(sleep,31,1279
+
+sysconf.c,30
+	       DEFUN(sysconf,26,960
+
+times.c,28
+	       DEFUN(times,25,954
+
+../sysdeps/generic/uname.c,21
+DEFUN(uname,30,1096
+
+../sysdeps/unix/bsd/sun/sunos4/uname.S,0
+
+../sysdeps/unix/bsd/ultrix4/uname.S,0
+
+../sysdeps/unix/sysv/uname.S,23
+SYSCALL (uname,21,846
+
+../sysdeps/mach/hurd/uname.c,14
+uname 24,911
+
+../sysdeps/generic/vfork.c,33
+	       DEFUN_VOID(vfork)25,954
+
+../sysdeps/unix/bsd/ultrix4/mips/vfork.S,20
+ENTRY(vfork)23,935
+
+../sysdeps/unix/sparc/vfork.S,20
+ENTRY(vfork)22,890
+
+wait.c,27
+	       DEFUN(wait,25,948
+
+wait3.c,28
+	       DEFUN(wait3,26,990
+
+wait4.c,28
+	       DEFUN(wait4,26,993
+
+waitpid.c,30
+	       DEFUN(waitpid,26,992
+
+../sysdeps/unix/bsd/init-posix.c,33
+DEFUN_VOID(__init_posix)29,1118
+
+../sysdeps/stub/init-posix.c,32
+DEFUN_VOID(__init_posix)24,874
+
+environ.c,0
+
+sys/utsname.h,54
+#define	_SYS_UTSNAME_H	25,930
+struct utsname33,1070
+
+sys/times.h,78
+#define	_SYS_TIMES_H	25,920
+#define	__need_clock_t28,966
+struct tms35,1097
+
+sys/wait.h,643
+#define	_SYS_WAIT_H	25,945
+#define	__WAIT_INT(42,1306
+#define	__WAIT_INT(46,1467
+#define	__WAIT_STATUS	58,2055
+#define	__WAIT_STATUS_DEFN	59,2086
+#define	__WAIT_STATUS	61,2127
+#define	__WAIT_STATUS_DEFN	62,2193
+#define	__WAIT_INT(67,2263
+#define	__WAIT_STATUS	68,2299
+#define	__WAIT_STATUS_DEFN	69,2328
+#define	WEXITSTATUS(76,2458
+#define	WTERMSIG(77,2520
+#define	WSTOPSIG(78,2576
+#define	WIFEXITED(79,2632
+#define	WIFSIGNALED(80,2690
+#define	WIFSTOPPED(81,2752
+#define	WCOREFLAG	84,2830
+#define	WCOREDUMP(85,2861
+#define	W_EXITCODE(86,2919
+#define	W_STOPCODE(87,2971
+#define	WAIT_ANY	98,3358
+#define	WAIT_MYPGRP	99,3400
+
+sys/types.h,693
+#define	_SYS_TYPES_H	25,938
+#define u_char 33,1040
+#define u_short 34,1064
+#define u_int 35,1090
+#define u_long 36,1112
+#define quad 37,1136
+#define u_quad 38,1156
+#define	fsid_t 39,1180
+#define dev_t 42,1212
+#define gid_t 43,1234
+#define ino_t 44,1256
+#define mode_t 45,1278
+#define nlink_t 46,1302
+#define off_t 47,1328
+#define pid_t 48,1350
+#define uid_t 49,1372
+#define	ssize_t	51,1410
+#define daddr_t 55,1461
+#define caddr_t 56,1487
+#define	__need_time_t59,1521
+#define	__need_size_t62,1562
+#define	FD_SETSIZE	68,1624
+#define	NFDBITS	69,1656
+#define	fd_set	70,1683
+#define	FD_ZERO(71,1708
+#define	FD_SET(72,1744
+#define	FD_CLR(73,1788
+#define	FD_ISSET(74,1832
+
+unistd.h,563
+#define	_UNISTD_H	25,925
+#define	_POSIX_VERSION	34,1195
+#define	_POSIX2_C_VERSION	39,1339
+#define	_POSIX2_C_BIND	43,1493
+#define	_POSIX2_C_DEV	47,1614
+#define	_POSIX2_SW_DEV	51,1732
+#define	STDIN_FILENO	85,2986
+#define	STDOUT_FILENO	86,3032
+#define	STDERR_FILENO	87,3080
+#define	ssize_t	95,3235
+#define	__need_size_t98,3269
+#define __need_NULL99,3291
+#define	R_OK	105,3413
+#define	W_OK	106,3462
+#define	X_OK	107,3512
+#define	F_OK	108,3564
+#define	SEEK_SET	117,3873
+#define	SEEK_CUR	118,3928
+#define	SEEK_END	119,3982
+#define	getpgrp(301,11399
+
+glob.h,24
+#define	_GLOB_H	20,793
+
+wordexp.h,50
+#define	_WORDEXP_H	21,857
+  } wordexp_t;45,1733
+
+fnmatch.h,27
+#define	_FNMATCH_H	20,802
+
+gnu/types.h,1010
+#define	_GNU_TYPES_H	21,859
+typedef unsigned char __u_char;25,910
+typedef unsigned short __u_short;26,942
+typedef unsigned int __u_int;27,976
+typedef unsigned long __u_long;28,1006
+} __quad;32,1070
+} __u_quad;36,1116
+typedef int __dev_t;38,1129
+typedef unsigned int __uid_t;39,1182
+typedef unsigned int __gid_t;40,1249
+typedef unsigned long int __ino_t;41,1317
+typedef unsigned int __mode_t;42,1388
+typedef unsigned short int __nlink_t;43,1459
+typedef long int __off_t;44,1530
+typedef int __pid_t;45,1595
+typedef int __ssize_t;46,1657
+typedef unsigned long long int __fsid_t;48,1736
+typedef __quad __fsid_t;50,1815
+typedef long int __daddr_t;54,1904
+typedef char *__caddr_t;55,1967
+typedef long int __time_t;56,1992
+typedef long int __swblk_t;57,2019
+#define	__FD_SETSIZE	62,2169
+#define	__NFDBITS	65,2258
+#define	__FDELT(66,2309
+#define	__FDMASK(67,2346
+  } __fd_set;73,2551
+#define	__FD_ZERO(76,2632
+#define	__FD_SET(78,2713
+#define	__FD_CLR(79,2783
+#define	__FD_ISSET(80,2854
+
+getopt.h,125
+#define _GETOPT_H 23,995
+#define	no_argument	97,3397
+#define required_argument	98,3420
+#define optional_argument	99,3448
+
+posix1_lim.h,528
+#define	_POSIX1_LIMITS_H	25,931
+#define	_POSIX_ARG_MAX	31,1087
+#define	_POSIX_CHILD_MAX	34,1173
+#define	_POSIX_LINK_MAX	37,1238
+#define	_POSIX_MAX_CANON	40,1326
+#define	_POSIX_MAX_INPUT	44,1443
+#define	_POSIX_NGROUPS_MAX	47,1540
+#define	_POSIX_OPEN_MAX	50,1628
+#define	_POSIX_NAME_MAX	53,1695
+#define	_POSIX_PATH_MAX	56,1762
+#define	_POSIX_PIPE_BUF	59,1857
+#define	_POSIX_SSIZE_MAX	62,1924
+#define	_POSIX_STREAM_MAX	65,2014
+#define	_POSIX_TZNAME_MAX	68,2107
+#define	SSIZE_MAX	76,2241
+#define	NGROUPS_MAX	84,2398
+
+posix2_lim.h,568
+#define	_POSIX2_LIMITS_H	21,851
+#define	_POSIX2_BC_BASE_MAX	25,955
+#define	_POSIX2_BC_DIM_MAX	28,1066
+#define	_POSIX2_BC_SCALE_MAX	31,1161
+#define	_POSIX2_BC_STRING_MAX	34,1271
+#define	_POSIX2_EQUIV_CLASS_MAX	38,1447
+#define	_POSIX2_EXPR_NEST_MAX	42,1587
+#define	_POSIX2_LINE_MAX	45,1676
+#define	_POSIX2_RE_DUP_MAX	49,1838
+#define	BC_BASE_MAX	57,2038
+#define	BC_DIM_MAX	60,2104
+#define	BC_SCALE_MAX	63,2170
+#define	BC_STRING_MAX	66,2241
+#define	EQUIV_CLASS_MAX	69,2316
+#define	EXPR_NEST_MAX	72,2393
+#define	LINE_MAX	75,2461
+#define	RE_DUP_MAX	78,2521
+
+../sysdeps/unix/bsd/posix_opt.h,131
+#define	_POSIX_JOB_CONTROL	1,0
+#define	_POSIX_CHOWN_RESTRICTED	3,53
+#define	_POSIX_NO_TRUNC	4,87
+#define	_POSIX_VDISABLE	5,115
+
+../sysdeps/stub/posix_opt.h,0
+
+../sysdeps/unix/bsd/ultrix4/posix_opt.h,172
+#define	_POSIX_JOB_CONTROL	19,836
+#define	_POSIX_SAVED_IDS	20,865
+#define	_POSIX_CHOWN_RESTRICTED	21,892
+#define	_POSIX_NO_TRUNC	22,926
+#define	_POSIX_VDISABLE	23,953
+
+../hp300/local_lim.h,169
+#define ARG_MAX 4,82
+#define CHILD_MAX 5,104
+#define LINK_MAX 6,125
+#define OPEN_MAX 7,148
+#define MAX_CANON 8,168
+#define NAME_MAX 9,190
+#define PATH_MAX 10,211
+
+../sysdeps/stub/local_lim.h,0
+
+../sysdeps/unix/sysv/local_lim.h,206
+#define NGROUPS_MAX 19,825
+#define ARG_MAX 20,880
+#define CHILD_MAX 21,901
+#define OPEN_MAX 22,922
+#define LINK_MAX 23,942
+#define MAX_CANON 24,964
+#define NAME_MAX 30,1210
+#define PATH_MAX 32,1232
+
+../sysdeps/unix/sysv/sco3.2/local_lim.h,237
+#define _LOCAL_LIM_H 20,846
+#define NGROUPS_MAX 22,870
+#define ARG_MAX 23,940
+#define CHILD_MAX 24,961
+#define OPEN_MAX 25,982
+#define LINK_MAX 26,1002
+#define MAX_CANON 27,1024
+#define NAME_MAX 33,1270
+#define PATH_MAX 35,1292
+
+../sysdeps/mach/hurd/local_lim.h,58
+#define NGROUPS_MAX	31,1402
+#define	SYMLINK_MAX	39,1715
+
+tar.h,644
+#define	_TAR_H	24,919
+#define TSUID	74,2657
+#define TSGID	75,2677
+#define TSVTX	76,2697
+#define TUREAD	77,2717
+#define TUWRITE	78,2738
+#define TUEXEC	79,2760
+#define TGREAD	80,2781
+#define TGWRITE	81,2802
+#define TGEXEC	82,2824
+#define TOREAD	83,2845
+#define TOWRITE	84,2866
+#define TOEXEC	85,2888
+#define REGTYPE	91,3065
+#define AREGTYPE	92,3124
+#define LNKTYPE	93,3184
+#define SYMTYPE	94,3223
+#define CHRTYPE	95,3290
+#define BLKTYPE	96,3337
+#define DIRTYPE	97,3380
+#define FIFOTYPE	98,3419
+#define CONTTYPE	99,3459
+#define TMAGIC	103,3591
+#define TMAGLEN	104,3614
+#define TVERSION	107,3686
+#define TVERSLEN	108,3708
+
+../sysdeps/generic/utsnamelen.h,31
+#define	_UTSNAME_LENGTH	3,123
+
+../sysdeps/unix/bsd/sun/sunos4/utsnamelen.h,29
+#define _UTSNAME_LENGTH 1,0
+
+../sysdeps/unix/bsd/ultrix4/utsnamelen.h,29
+#define _UTSNAME_LENGTH 1,0
+
+../sysdeps/unix/sysv/utsnamelen.h,29
+#define _UTSNAME_LENGTH 1,0
+
+../sysdeps/unix/sysv/sysv4/solaris2/utsnamelen.h,29
+#define _UTSNAME_LENGTH 1,0
+
+../sysdeps/generic/confname.h,0
+
+../sysdeps/unix/sysv/sco3.2.4/confname.h,620
+#define _PC_LINK_MAX	21,960
+#define _PC_MAX_CANON	22,984
+#define _PC_MAX_INPUT	23,1009
+#define _PC_NAME_MAX	24,1034
+#define _PC_PATH_MAX	25,1058
+#define _PC_PIPE_BUF	26,1082
+#define _PC_CHOWN_RESTRICTED	27,1106
+#define _PC_NO_TRUNC	28,1137
+#define _PC_VDISABLE	29,1161
+#define _SC_ARG_MAX	32,1231
+#define _SC_CHILD_MAX	33,1254
+#define _SC_CLK_TCK	34,1279
+#define _SC_NGROUPS_MAX	35,1302
+#define _SC_OPEN_MAX	36,1329
+#define _SC_JOB_CONTROL	37,1353
+#define _SC_SAVED_IDS	38,1380
+#define _SC_VERSION	39,1405
+#define _SC_PASS_MAX	40,1428
+#define _SC_XOPEN_VERSION	41,1452
+#define _SC_TZNAME_MAX	42,1480
+
+../sysdeps/unix/bsd/waitflags.h,80
+#define	_WAITFLAGS_H	22,893
+#define	WNOHANG	25,965
+#define	WUNTRACED	26,1012
+
+../sysdeps/stub/waitflags.h,80
+#define	_WAITFLAGS_H	22,893
+#define	WNOHANG	25,965
+#define	WUNTRACED	26,1012
+
+../sysdeps/unix/sysv/sysv4/waitflags.h,131
+#define	_WAITFLAGS_H	22,907
+#define	WNOHANG	25,979
+#define	WUNTRACED	26,1027
+#define WEXITED	29,1108
+#define WTRAPPED	30,1170
+
+../sysdeps/generic/waitstatus.h,510
+#define	_WAITSTATUS_H23,953
+#define	__WEXITSTATUS(26,1041
+#define	__WTERMSIG(29,1154
+#define	__WSTOPSIG(32,1265
+#define	__WIFEXITED(35,1370
+#define	__WIFSIGNALED(39,1501
+#define	__WIFSIGNALED(43,1677
+#define	__WIFSTOPPED(47,1832
+#define	__WCOREDUMP(50,1948
+#define	__W_EXITCODE(53,2048
+#define	__W_STOPCODE(54,2100
+#define	__WCOREFLAG	55,2146
+union wait62,2213
+#define	w_termsig	94,3146
+#define	w_coredump	95,3194
+#define	w_retcode	96,3244
+#define	w_stopsig	97,3292
+#define	w_stopval	98,3337
+
+sys/unistd.h,0

@@ -1,0 +1,224 @@
+
+../sysdeps/unix/inet/accept.S,24
+SYSCALL (accept,21,852
+
+../sysdeps/stub/accept.c,22
+DEFUN(accept,29,1200
+
+../sysdeps/unix/sysv/linux/accept.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/accept.c,22
+DEFUN(accept,32,1276
+
+../sysdeps/unix/inet/bind.S,22
+SYSCALL (bind,21,852
+
+../sysdeps/stub/bind.c,19
+DEFUN(bind,25,971
+
+../sysdeps/unix/sysv/linux/bind.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/bind.c,20
+DEFUN(bind,28,1041
+
+../sysdeps/unix/inet/connect.S,25
+SYSCALL (connect,21,852
+
+../sysdeps/stub/connect.c,23
+DEFUN(connect,28,1148
+
+../sysdeps/unix/sysv/linux/connect.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/connect.c,23
+DEFUN(connect,31,1218
+
+../sysdeps/unix/inet/getpeernam.S,29
+SYSCALL (getpeername,21,852
+
+../sysdeps/stub/getpeernam.c,27
+DEFUN(getpeername,26,1028
+
+../sysdeps/unix/sysv/linux/getpeernam.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/getpeernam.c,27
+DEFUN(getpeername,29,1098
+
+../sysdeps/unix/inet/getsocknam.S,29
+SYSCALL (getsockname,21,852
+
+../sysdeps/stub/getsocknam.c,26
+DEFUN(getsockname,25,965
+
+../sysdeps/unix/sysv/linux/getsocknam.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/getsocknam.c,27
+DEFUN(getsockname,28,1035
+
+../sysdeps/unix/inet/getsockopt.S,28
+SYSCALL (getsockopt,21,852
+
+../sysdeps/stub/getsockopt.c,26
+DEFUN(getsockopt,27,1112
+
+../sysdeps/mach/hurd/getsockopt.c,26
+DEFUN(getsockopt,30,1182
+
+../sysdeps/unix/inet/listen.S,24
+SYSCALL (listen,21,852
+
+../sysdeps/stub/listen.c,22
+DEFUN(listen,27,1063
+
+../sysdeps/unix/sysv/linux/listen.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/listen.c,22
+DEFUN(listen,30,1133
+
+../sysdeps/unix/inet/recv.S,22
+SYSCALL (recv,21,852
+
+../sysdeps/stub/recv.c,19
+DEFUN(recv,26,985
+
+../sysdeps/unix/bsd/osf1/alpha/recv.S,47
+#define SYS_recv 22,881
+SYSCALL (recv,24,912
+
+../sysdeps/unix/inet/recvfrom.S,26
+SYSCALL (recvfrom,21,852
+
+../sysdeps/stub/recvfrom.c,24
+DEFUN(recvfrom,27,1048
+
+../sysdeps/unix/inet/recvmsg.S,25
+SYSCALL (recvmsg,21,852
+
+../sysdeps/stub/recvmsg.c,23
+DEFUN(recvmsg,26,1014
+
+../sysdeps/unix/inet/send.S,22
+SYSCALL (send,21,852
+
+../sysdeps/stub/send.c,19
+DEFUN(send,25,968
+
+../sysdeps/unix/bsd/osf1/alpha/send.S,47
+#define SYS_send 22,881
+SYSCALL (send,24,912
+
+../sysdeps/unix/inet/sendmsg.S,25
+SYSCALL (sendmsg,21,852
+
+../sysdeps/stub/sendmsg.c,23
+DEFUN(sendmsg,26,1004
+
+../sysdeps/unix/inet/sendto.S,24
+SYSCALL (sendto,21,852
+
+../sysdeps/stub/sendto.c,22
+DEFUN(sendto,26,1038
+
+../sysdeps/unix/inet/setsockopt.S,28
+SYSCALL (setsockopt,21,852
+
+../sysdeps/stub/setsockopt.c,26
+DEFUN(setsockopt,27,1041
+
+../sysdeps/mach/hurd/setsockopt.c,26
+DEFUN(setsockopt,30,1111
+
+../sysdeps/unix/inet/shutdown.S,26
+SYSCALL (shutdown,21,852
+
+../sysdeps/stub/shutdown.c,24
+DEFUN(shutdown,30,1145
+
+../sysdeps/mach/hurd/shutdown.c,24
+DEFUN(shutdown,33,1215
+
+../sysdeps/unix/inet/socket.S,24
+SYSCALL (socket,21,852
+
+../sysdeps/stub/socket.c,22
+DEFUN(socket,27,1099
+
+../sysdeps/unix/sysv/i386/linux/socket.S,23
+ENTRY (socket)31,1282
+
+../sysdeps/mach/hurd/socket.c,22
+DEFUN(socket,30,1175
+
+../sysdeps/unix/inet/socketpair.S,28
+SYSCALL (socketpair,21,852
+
+../sysdeps/stub/socketpair.c,26
+DEFUN(socketpair,28,1179
+
+../sysdeps/unix/sysv/linux/socketpair.S,20
+#define	socket	1,0
+
+../sysdeps/mach/hurd/socketpair.c,26
+DEFUN(socketpair,31,1249
+
+sys/socket.h,1306
+#define	_SYS_SOCKET_H	21,860
+#define	__need_size_t26,922
+enum __socket_type31,991
+#define	PF_UNSPEC	44,1437
+#define	PF_FILE	45,1477
+#define	PF_UNIX	46,1542
+#define	PF_INET	47,1596
+#define	PF_IMPLINK	48,1642
+#define	PF_PUP	49,1692
+#define	PF_CHAOS	50,1732
+#define	PF_NS	51,1779
+#define	PF_ISO	52,1823
+#define	PF_OSI	53,1863
+#define	PF_ECMA	54,1886
+#define	PF_DATAKIT	55,1928
+#define	PF_CCITT	56,1980
+#define	PF_SNA	57,2037
+#define	PF_DECnet	58,2081
+#define	PF_DLI	59,2127
+#define	PF_LAT	60,2181
+#define	PF_HYLINK	61,2242
+#define	PF_APPLETALK	62,2297
+#define	PF_ROUTE	63,2344
+#define	PF_LINK	64,2398
+#define	PF_MAX	65,2447
+#define	AF_UNSPEC	68,2492
+#define	AF_FILE	69,2520
+#define	AF_UNIX	70,2545
+#define	AF_INET	71,2570
+#define	AF_IMPLINK	72,2595
+#define	AF_PUP	73,2625
+#define	AF_CHAOS	74,2648
+#define	AF_NS	75,2674
+#define	AF_ISO	76,2695
+#define	AF_OSI	77,2718
+#define	AF_ECMA	78,2741
+#define	AF_DATAKIT	79,2766
+#define	AF_CCITT	80,2796
+#define	AF_SNA	81,2822
+#define	AF_DECnet	82,2845
+#define	AF_DLI	83,2873
+#define	AF_LAT	84,2896
+#define	AF_HYLINK	85,2919
+#define	AF_APPLETALK	86,2947
+#define	AF_ROUTE	87,2981
+#define	AF_LINK	88,3007
+#define	AF_MAX	89,3032
+struct sockaddr93,3111
+struct msghdr163,6073
+#define	SOL_SOCKET	187,6987
+struct linger219,8343
+
+sys/un.h,52
+#define	_SYS_UN_H	21,844
+struct sockaddr_un24,927

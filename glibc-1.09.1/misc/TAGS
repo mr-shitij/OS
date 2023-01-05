@@ -1,0 +1,1978 @@
+
+brk.c,26
+	       DEFUN(brk,26,961
+
+sbrk.c,27
+	       DEFUN(sbrk,26,970
+
+../sysdeps/stub/sstk.c,19
+DEFUN(sstk,25,977
+
+../sysdeps/unix/bsd/bsd4.4/sstk.S,22
+SYSCALL (sstk,22,874
+
+ioctl.c,21
+DEFUN(ioctl,34,1004
+
+../sysdeps/unix/bsd/hp/m68k/__brk.S,91
+#define	SYS_brk	22,874
+#define	__end	26,921
+ENTRY (__brk)35,1002
+	movel d0, sp@39,1059
+
+../sysdeps/stub/__brk.c,20
+DEFUN(__brk,25,965
+
+../sysdeps/unix/bsd/sun/m68k/__brk.S,91
+#define	SYS_brk	22,874
+#define	__end	26,921
+ENTRY (__brk)35,1002
+	movel d0, sp@39,1058
+
+../sysdeps/unix/bsd/vax/__brk.S,67
+#define	SYS_brk	22,862
+#define	__end	26,909
+ENTRY (__brk)35,990
+
+../sysdeps/unix/bsd/ultrix4/mips/__brk.S,90
+#define SYS_brk 22,873
+#define __end 26,926
+ENTRY(__curbrk)31,975
+ENTRY(__brk)38,1037
+
+../sysdeps/unix/bsd/osf1/alpha/__brk.S,67
+#define SYS_brk 22,873
+#define __end 26,926
+ENTRY(__brk)36,1032
+
+../sysdeps/unix/i386/__brk.S,171
+#define	SYS_brk	22,874
+.globl C_SYMBOL_NAME(26,907
+	.long C_SYMBOL_NAME(29,975
+	.long C_SYMBOL_NAME(31,1008
+SYSCALL__ (brk,35,1048
+	movl %eax, C_SYMBOL_NAME(37,1087
+
+../sysdeps/unix/sparc/__brk.S,166
+#define	SYS_brk	22,862
+#define	C_SYMBOL_NAME(26,911
+.global C_SYMBOL_NAME(30,961
+	.long C_SYMBOL_NAME(33,1030
+	.long C_SYMBOL_NAME(35,1063
+ENTRY (__brk)39,1103
+
+../sysdeps/mach/hurd/__brk.c,120
+#define	DATA_SIZE	27,1023
+DEFUN(__brk,48,1601
+_hurd_set_brk 58,1787
+init_brk 94,2557
+_hurd_set_data_limit 125,3196
+
+../sysdeps/unix/__sbrk.c,22
+DEFUN(__sbrk,28,1061
+
+../sysdeps/stub/__sbrk.c,22
+DEFUN(__sbrk,26,1055
+
+../sysdeps/mach/hurd/__sbrk.c,22
+DEFUN(__sbrk,27,1073
+
+../sysdeps/unix/__ioctl.S,25
+SYSCALL__ (ioctl,21,852
+
+../sysdeps/stub/__ioctl.c,23
+DEFUN(__ioctl,26,1043
+
+../sysdeps/mach/hurd/__ioctl.c,23
+DEFUN(__ioctl,40,1409
+
+../sysdeps/unix/common/readv.S,23
+SYSCALL (readv,21,852
+
+../sysdeps/posix/readv.c,21
+DEFUN(readv,31,1249
+
+../sysdeps/stub/readv.c,21
+DEFUN(readv,30,1222
+
+../sysdeps/unix/common/writev.S,24
+SYSCALL (writev,21,852
+
+../sysdeps/posix/writev.c,22
+DEFUN(writev,31,1243
+
+../sysdeps/stub/writev.c,22
+DEFUN(writev,30,1216
+
+setreuid.c,31
+	       DEFUN(setreuid,25,968
+
+setregid.c,31
+	       DEFUN(setregid,25,968
+
+../sysdeps/unix/common/__setreuid.S,28
+SYSCALL__ (setreuid,21,852
+
+../sysdeps/stub/__setreuid.c,26
+DEFUN(__setreuid,27,1041
+
+../sysdeps/mach/hurd/__setreuid.c,19
+__setreuid 27,959
+
+../sysdeps/unix/common/__setregid.S,28
+SYSCALL__ (setregid,21,852
+
+../sysdeps/stub/__setregid.c,26
+DEFUN(__setregid,27,1043
+
+../sysdeps/mach/hurd/__setregid.c,19
+__setregid 27,959
+
+../sysdeps/unix/bsd/seteuid.c,22
+DEFUN(seteuid,24,895
+
+../sysdeps/stub/seteuid.c,22
+DEFUN(seteuid,25,955
+
+../sysdeps/unix/bsd/bsd4.4/seteuid.S,25
+SYSCALL (seteuid,21,852
+
+../sysdeps/unix/sysv/sysv4/seteuid.S,0
+
+../sysdeps/mach/hurd/seteuid.c,23
+DEFUN(seteuid,28,1023
+
+../sysdeps/unix/bsd/setegid.c,22
+DEFUN(setegid,24,895
+
+../sysdeps/stub/setegid.c,22
+DEFUN(setegid,25,956
+
+../sysdeps/unix/bsd/bsd4.4/setegid.S,25
+SYSCALL (setegid,21,852
+
+../sysdeps/unix/sysv/sysv4/setegid.S,0
+
+../sysdeps/mach/hurd/setegid.c,23
+DEFUN(setegid,28,1023
+
+getpgsz.c,39
+	       DEFUN_VOID(getpagesize)26,991
+
+../sysdeps/unix/bsd/__getpgsz.S,31
+SYSCALL__ (getpagesize,21,852
+
+../sysdeps/unix/__getpgsz.c,33
+DEFUN_VOID(__getpagesize)24,891
+
+../sysdeps/posix/__getpgsz.c,33
+DEFUN_VOID(__getpagesize)26,938
+
+../sysdeps/stub/__getpgsz.c,33
+DEFUN_VOID(__getpagesize)25,936
+
+../sysdeps/unix/sysv/sysv4/__getpgsz.c,0
+
+../sysdeps/mach/__getpgsz.c,33
+DEFUN_VOID(__getpagesize)27,968
+
+getdtsz.c,41
+	       DEFUN_VOID(getdtablesize)25,974
+
+../sysdeps/unix/bsd/__getdtsz.S,33
+SYSCALL__ (getdtablesize,21,852
+
+../sysdeps/posix/__getdtsz.c,36
+DEFUN_VOID(__getdtablesize)27,1017
+
+../sysdeps/stub/__getdtsz.c,35
+DEFUN_VOID(__getdtablesize)26,988
+
+../sysdeps/unix/sysv/sysv4/__getdtsz.c,0
+
+../sysdeps/mach/hurd/__getdtsz.c,36
+DEFUN_VOID(__getdtablesize)28,1082
+
+../sysdeps/unix/inet/__gethstnm.S,31
+SYSCALL__ (gethostname,21,852
+
+../sysdeps/stub/__gethstnm.c,29
+DEFUN(__gethostname,27,1063
+
+../sysdeps/unix/sysv/__gethstnm.c,29
+DEFUN(__gethostname,28,1088
+
+../sysdeps/mach/hurd/__gethstnm.c,29
+DEFUN(__gethostname,29,1122
+
+gethstnm.c,34
+	       DEFUN(gethostname,27,998
+
+../sysdeps/unix/inet/sethostnam.S,29
+SYSCALL (sethostname,21,852
+
+../sysdeps/stub/sethostnam.c,27
+DEFUN(sethostname,26,1011
+
+../sysdeps/mach/hurd/sethostnam.c,27
+DEFUN(sethostname,27,1047
+
+../sysdeps/unix/common/__select.S,26
+SYSCALL__ (select,21,852
+
+../sysdeps/stub/__select.c,24
+DEFUN(__select,30,1264
+
+../sysdeps/mach/hurd/__select.c,58
+#define SELECT_DONE_MSGID 26,971
+DEFUN(__select,34,1366
+
+select.c,30
+	       DEFUN(select,28,1030
+
+../sysdeps/unix/acct.S,22
+SYSCALL (acct,21,852
+
+../sysdeps/stub/acct.c,20
+DEFUN(acct,27,1121
+
+../sysdeps/unix/chroot.S,24
+SYSCALL (chroot,21,852
+
+../sysdeps/stub/chroot.c,22
+DEFUN(chroot,26,1017
+
+../sysdeps/mach/hurd/chroot.c,22
+DEFUN(chroot,29,1029
+
+../sysdeps/unix/fsync.S,23
+SYSCALL (fsync,21,852
+
+../sysdeps/stub/fsync.c,20
+DEFUN(fsync,25,951
+
+../sysdeps/mach/hurd/fsync.c,21
+DEFUN(fsync,27,1008
+
+../sysdeps/unix/sync.S,22
+SYSCALL (sync,21,852
+
+../sysdeps/stub/sync.c,24
+DEFUN_VOID(sync)25,958
+
+../sysdeps/mach/hurd/sync.c,24
+DEFUN_VOID(sync)26,994
+
+../sysdeps/unix/reboot.S,24
+SYSCALL (reboot,21,846
+
+../sysdeps/stub/reboot.c,21
+DEFUN(reboot,25,917
+
+../sysdeps/mach/hurd/reboot.c,21
+DEFUN(reboot,27,973
+
+../sysdeps/unix/inet/gethostid.S,27
+SYSCALL (gethostid,21,852
+
+../sysdeps/stub/gethostid.c,29
+DEFUN_VOID(gethostid)25,949
+
+../sysdeps/mach/hurd/gethostid.c,29
+DEFUN_VOID(gethostid)26,985
+
+../sysdeps/unix/inet/sethostid.S,27
+SYSCALL (sethostid,21,852
+
+../sysdeps/stub/sethostid.c,24
+DEFUN(sethostid,26,993
+
+../sysdeps/unix/bsd/sun/sethostid.c,0
+
+../sysdeps/unix/bsd/sun/sparc/sethostid.S,106
+SYSCALL (sethostid,23,875
+#define	_ERRNO_H29,962
+ENTRY (sethostid)32,1000
+	st %o0, [%g1 + %lo(35,1059
+
+../sysdeps/unix/bsd/sun/m68k/sethostid.S,27
+SYSCALL (sethostid,23,875
+
+../sysdeps/mach/hurd/sethostid.c,25
+DEFUN(sethostid,27,1011
+
+mknod.c,28
+	       DEFUN(mknod,25,967
+
+../sysdeps/unix/__mknod.S,25
+SYSCALL__ (mknod,21,852
+
+../sysdeps/stub/__mknod.c,23
+DEFUN(__mknod,28,1123
+
+../sysdeps/mach/hurd/__mknod.c,23
+DEFUN(__mknod,31,1198
+
+../sysdeps/unix/common/swapon.S,24
+SYSCALL (swapon,21,852
+
+../sysdeps/stub/swapon.c,22
+DEFUN(swapon,26,1017
+
+../sysdeps/unix/common/vhangup.S,25
+SYSCALL (vhangup,21,852
+
+../sysdeps/stub/vhangup.c,28
+DEFUN_VOID(vhangup)27,1074
+
+../sysdeps/unix/bsd/osf1/alpha/vhangup.S,53
+#define SYS_vhangup 22,881
+SYSCALL (vhangup,24,918
+
+../sysdeps/posix/mktemp.c,22
+DEFUN(mktemp,31,1174
+
+../sysdeps/stub/mktemp.c,22
+DEFUN(mktemp,27,1078
+
+../sysdeps/posix/mkstemp.c,23
+DEFUN(mkstemp,31,1210
+
+../sysdeps/stub/mkstemp.c,23
+DEFUN(mkstemp,28,1146
+
+../sysdeps/unix/bsd/ualarm.c,22
+DEFUN(ualarm,28,1157
+
+../sysdeps/stub/ualarm.c,22
+DEFUN(ualarm,28,1154
+
+../sysdeps/unix/bsd/usleep.c,22
+DEFUN(usleep,26,1004
+
+../sysdeps/stub/usleep.c,21
+DEFUN(usleep,24,958
+
+../sysdeps/mach/usleep.c,22
+DEFUN(usleep,26,1010
+
+../sysdeps/unix/bsd/gtty.c,19
+DEFUN(gtty,25,958
+
+../sysdeps/stub/gtty.c,67
+DEFUN(gtty,26,984
+      int fd AND struct sgttyb *params)27,1010
+
+../sysdeps/unix/bsd/stty.c,19
+DEFUN(stty,25,956
+
+../sysdeps/stub/stty.c,73
+DEFUN(stty,26,982
+      int fd AND CONST struct sgttyb *params)27,1008
+
+../sysdeps/unix/ptrace.S,24
+SYSCALL (ptrace,21,852
+
+../sysdeps/stub/ptrace.c,22
+DEFUN(ptrace,35,1376
+
+../sysdeps/unix/nlist.c,21
+DEFUN(nlist,30,1075
+
+../sysdeps/stub/nlist.c,74
+DEFUN(nlist,28,1084
+      CONST char *file AND struct nlist *nl)29,1109
+
+utimes.c,29
+	       DEFUN(utimes,25,964
+
+../sysdeps/unix/bsd/__utimes.S,26
+SYSCALL__ (utimes,21,852
+
+../sysdeps/stub/__utimes.c,24
+DEFUN(__utimes,27,1009
+
+../sysdeps/unix/sysv/sysv4/solaris2/__utimes.S,0
+
+../sysdeps/mach/hurd/__utimes.c,24
+DEFUN(__utimes,28,1039
+
+../sysdeps/unix/common/truncate.S,26
+SYSCALL (truncate,21,852
+
+../sysdeps/stub/truncate.c,23
+DEFUN(truncate,25,932
+
+../sysdeps/mach/hurd/truncate.c,23
+DEFUN(truncate,27,981
+
+../sysdeps/unix/common/ftruncate.S,27
+SYSCALL (ftruncate,21,852
+
+../sysdeps/stub/ftruncate.c,24
+DEFUN(ftruncate,25,949
+
+../sysdeps/mach/hurd/ftruncate.c,25
+DEFUN(ftruncate,27,1006
+
+../sysdeps/stub/chflags.c,91
+DEFUN(chflags,26,955
+DEFUN(chflags, (file, flags), CONST char *file AND int flags)26,955
+
+../sysdeps/unix/bsd/bsd4.4/chflags.S,25
+SYSCALL (chflags,21,852
+
+../sysdeps/mach/hurd/chflags.c,22
+DEFUN(chflags,27,985
+
+../sysdeps/stub/fchflags.c,81
+DEFUN(fchflags,26,972
+DEFUN(fchflags, (fd, flags), int fd AND int flags)26,972
+
+../sysdeps/unix/bsd/bsd4.4/fchflags.S,26
+SYSCALL (fchflags,21,852
+
+../sysdeps/mach/hurd/fchflags.c,24
+DEFUN(fchflags,28,1029
+
+insremque.c,64
+struct qelem22,868
+DEFUN(insque,32,1027
+DEFUN(remque,46,1329
+
+getttyent.c,134
+getttynam(47,2103
+getttyent(61,2294
+#define	QUOTED	132,3779
+skip(139,3910
+value(173,4457
+setttyent(181,4539
+endttyent(193,4674
+
+getusersh.c,110
+#define SHELLS 46,2113
+getusershell(62,2444
+endusershell(75,2597
+setusershell(88,2759
+initshells(95,2821
+
+getpass.c,43
+#define TCSASOFT 29,1136
+getpass 33,1170
+
+ttyslot.c,17
+ttyslot(44,2050
+
+syslog.c,91
+syslog(69,2754
+vsyslog(89,2984
+openlog(190,5153
+closelog(219,5819
+setlogmask(227,5932
+
+../sysdeps/unix/bsd/m68k/syscall.S,40
+ENTRY (syscall)21,846
+	DO_CALL 23,914
+
+../sysdeps/unix/syscall.S,54
+#define SYS_syscall	22,866
+SYSCALL (syscall,28,1054
+
+../sysdeps/stub/syscall.c,22
+DEFUN(syscall,26,997
+
+../sysdeps/unix/bsd/sun/m68k/syscall.S,45
+ENTRY (syscall)21,846
+	movel d0, sp@24,974
+
+../sysdeps/unix/bsd/sequent/i386/syscall.S,23
+ENTRY (syscall)25,947
+
+../sysdeps/unix/i386/syscall.S,23
+ENTRY (syscall)22,867
+
+../sysdeps/mach/i386/syscall.S,23
+ENTRY (syscall)21,846
+
+../sysdeps/stub/mmap.c,14
+mmap 33,1474
+
+../sysdeps/unix/bsd/sun/sunos4/mmap.c,39
+extern caddr_t __mmap_syscall 32,1466
+
+../sysdeps/unix/bsd/ultrix4/mmap.S,0
+
+../sysdeps/unix/bsd/bsd4.4/mmap.S,22
+SYSCALL (mmap,21,846
+
+../sysdeps/unix/bsd/osf1/mmap.S,0
+
+../sysdeps/mach/hurd/mmap.c,14
+mmap 35,1513
+
+../sysdeps/stub/munmap.c,16
+munmap 27,1043
+
+../sysdeps/unix/bsd/sun/sunos4/munmap.S,0
+
+../sysdeps/unix/bsd/ultrix4/munmap.S,0
+
+../sysdeps/unix/bsd/bsd4.4/munmap.S,24
+SYSCALL (munmap,21,846
+
+../sysdeps/unix/bsd/osf1/munmap.S,0
+
+../sysdeps/mach/munmap.c,16
+munmap 28,1061
+
+../sysdeps/stub/mprotect.c,18
+mprotect 28,1059
+
+../sysdeps/unix/bsd/sun/sunos4/mprotect.S,0
+
+../sysdeps/unix/bsd/ultrix4/mprotect.S,0
+
+../sysdeps/unix/bsd/bsd4.4/mprotect.S,26
+SYSCALL (mprotect,21,846
+
+../sysdeps/unix/bsd/osf1/mprotect.S,0
+
+../sysdeps/mach/mprotect.c,18
+mprotect 29,1077
+
+../sysdeps/stub/msync.c,15
+msync 28,1080
+
+../sysdeps/unix/bsd/sun/sunos4/sys/msync.S,23
+SYSCALL (msync,21,846
+
+../sysdeps/unix/bsd/bsd4.4/msync.S,23
+SYSCALL (msync,21,846
+
+../sysdeps/unix/bsd/osf1/msync.S,0
+
+data_start.c,0
+
+progname.c,28
+DEFUN(set_progname,29,1004
+
+sys/uio.h,77
+#define _SYS_UIO_H	21,857
+#define	__need_size_t26,916
+struct iovec32,1010
+
+sys/ioctl.h,291
+#define	_SYS_IOCTL_H	21,865
+struct tchars38,1485
+#define	_IOT_tchars	48,1787
+struct ltchars54,1982
+#define	_IOT_ltchars	64,2293
+struct sgttyb69,2466
+#define	_IOT_sgttyb	78,2690
+struct winsize83,2902
+#define	_IOT_winsize	92,3155
+struct ttysize97,3314
+#define	_IOT_ttysize	105,3454
+
+sys/ptrace.h,55
+#define	_PTRACE_H	21,856
+enum __ptrace_request28,964
+
+../hp300/ioctls.h,5544
+#define ALLDELAY 1,0
+#define ANYP 2,28
+#define B0 3,52
+#define B110 4,74
+#define B1200 5,98
+#define B134 6,123
+#define B150 7,147
+#define B1800 8,171
+#define B19200 9,196
+#define B200 10,222
+#define B2400 11,246
+#define B300 12,271
+#define B38400 13,295
+#define B4800 14,321
+#define B50 15,346
+#define B600 16,369
+#define B75 17,393
+#define B9600 18,416
+#define BS0 19,441
+#define BS1 20,464
+#define BSDELAY 21,487
+#define CBREAK 22,514
+#define CCLEAR 23,540
+#define CGO 24,566
+#define CHALF 25,589
+#define CLINE 26,614
+#define CPAGE 27,639
+#define CR0 28,664
+#define CR1 29,687
+#define CR2 30,710
+#define CR3 31,733
+#define CRDELAY 32,756
+#define CRMOD 33,783
+#define CRTBS 34,808
+#define CRTERA 35,833
+#define CRTKIL 36,859
+#define CSPARE 37,885
+#define CTLECH 38,911
+#define DECCTQ 39,937
+#define ECHO 40,963
+#define EVENP 41,987
+#define EXTA 42,1012
+#define EXTB 43,1036
+#define FF0 44,1060
+#define FF1 45,1083
+#define FIOASYNC 46,1106
+#define FIOCLEX 47,1134
+#define FIOGETOWN 48,1161
+#define FIONBIO 49,1190
+#define FIONCLEX 50,1217
+#define FIONREAD 51,1245
+#define FIOSETOWN 52,1273
+#define FLUSHO 53,1302
+#define IOCPARM_MASK 54,1328
+#define IOCPARM_MAX 55,1360
+#define IOC_DIRMASK 56,1391
+#define IOC_IN 57,1422
+#define IOC_INOUT 58,1448
+#define IOC_OUT 59,1477
+#define IOC_VOID 60,1504
+#define L001000 61,1532
+#define LCASE 62,1559
+#define LCRTBS 63,1584
+#define LCRTERA 64,1610
+#define LCRTKIL 65,1637
+#define LCTLECH 66,1664
+#define LDECCTQ 67,1691
+#define LFLUSHO 68,1718
+#define LITOUT 69,1745
+#define LLITOUT 70,1771
+#define LMDMBUF 71,1798
+#define LNOFLSH 72,1825
+#define LNOHANG 73,1852
+#define LPASS8 74,1879
+#define LPENDIN 75,1905
+#define LPRTERA 76,1932
+#define LTILDE 77,1959
+#define LTOSTOP 78,1985
+#define MDMBUF 79,2012
+#define NETLDISC 80,2038
+#define NL0 81,2066
+#define NL1 82,2089
+#define NL2 83,2112
+#define NL3 84,2135
+#define NLDELAY 85,2158
+#define NOFLSH 86,2185
+#define NOHANG 87,2211
+#define NTTYDISC 88,2237
+#define NUPDISC 89,2265
+#define ODDP 90,2292
+#define OTTYDISC 91,2316
+#define PASS8 92,2344
+#define PENDIN 93,2369
+#define PRTERA 94,2395
+#define RAW 95,2421
+#define SIOCADDRT 96,2444
+#define SIOCATMARK 97,2473
+#define SIOCDARP 98,2503
+#define SIOCDELRT 99,2531
+#define SIOCGARP 100,2560
+#define SIOCGHIWAT 101,2588
+#define SIOCGIFADDR 102,2618
+#define SIOCGIFBRDADDR 103,2649
+#define SIOCGIFCONF 104,2683
+#define SIOCGIFDSTADDR 105,2714
+#define SIOCGIFFLAGS 106,2748
+#define SIOCGIFMETRIC 107,2780
+#define SIOCGIFNETMASK 108,2813
+#define SIOCGLOWAT 109,2847
+#define SIOCGPGRP 110,2877
+#define SIOCSARP 111,2906
+#define SIOCSHIWAT 112,2934
+#define SIOCSIFADDR 113,2964
+#define SIOCSIFBRDADDR 114,2995
+#define SIOCSIFDSTADDR 115,3029
+#define SIOCSIFFLAGS 116,3063
+#define SIOCSIFMETRIC 117,3095
+#define SIOCSIFNETMASK 118,3128
+#define SIOCSLOWAT 119,3162
+#define SIOCSPGRP 120,3192
+#define SLIPDISC 121,3221
+#define TAB0 122,3249
+#define TAB1 123,3273
+#define TAB2 124,3297
+#define TABLDISC 125,3321
+#define TANDEM 126,3349
+#define TBDELAY 127,3375
+#define TILDE 128,3402
+#define TIOCCBRK 129,3427
+#define TIOCCDTR 130,3455
+#define TIOCCONS 131,3483
+#define TIOCEXCL 132,3511
+#define TIOCFLUSH 133,3539
+#define TIOCGETC 134,3568
+#define TIOCGETD 135,3596
+#define TIOCGETP 136,3624
+#define TIOCGLTC 137,3652
+#define TIOCGPGRP 138,3680
+#define TIOCGSCR 139,3709
+#define TIOCGSIZE 140,3737
+#define TIOCGSOFTC 141,3766
+#define TIOCGSTAT 142,3796
+#define TIOCGWID 143,3825
+#define TIOCGWINSZ 144,3853
+#define TIOCHPCL 145,3883
+#define TIOCLBIC 146,3911
+#define TIOCLBIS 147,3939
+#define TIOCLGET 148,3967
+#define TIOCLSET 149,3995
+#define TIOCMBIC 150,4023
+#define TIOCMBIS 151,4051
+#define TIOCMGET 152,4079
+#define TIOCMODG 153,4107
+#define TIOCMODS 154,4135
+#define TIOCMSET 155,4163
+#define TIOCM_CAR 156,4191
+#define TIOCM_CD 157,4220
+#define TIOCM_CTS 158,4248
+#define TIOCM_DSR 159,4277
+#define TIOCM_DTR 160,4306
+#define TIOCM_LE 161,4335
+#define TIOCM_RI 162,4363
+#define TIOCM_RNG 163,4391
+#define TIOCM_RTS 164,4420
+#define TIOCM_SR 165,4449
+#define TIOCM_ST 166,4477
+#define TIOCNOTTY 167,4505
+#define TIOCNXCL 168,4534
+#define TIOCOUTQ 169,4562
+#define TIOCPGET 170,4590
+#define TIOCPKT 171,4618
+#define TIOCPKT_DATA 172,4645
+#define TIOCPKT_DOSTOP 173,4677
+#define TIOCPKT_FLUSHREAD 174,4711
+#define TIOCPKT_FLUSHWRITE 175,4748
+#define TIOCPKT_NOSTOP 176,4786
+#define TIOCPKT_START 177,4820
+#define TIOCPKT_STOP 178,4853
+#define TIOCPSET 179,4885
+#define TIOCREMOTE 180,4913
+#define TIOCSBRK 181,4943
+#define TIOCSCARR 182,4971
+#define TIOCSDTR 183,5000
+#define TIOCSETC 184,5028
+#define TIOCSETD 185,5056
+#define TIOCSETN 186,5084
+#define TIOCSETP 187,5112
+#define TIOCSLTC 188,5140
+#define TIOCSPGRP 189,5168
+#define TIOCSSCR 190,5197
+#define TIOCSSIZE 191,5225
+#define TIOCSSOFTC 192,5254
+#define TIOCSSTAT 193,5284
+#define TIOCSTART 194,5313
+#define TIOCSTI 195,5342
+#define TIOCSTOP 196,5369
+#define TIOCSWID 197,5397
+#define TIOCSWINSZ 198,5425
+#define TIOCUCNTL 199,5455
+#define TIOCWCARR 200,5484
+#define TOSTOP 201,5513
+#define UST_CHILDS 202,5539
+#define UST_FLAGS 203,5569
+#define UST_INCORE 204,5598
+#define UST_LOAD1 205,5628
+#define UST_LOAD15 206,5657
+#define UST_LOAD5 207,5687
+#define UST_PCPU 208,5716
+#define UST_PGRP 209,5744
+#define UST_RAWCPU 210,5772
+#define UST_STATE 211,5802
+#define UST_UPTIME 212,5831
+#define VTDELAY 213,5861
+#define XTABS 214,5888
+
+../sysdeps/stub/ioctls.h,0
+
+../sysdeps/unix/bsd/bsd4.4/ioctls.h,5902
+#define	_IOCTLS_H_37,1899
+#define	TIOCGSIZE	39,1919
+#define	TIOCSSIZE	40,1948
+#define	IOCPARM_MASK	47,2196
+#define	IOCPARM_LEN(48,2265
+#define	IOCBASECMD(49,2317
+#define	IOCGROUP(50,2361
+#define	IOCPARM_MAX	52,2402
+#define	IOC_VOID	53,2467
+#define	IOC_OUT	54,2515
+#define	IOC_IN	55,2569
+#define	IOC_INOUT	56,2621
+#define	IOC_DIRMASK	57,2656
+#define _IOC(59,2715
+#define	_IO(61,2816
+#define	_IOR(62,2861
+#define	_IOW(63,2916
+#define	_IOWR(65,3024
+#define	TIOCMODG	67,3083
+#define	TIOCMODS	68,3148
+#define		TIOCM_LE	69,3213
+#define		TIOCM_DTR	70,3255
+#define		TIOCM_RTS	71,3306
+#define		TIOCM_ST	72,3353
+#define		TIOCM_SR	73,3402
+#define		TIOCM_CTS	74,3450
+#define		TIOCM_CAR	75,3495
+#define		TIOCM_CD	76,3541
+#define		TIOCM_RNG	77,3569
+#define		TIOCM_RI	78,3605
+#define		TIOCM_DSR	79,3633
+#define	TIOCEXCL	81,3703
+#define	TIOCNXCL	82,3765
+#define	TIOCFLUSH	84,3851
+#define	TIOCGETA	86,3933
+#define	TIOCSETA	87,4005
+#define	TIOCSETAW	88,4077
+#define	TIOCSETAF	89,4149
+#define	TIOCGETD	90,4224
+#define	TIOCSETD	91,4286
+#define	TIOCSBRK	93,4375
+#define	TIOCCBRK	94,4427
+#define	TIOCSDTR	95,4481
+#define	TIOCCDTR	96,4543
+#define	TIOCGPGRP	97,4607
+#define	TIOCSPGRP	98,4667
+#define	TIOCOUTQ	100,4754
+#define	TIOCSTI	101,4815
+#define	TIOCNOTTY	102,4883
+#define	TIOCPKT	103,4943
+#define		TIOCPKT_DATA	104,5013
+#define		TIOCPKT_FLUSHREAD	105,5059
+#define		TIOCPKT_FLUSHWRITE	106,5110
+#define		TIOCPKT_STOP	107,5162
+#define		TIOCPKT_START	108,5208
+#define		TIOCPKT_NOSTOP	109,5256
+#define		TIOCPKT_DOSTOP	110,5307
+#define		TIOCPKT_IOCTL	111,5356
+#define	TIOCSTOP	112,5418
+#define	TIOCSTART	113,5477
+#define	TIOCMSET	114,5538
+#define	TIOCMBIS	115,5600
+#define	TIOCMBIC	116,5658
+#define	TIOCMGET	117,5716
+#define	TIOCREMOTE	118,5778
+#define	TIOCGWINSZ	119,5844
+#define	TIOCSWINSZ	120,5916
+#define	TIOCUCNTL	121,5988
+#define		UIOCCMD(122,6059
+#define	TIOCCONS	123,6114
+#define	TIOCSCTTY	124,6180
+#define	TIOCEXT	125,6241
+#define	TIOCSIG	126,6308
+#define TIOCDRAIN	127,6366
+#define TTYDISC	129,6430
+#define	TABLDISC	130,6484
+#define	SLIPDISC	131,6528
+#define	FIOCLEX	134,6577
+#define	FIONCLEX	135,6637
+#define	FIONREAD	136,6694
+#define	FIONBIO	137,6757
+#define	FIOASYNC	138,6827
+#define	FIOSETOWN	139,6890
+#define	FIOGETOWN	140,6944
+#define	SIOCSHIWAT	143,7025
+#define	SIOCGHIWAT	144,7089
+#define	SIOCSLOWAT	145,7153
+#define	SIOCGLOWAT	146,7216
+#define	SIOCATMARK	147,7279
+#define	SIOCSPGRP	148,7337
+#define	SIOCGPGRP	149,7399
+#define	SIOCADDRT	151,7462
+#define	SIOCDELRT	152,7527
+#define	SIOCSIFADDR	154,7596
+#define	OSIOCGIFADDR	155,7668
+#define	SIOCGIFADDR	156,7741
+#define	SIOCSIFDSTADDR	157,7813
+#define	OSIOCGIFDSTADDR	158,7886
+#define	SIOCGIFDSTADDR	159,7960
+#define	SIOCSIFFLAGS	160,8033
+#define	SIOCGIFFLAGS	161,8104
+#define	OSIOCGIFBRDADDR	162,8175
+#define	SIOCGIFBRDADDR	163,8252
+#define	SIOCSIFBRDADDR	164,8328
+#define	OSIOCGIFCONF	165,8403
+#define	SIOCGIFCONF	166,8474
+#define	OSIOCGIFNETMASK	167,8544
+#define	SIOCGIFNETMASK	168,8620
+#define	SIOCSIFNETMASK	169,8695
+#define	SIOCGIFMETRIC	170,8769
+#define	SIOCSIFMETRIC	171,8839
+#define	SIOCDIFADDR	172,8908
+#define	SIOCAIFADDR	173,8976
+#define	SIOCSARP	175,9052
+#define	OSIOCGARP	176,9118
+#define	SIOCGARP	177,9185
+#define	SIOCDARP	178,9251
+# define TIOCGETD	186,9445
+# define TIOCSETD	188,9525
+# define OTIOCGETD	190,9593
+# define OTIOCSETD	191,9656
+#define	TIOCHPCL	193,9726
+#define	TIOCGETP	194,9784
+#define	TIOCSETP	195,9856
+#define	TIOCSETN	196,9928
+#define	TIOCSETC	197,10002
+#define	TIOCGETC	198,10074
+#define		TANDEM	199,10146
+#define		CBREAK	200,10205
+#define		LCASE	201,10256
+#define		ECHO	202,10309
+#define		CRMOD	203,10352
+#define		RAW	204,10410
+#define		ODDP	205,10459
+#define		EVENP	206,10511
+#define		ANYP	207,10565
+#define		NLDELAY	208,10622
+#define			NL0	209,10666
+#define			NL1	210,10691
+#define			NL2	211,10729
+#define			NL3	212,10765
+#define		TBDELAY	213,10790
+#define			TAB0	214,10846
+#define			TAB1	215,10872
+#define			TAB2	216,10911
+#define		XTABS	217,10937
+#define		CRDELAY	218,10992
+#define			CR0	219,11036
+#define			CR1	220,11061
+#define			CR2	221,11099
+#define			CR3	222,11137
+#define		VTDELAY	223,11180
+#define			FF0	224,11234
+#define			FF1	225,11259
+#define		BSDELAY	226,11297
+#define			BS0	227,11341
+#define			BS1	228,11366
+#define		ALLDELAY	229,11391
+#define		CRTBS	230,11451
+#define		PRTERA	231,11507
+#define		CRTERA	232,11555
+#define		TILDE	233,11613
+#define		MDMBUF	234,11669
+#define		LITOUT	235,11730
+#define		TOSTOP	236,11779
+#define		FLUSHO	237,11840
+#define		NOHANG	238,11899
+#define		L001000	239,11971
+#define		CRTKIL	240,12000
+#define		PASS8	241,12056
+#define		CTLECH	242,12083
+#define		PENDIN	243,12142
+#define		DECCTQ	244,12200
+#define		NOFLSH	245,12258
+#define	TIOCLBIS	246,12318
+#define	TIOCLBIC	247,12381
+#define	TIOCLSET	248,12444
+#define	TIOCLGET	249,12514
+#define		LCRTBS	250,12573
+#define		LPRTERA	251,12602
+#define		LCRTERA	252,12633
+#define		LTILDE	253,12664
+#define		LMDMBUF	254,12693
+#define		LLITOUT	255,12724
+#define		LTOSTOP	256,12755
+#define		LFLUSHO	257,12786
+#define		LNOHANG	258,12817
+#define		LCRTKIL	259,12848
+#define		LPASS8	260,12879
+#define		LCTLECH	261,12908
+#define		LPENDIN	262,12939
+#define		LDECCTQ	263,12970
+#define		LNOFLSH	264,13001
+#define	TIOCSLTC	265,13032
+#define	TIOCGLTC	266,13106
+#define OTIOCCONS	267,13180
+#define	OTTYDISC	268,13243
+#define	NETLDISC	269,13262
+#define	NTTYDISC	270,13281
+#define B0	274,13353
+#define B50	275,13366
+#define B75	276,13380
+#define B110	277,13394
+#define B134	278,13409
+#define B150	279,13424
+#define B200	280,13439
+#define B300	281,13454
+#define B600	282,13469
+#define B1200	283,13484
+#define	B1800	284,13500
+#define B2400	285,13517
+#define B4800	286,13534
+#define B9600	287,13551
+#define EXTA	288,13568
+#define EXTB	289,13584
+
+../sysdeps/mach/hurd/ioctls.h,5815
+#define	_IOCTLS_H	21,850
+enum __ioctl_dir23,871
+union __ioctl32,1097
+#define	_IOCT(55,1752
+#define	_IOC(61,2033
+#define	_IO(67,2265
+#define	_IOR(68,2312
+#define	_IOW(69,2368
+#define	_IOWR(70,2425
+#define	_IOT(74,2574
+#define _IOTS(78,2733
+#define	_IOT_SIMPLE(82,2863
+#define	_IOT_int	85,2947
+#define	_IOT_char	86,2983
+#define	_IOT_short	87,3021
+#define	TIOCMODG	92,3143
+#define	TIOCMODS	93,3208
+#define		TIOCM_LE	94,3273
+#define		TIOCM_DTR	95,3315
+#define		TIOCM_RTS	96,3366
+#define		TIOCM_ST	97,3413
+#define		TIOCM_SR	98,3462
+#define		TIOCM_CTS	99,3510
+#define		TIOCM_CAR	100,3555
+#define		TIOCM_CD	101,3601
+#define		TIOCM_RNG	102,3629
+#define		TIOCM_RI	103,3665
+#define		TIOCM_DSR	104,3693
+#define	TIOCEXCL	106,3763
+#define	TIOCNXCL	107,3825
+#define	TIOCFLUSH	109,3911
+#define	TIOCGETA	111,3993
+#define	TIOCSETA	112,4058
+#define	TIOCSETAW	113,4123
+#define	TIOCSETAF	114,4188
+#define	TIOCGETD	115,4256
+#define	TIOCSETD	116,4318
+#define	TIOCSBRK	118,4407
+#define	TIOCCBRK	119,4459
+#define	TIOCSDTR	120,4513
+#define	TIOCCDTR	121,4575
+#define	TIOCGPGRP	122,4639
+#define	TIOCSPGRP	123,4699
+#define	TIOCOUTQ	125,4786
+#define	TIOCSTI	126,4847
+#define	TIOCNOTTY	127,4915
+#define	TIOCPKT	128,4975
+#define		TIOCPKT_DATA	129,5045
+#define		TIOCPKT_FLUSHREAD	130,5091
+#define		TIOCPKT_FLUSHWRITE	131,5142
+#define		TIOCPKT_STOP	132,5194
+#define		TIOCPKT_START	133,5240
+#define		TIOCPKT_NOSTOP	134,5288
+#define		TIOCPKT_DOSTOP	135,5339
+#define		TIOCPKT_IOCTL	136,5388
+#define	TIOCSTOP	137,5450
+#define	TIOCSTART	138,5509
+#define	TIOCMSET	139,5570
+#define	TIOCMBIS	140,5632
+#define	TIOCMBIC	141,5690
+#define	TIOCMGET	142,5748
+#define	TIOCREMOTE	143,5810
+#define	TIOCGWINSZ	144,5876
+#define	TIOCSWINSZ	145,5941
+#define	TIOCUCNTL	146,6006
+#define		UIOCCMD(147,6077
+#define	TIOCCONS	148,6132
+#define	TIOCSCTTY	149,6198
+#define	TIOCEXT	150,6259
+#define	TIOCSIG	151,6326
+#define TIOCDRAIN	152,6384
+#define TTYDISC	154,6448
+#define	TABLDISC	155,6502
+#define	SLIPDISC	156,6546
+#define	FIOCLEX	159,6595
+#define	FIONCLEX	160,6655
+#define	FIONREAD	161,6712
+#define	FIONBIO	162,6775
+#define	FIOASYNC	163,6845
+#define	FIOSETOWN	164,6908
+#define	FIOGETOWN	165,6962
+#define	SIOCSHIWAT	168,7043
+#define	SIOCGHIWAT	169,7107
+#define	SIOCSLOWAT	170,7171
+#define	SIOCGLOWAT	171,7234
+#define	SIOCATMARK	172,7297
+#define	SIOCSPGRP	173,7355
+#define	SIOCGPGRP	174,7417
+#define	SIOCADDRT	176,7480
+#define	SIOCDELRT	177,7538
+#define	SIOCSIFADDR	179,7600
+#define	OSIOCGIFADDR	180,7665
+#define	SIOCGIFADDR	181,7731
+#define	SIOCSIFDSTADDR	182,7796
+#define	OSIOCGIFDSTADDR	183,7862
+#define	SIOCGIFDSTADDR	184,7929
+#define	SIOCSIFFLAGS	185,7995
+#define	SIOCGIFFLAGS	186,8059
+#define	OSIOCGIFBRDADDR	187,8123
+#define	SIOCGIFBRDADDR	188,8193
+#define	SIOCSIFBRDADDR	189,8262
+#define	OSIOCGIFCONF	190,8330
+#define	SIOCGIFCONF	191,8394
+#define	OSIOCGIFNETMASK	192,8457
+#define	SIOCGIFNETMASK	193,8526
+#define	SIOCSIFNETMASK	194,8594
+#define	SIOCGIFMETRIC	195,8661
+#define	SIOCSIFMETRIC	196,8724
+#define	SIOCDIFADDR	197,8786
+#define	SIOCAIFADDR	198,8847
+#define	SIOCSARP	200,8916
+#define	OSIOCGARP	201,8975
+#define	SIOCGARP	202,9035
+#define	SIOCDARP	203,9094
+# define TIOCGETD	211,9281
+# define TIOCSETD	213,9361
+# define OTIOCGETD	215,9429
+# define OTIOCSETD	216,9492
+#define	TIOCHPCL	218,9562
+#define	TIOCGETP	219,9620
+#define	TIOCSETP	220,9685
+#define	TIOCSETN	221,9750
+#define	TIOCSETC	222,9817
+#define	TIOCGETC	223,9882
+#define		TANDEM	224,9947
+#define		CBREAK	225,10006
+#define		LCASE	226,10057
+#define		ECHO	227,10110
+#define		CRMOD	228,10153
+#define		RAW	229,10211
+#define		ODDP	230,10260
+#define		EVENP	231,10312
+#define		ANYP	232,10366
+#define		NLDELAY	233,10423
+#define			NL0	234,10467
+#define			NL1	235,10492
+#define			NL2	236,10530
+#define			NL3	237,10566
+#define		TBDELAY	238,10591
+#define			TAB0	239,10647
+#define			TAB1	240,10673
+#define			TAB2	241,10712
+#define		XTABS	242,10738
+#define		CRDELAY	243,10793
+#define			CR0	244,10837
+#define			CR1	245,10862
+#define			CR2	246,10900
+#define			CR3	247,10938
+#define		VTDELAY	248,10981
+#define			FF0	249,11035
+#define			FF1	250,11060
+#define		BSDELAY	251,11098
+#define			BS0	252,11142
+#define			BS1	253,11167
+#define		ALLDELAY	254,11192
+#define		CRTBS	255,11252
+#define		PRTERA	256,11308
+#define		CRTERA	257,11356
+#define		TILDE	258,11414
+#define		MDMBUF	259,11470
+#define		LITOUT	260,11531
+#define		TOSTOP	261,11580
+#define		FLUSHO	262,11641
+#define		NOHANG	263,11700
+#define		L001000	264,11772
+#define		CRTKIL	265,11801
+#define		PASS8	266,11857
+#define		CTLECH	267,11884
+#define		PENDIN	268,11943
+#define		DECCTQ	269,12001
+#define		NOFLSH	270,12059
+#define	TIOCLBIS	271,12119
+#define	TIOCLBIC	272,12182
+#define	TIOCLSET	273,12245
+#define	TIOCLGET	274,12315
+#define		LCRTBS	275,12374
+#define		LPRTERA	276,12403
+#define		LCRTERA	277,12434
+#define		LTILDE	278,12465
+#define		LMDMBUF	279,12494
+#define		LLITOUT	280,12525
+#define		LTOSTOP	281,12556
+#define		LFLUSHO	282,12587
+#define		LNOHANG	283,12618
+#define		LCRTKIL	284,12649
+#define		LPASS8	285,12680
+#define		LCTLECH	286,12709
+#define		LPENDIN	287,12740
+#define		LDECCTQ	288,12771
+#define		LNOFLSH	289,12802
+#define	TIOCSLTC	290,12833
+#define	TIOCGLTC	291,12900
+#define OTIOCCONS	292,12967
+#define	OTTYDISC	293,13030
+#define	NETLDISC	294,13049
+#define	NTTYDISC	295,13068
+#define B0	299,13140
+#define B50	300,13153
+#define B75	301,13167
+#define B110	302,13181
+#define B134	303,13196
+#define B150	304,13211
+#define B200	305,13226
+#define B300	306,13241
+#define B600	307,13256
+#define B1200	308,13271
+#define	B1800	309,13287
+#define B2400	310,13304
+#define B4800	311,13321
+#define B9600	312,13338
+#define EXTA	313,13355
+#define EXTB	314,13371
+
+sys/file.h,199
+#define	_SYS_FILE_H	21,858
+#define	L_SET	33,1106
+#define	L_INCR	34,1158
+#define	L_XTND	35,1210
+#define	LOCK_SH	39,1299
+#define	LOCK_EX	40,1340
+#define	LOCK_UN	41,1384
+#define	LOCK_NB	44,1464
+
+a.out.h,2024
+#define __A_OUT_GNU_H__2,24
+enum machine_type 42,1292
+#define N_MAGIC(71,1801
+#define N_MACHTYPE(72,1840
+#define N_FLAGS(73,1867
+#define N_SET_INFO(74,1892
+#define N_SET_MAGIC(75,1967
+#define N_SET_MACHTYPE(76,2026
+#define N_SET_FLAGS(77,2076
+#define	OMAGIC	78,2120
+#define	ZMAGIC	79,2174
+#define NMAGIC	80,2237
+#define N_BADMAG(81,2299
+#define N_ADDRADJ(82,2366
+#define N_DATOFF(83,2429
+#define N_TRELOFF(84,2491
+#define N_SYMOFF(85,2554
+#define N_TXTADDR(86,2621
+#define N_COMM	87,2655
+#define N_FN	88,2706
+#define PAGE_SIZE	91,2856
+#define SEGMENT_SIZE	92,2879
+#define N_MAGIC(97,2966
+#define N_MACHTYPE(99,3020
+#define N_FLAGS(100,3097
+#define N_SET_INFO(101,3150
+#define N_SET_MAGIC(105,3301
+#define N_SET_MACHTYPE(108,3408
+#define N_SET_FLAGS(112,3535
+#define OMAGIC 120,3750
+#define NMAGIC 122,3810
+#define ZMAGIC 124,3878
+#define N_BADMAG(128,3947
+#define _N_BADMAG(133,4058
+#define _N_HDROFF(138,4177
+#define _N_HDROFF(140,4242
+#define N_TXTOFF(144,4320
+#define N_DATOFF(149,4461
+#define N_TRELOFF(153,4541
+#define N_DRELOFF(157,4622
+#define N_SYMOFF(161,4705
+#define N_STROFF(165,4787
+#define N_TXTADDR(170,4928
+#define	PAGE_SIZE	177,5142
+#define	PAGE_SIZE	180,5210
+#define	SEGMENT_SIZE	183,5301
+#define SEGMENT_SIZE 186,5373
+#define PAGE_SIZE 189,5446
+#define SEGMENT_SIZE 193,5547
+#define SEGMENT_SIZE 200,5823
+#define	PAGE_SIZE 206,6041
+#define	PAGSIZ	209,6070
+#define	SEGSIZ	210,6095
+#define _N_SEGMENT_ROUND(212,6124
+#define _N_TXTENDADDR(214,6202
+#define N_DATADDR(217,6272
+#define N_BSSADDR(224,6480
+struct nlist 228,6570
+#define N_UNDF 242,6808
+#define N_ABS 245,6853
+#define N_TEXT 248,6898
+#define N_DATA 251,6944
+#define N_BSS 254,6989
+#define N_COMM 257,7034
+#define N_FN 260,7079
+#define N_EXT 264,7124
+#define N_TYPE 267,7169
+#define N_STAB 270,7217
+#define N_INDR 281,7695
+#define	N_SETA	295,8297
+#define	N_SETT	296,8352
+#define	N_SETD	297,8403
+#define	N_SETB	298,8454
+#define N_SETV	301,8536
+struct relocation_info309,8903
+
+nlist.h,78
+#define	_NLIST_H	21,855
+struct nlist27,962
+#define	N_NLIST_DECLARED36,1086
+
+stab.h,83
+#define __GNU_STAB__5,65
+#define __define_stab(7,87
+enum __stab_debug_code9,141
+
+stab.def,22
+__define_stab 22,965
+
+sgtty.h,25
+#define	_SGTYY_H	20,854
+
+sys/dir.h,50
+#define	_SYS_DIR_H	21,845
+#define	direct	26,910
+
+sys/cdefs.h,921
+#define	_SYS_CDEFS_H	21,853
+#define	__P(26,916
+#define	__DOTS	27,978
+#define	__NORETURN	33,1264
+#define	__CONSTVALUE	34,1294
+#define	__NORETURN	39,1495
+#define	__CONSTVALUE	40,1541
+#define	__inline	45,1617
+#define	__NORETURN	46,1663
+#define	__CONSTVALUE	47,1728
+#define	__P(51,1861
+#define	__const	52,1884
+#define	__signed	53,1907
+#define	__volatile	54,1931
+#define	__DOTS	55,1959
+#define	__P(59,2015
+#define	__const	60,2058
+#define	__signed61,2103
+#define	__volatile62,2120
+#define	__DOTS63,2139
+#define	__CONCAT(74,2346
+#define	__STRING(75,2375
+#define __ptr_t 78,2469
+typedef long double __long_double_t;79,2492
+#define	__CONCAT(83,2537
+#define	__STRING(84,2566
+#define __ptr_t 86,2591
+typedef double __long_double_t;87,2614
+#define	const	96,2896
+#define	signed	97,2919
+#define	volatile	98,2944
+#define	__BEGIN_DECLS	103,3068
+#define	__BEGIN_DECLS106,3131
+#define	__END_DECLS107,3153
+
+ttyent.h,253
+#define	_TTYENT_H_37,1885
+#define	_PATH_TTYS	39,1905
+#define	_TTYS_OFF	41,1937
+#define	_TTYS_ON	42,1961
+#define	_TTYS_SECURE	43,1983
+#define	_TTYS_WINDOW	44,2013
+#define _TTYS_TRUSTED	45,2043
+#define _TTYS_CONSOLE	46,2075
+struct ttyent 48,2108
+
+../hp300/syscall.h,3920
+#define SYS_exit 1,0
+#define SYS_fork 2,19
+#define SYS_read 3,38
+#define SYS_write 4,57
+#define SYS_open 5,77
+#define SYS_close 6,96
+#define SYS_creat 7,116
+#define SYS_link 8,136
+#define SYS_unlink 9,155
+#define SYS_execv 10,177
+#define SYS_chdir 11,198
+#define SYS_mknod 12,219
+#define SYS_chmod 13,240
+#define SYS_chown 14,261
+#define SYS_lseek 15,282
+#define SYS_getpid 16,303
+#define SYS_umount 17,325
+#define SYS_getuid 18,394
+#define SYS_ptrace 19,416
+#define SYS_access 20,438
+#define SYS_sync 21,460
+#define SYS_kill 22,480
+#define SYS_stat 23,500
+#define SYS_lstat 24,520
+#define SYS_dup 25,541
+#define SYS_pipe 26,560
+#define SYS_profil 27,580
+#define SYS_getgid 28,602
+#define SYS_acct 29,624
+#define SYS_ioctl 30,644
+#define SYS_reboot 31,665
+#define SYS_symlink 32,687
+#define SYS_readlink 33,710
+#define SYS_execve 34,734
+#define SYS_umask 35,756
+#define SYS_chroot 36,777
+#define SYS_fstat 37,799
+#define SYS_getpagesize 38,820
+#define SYS_mremap 39,847
+#define SYS_sbrk 40,869
+#define SYS_sstk 41,889
+#define SYS_mmap 42,909
+#define SYS_munmap 43,929
+#define SYS_mprotect 44,951
+#define SYS_madvise 45,975
+#define SYS_vhangup 46,998
+#define SYS_mincore 47,1021
+#define SYS_getgroups 48,1044
+#define SYS_setgroups 49,1069
+#define SYS_getpgrp 50,1094
+#define SYS_setpgrp 51,1117
+#define SYS_setitimer 52,1140
+#define SYS_wait 53,1165
+#define SYS_swapon 54,1185
+#define SYS_getitimer 55,1207
+#define SYS_gethostname 56,1232
+#define SYS_sethostname 57,1259
+#define SYS_getdtablesize 58,1286
+#define SYS_dup2 59,1315
+#define SYS_getdopt 60,1335
+#define SYS_fcntl 61,1358
+#define SYS_select 62,1379
+#define SYS_setdopt 63,1401
+#define SYS_fsync 64,1424
+#define SYS_setpriority 65,1445
+#define SYS_socket 66,1472
+#define SYS_connect 67,1494
+#define SYS_accept 68,1517
+#define SYS_getpriority 69,1539
+#define SYS_send 70,1567
+#define SYS_recv 71,1588
+#define SYS_sigreturn 72,1609
+#define SYS_bind 73,1635
+#define SYS_setsockopt 74,1656
+#define SYS_listen 75,1683
+#define SYS_sigvec 76,1706
+#define SYS_sigblock 77,1729
+#define SYS_sigsetmask 78,1754
+#define SYS_sigpause 79,1781
+#define SYS_sigstack 80,1806
+#define SYS_recvmsg 81,1831
+#define SYS_sendmsg 82,1855
+#define SYS_gettimeofday 83,1879
+#define SYS_getrusage 84,1908
+#define SYS_getsockopt 85,1934
+#define SYS_readv 86,1961
+#define SYS_writev 87,1983
+#define SYS_settimeofday 88,2006
+#define SYS_fchown 89,2035
+#define SYS_fchmod 90,2058
+#define SYS_recvfrom 91,2081
+#define SYS_setreuid 92,2106
+#define SYS_setregid 93,2131
+#define SYS_rename 94,2156
+#define SYS_truncate 95,2179
+#define SYS_ftruncate 96,2204
+#define SYS_flock 97,2230
+#define SYS_sendto 98,2252
+#define SYS_shutdown 99,2275
+#define SYS_socketpair 100,2300
+#define SYS_mkdir 101,2327
+#define SYS_rmdir 102,2349
+#define SYS_utimes 103,2371
+#define SYS_adjtime 104,2394
+#define SYS_getpeername 105,2418
+#define SYS_gethostid 106,2446
+#define SYS_sethostid 107,2472
+#define SYS_getrlimit 108,2498
+#define SYS_setrlimit 109,2524
+#define SYS_killpg 110,2550
+#define SYS_getsockname 111,2573
+#define SYS_maxusers 112,2601
+#define SYS_wait4 113,2626
+#define SYS_nfssvc 114,2648
+#define SYS_getdirentries 115,2671
+#define SYS_statfs 116,2701
+#define SYS_fstatfs 117,2724
+#define SYS_unmount 118,2748
+#define SYS_async_daemon 119,2772
+#define SYS_getfh 120,2801
+#define SYS_getdomainname 121,2823
+#define SYS_setdomainname 122,2853
+#define SYS_getdents 123,2883
+#define SYS_quotactl 124,2908
+#define SYS_exportfs 125,2933
+#define SYS_mount 126,2958
+#define SYS_shmat 127,2980
+#define SYS_shmctl 128,3002
+#define SYS_shmdt 129,3025
+#define SYS_shmget 130,3047
+#define SYS_msgctl 131,3070
+#define SYS_msgget 132,3112
+#define SYS_msgrcv 133,3135
+#define SYS_msgsnd 134,3158
+#define SYS_semctl 135,3181
+#define SYS_semget 136,3204
+#define SYS_semop 137,3227
+
+../sysdeps/stub/syscall.h,0
+
+../sysdeps/unix/sysv/linux/syscall.h,3263
+#define	_SYSCALL_H2,19
+#define	SYS_setup	4,39
+#define SYS_exit	5,106
+#define SYS_fork	6,126
+#define SYS_read	7,146
+#define SYS_write	8,166
+#define SYS_open	9,187
+#define SYS_close	10,207
+#define SYS_waitpid	11,228
+#define SYS_creat	12,251
+#define SYS_link	13,272
+#define SYS_unlink	14,292
+#define SYS_execve	15,315
+#define SYS_chdir	16,338
+#define SYS_time	17,360
+#define SYS_mknod	18,381
+#define SYS_chmod	19,403
+#define SYS_chown	20,425
+#define SYS_brk	21,447
+#define SYS_oldstat	22,468
+#define SYS_lseek	23,492
+#define SYS_getpid	24,514
+#define SYS_mount	25,537
+#define SYS_umount	26,559
+#define SYS_setuid	27,582
+#define SYS_getuid	28,605
+#define SYS_stime	29,628
+#define SYS_ptrace	30,650
+#define SYS_alarm	31,673
+#define SYS_oldfstat	32,695
+#define SYS_pause	33,720
+#define SYS_utime	34,742
+#define SYS_stty	35,764
+#define SYS_gtty	36,785
+#define SYS_access	37,806
+#define SYS_nice	38,829
+#define SYS_ftime	39,850
+#define SYS_sync	40,872
+#define SYS_kill	41,893
+#define SYS_rename	42,914
+#define SYS_mkdir	43,937
+#define SYS_rmdir	44,959
+#define SYS_dup	45,981
+#define SYS_pipe	46,1002
+#define SYS_times	47,1023
+#define SYS_prof	48,1045
+#define SYS_brk	50,1072
+#define SYS_setgid	52,1141
+#define SYS_getgid	53,1164
+#define SYS_signal	54,1187
+#define SYS_geteuid	55,1210
+#define SYS_getegid	56,1234
+#define SYS_acct	57,1258
+#define SYS_phys	58,1279
+#define SYS_lock	59,1300
+#define SYS_ioctl	60,1321
+#define SYS_fcntl	61,1343
+#define SYS_mpx	62,1365
+#define SYS_setpgrp	63,1386
+#define SYS_ulimit	64,1410
+#define SYS_olduname	65,1433
+#define SYS_umask	66,1458
+#define SYS_chroot	67,1480
+#define SYS_ustat	68,1503
+#define SYS_dup2	69,1525
+#define SYS_getppid	70,1546
+#define SYS_getpgrp	71,1570
+#define SYS_setsid	72,1594
+#define SYS_sigaction	73,1617
+#define SYS_siggetmask	74,1643
+#define SYS_sigsetmask	75,1670
+#define SYS_setreuid	76,1697
+#define SYS_setregid	77,1722
+#define SYS_sigsuspend	78,1747
+#define SYS_sigpending	79,1774
+#define SYS_sethostname	80,1801
+#define SYS_setrlimit	81,1829
+#define SYS_getrlimit	82,1855
+#define SYS_getrusage	83,1881
+#define SYS_gettimeofday	84,1907
+#define SYS_settimeofday	85,1935
+#define SYS_getgroups	86,1963
+#define SYS_setgroups	87,1989
+#define SYS_select	88,2015
+#define SYS_symlink	89,2038
+#define SYS_oldlstat	90,2062
+#define SYS_readlink	91,2087
+#define SYS_uselib	92,2112
+#define SYS_swapon	93,2135
+#define SYS_reboot	94,2158
+#define SYS_readdir	95,2181
+#define SYS_mmap	96,2205
+#define SYS_munmap	97,2226
+#define SYS_truncate	98,2249
+#define SYS_ftruncate	99,2274
+#define SYS_fchmod	100,2300
+#define SYS_fchown	101,2323
+#define SYS_getpriority	102,2346
+#define SYS_setpriority	103,2374
+#define SYS_profil	104,2402
+#define SYS_statfs	105,2425
+#define SYS_fstatfs	106,2448
+#define SYS_ioperm	107,2473
+#define SYS_socketcall	108,2497
+#define SYS_syslog	109,2525
+#define SYS_setitimer	110,2549
+#define SYS_getitimer	111,2576
+#define SYS_stat	112,2603
+#define SYS_lstat	113,2625
+#define SYS_fstat	114,2648
+#define SYS_uname	115,2671
+#define SYS_iopl	116,2694
+#define SYS_vhangup	117,2716
+#define SYS_idle	118,2741
+#define SYS_vm86	119,2763
+#define SYS_wait4	120,2785
+#define SYS_swapoff	121,2808
+
+../sysdeps/unix/sysv/sco3.2.4/syscall.h,2749
+#define _SYSCALL_H4,47
+#define SYS_access	6,67
+#define SYS_acct	7,89
+#define SYS_advfs	8,109
+#define SYS_alarm	9,130
+#define SYS_break	10,151
+#define SYS_brk	11,172
+#define SYS_chdir	12,192
+#define SYS_chmod	13,213
+#define SYS_chown	14,234
+#define SYS_chroot	15,255
+#define SYS_chsize	16,277
+#define SYS_close	17,303
+#define SYS_creat	18,323
+#define SYS_dup	19,343
+#define SYS_exec	20,363
+#define SYS_exece	21,383
+#define SYS_exit	22,404
+#define SYS_fcntl	23,423
+#define SYS_fork	24,444
+#define SYS_fpathconf	25,463
+#define SYS_fstat	26,492
+#define SYS_fstatfs	27,513
+#define SYS_ftime	28,536
+#define SYS_getdents	29,561
+#define SYS_getgid	30,585
+#define SYS_getgroups	31,607
+#define SYS_getitimer	32,636
+#define SYS_getmsg	33,665
+#define SYS_getpid	34,687
+#define SYS_getuid	35,709
+#define SYS_gtty	36,731
+#define SYS_ioctl	37,751
+#define SYS_kill	38,772
+#define SYS_link	39,792
+#define SYS_lock	40,811
+#define SYS_lseek	41,831
+#define SYS_lstat	42,852
+#define SYS_mkdir	43,873
+#define SYS_mknod	44,894
+#define SYS_mount	45,915
+#define SYS_msgsys	46,936
+#define SYS_nap	47,958
+#define SYS_nice	48,982
+#define SYS_open	49,1002
+#define SYS_pathconf	50,1021
+#define SYS_pause	51,1049
+#define SYS_pgrpsys	52,1070
+#define SYS_pipe	53,1093
+#define SYS_plock	54,1113
+#define SYS_poll	55,1134
+#define SYS_prof	56,1154
+#define SYS_ptrace	57,1174
+#define SYS_putmsg	58,1196
+#define SYS_rdebug	59,1218
+#define SYS_read	60,1240
+#define SYS_readlink	61,1259
+#define SYS_rename	62,1283
+#define SYS_rfstart	63,1309
+#define SYS_rfstop	64,1332
+#define SYS_rfsys	65,1354
+#define SYS_rmdir	66,1375
+#define SYS_rmount	67,1396
+#define SYS_rumount	68,1418
+#define SYS_seek	69,1441
+#define SYS_select	70,1461
+#define SYS_semsys	71,1487
+#define SYS_setgid	72,1509
+#define SYS_setgroups	73,1531
+#define SYS_setitimer	74,1560
+#define SYS_setpgrp	75,1589
+#define SYS_setuid	76,1612
+#define SYS_shmsys	77,1634
+#define SYS_sigaction	78,1656
+#define SYS_signal	79,1685
+#define SYS_sigpending	80,1707
+#define SYS_sigprocmask	81,1737
+#define SYS_sigsuspend	82,1768
+#define SYS_stat	83,1798
+#define SYS_statfs	84,1818
+#define SYS_stime	85,1840
+#define SYS_stty	86,1861
+#define SYS_symlink	87,1881
+#define SYS_sync	88,1904
+#define SYS_sys3b	89,1924
+#define SYS_sysacct	90,1945
+#define SYS_sysconf	91,1968
+#define SYS_sysfs	92,1995
+#define SYS_sysi86 93,2016
+#define SYS_time	94,2040
+#define SYS_times	95,2060
+#define SYS_uadmin	96,2081
+#define SYS_ulimit	97,2103
+#define SYS_umask	98,2125
+#define SYS_umount	99,2146
+#define SYS_unadvfs	100,2168
+#define SYS_unlink	101,2191
+#define SYS_utime	102,2213
+#define SYS_utssys	103,2234
+#define SYS_wait	104,2256
+#define SYS_write	105,2275
+
+syslog.h,0
+
+sys/syslog.h,1301
+#define	_PATH_LOG	36,1876
+#define	LOG_EMERG	47,2275
+#define	LOG_ALERT	48,2320
+#define	LOG_CRIT	49,2379
+#define	LOG_ERR	50,2424
+#define	LOG_WARNING	51,2466
+#define	LOG_NOTICE	52,2513
+#define	LOG_INFO	53,2573
+#define	LOG_DEBUG	54,2612
+#define	LOG_PRIMASK	56,2660
+#define	LOG_PRI(58,2759
+#define	LOG_MAKEPRI(59,2798
+#define	INTERNAL_NOPRI	62,2872
+#define	INTERNAL_MARK	64,2959
+typedef struct _code 65,3013
+} CODE;68,3063
+#define	LOG_KERN	88,3470
+#define	LOG_USER	89,3516
+#define	LOG_MAIL	90,3573
+#define	LOG_DAEMON	91,3615
+#define	LOG_AUTH	92,3662
+#define	LOG_SYSLOG	93,3724
+#define	LOG_LPR	94,3797
+#define	LOG_NEWS	95,3850
+#define	LOG_UUCP	96,3903
+#define	LOG_CRON	97,3948
+#define	LOG_AUTHPRIV	98,3991
+#define	LOG_LOCAL0	101,4123
+#define	LOG_LOCAL1	102,4179
+#define	LOG_LOCAL2	103,4235
+#define	LOG_LOCAL3	104,4291
+#define	LOG_LOCAL4	105,4347
+#define	LOG_LOCAL5	106,4403
+#define	LOG_LOCAL6	107,4459
+#define	LOG_LOCAL7	108,4515
+#define	LOG_NFACILITIES	110,4572
+#define	LOG_FACMASK	111,4634
+#define	LOG_FAC(113,4723
+#define	LOG_PRINTF	143,5349
+#define	LOG_MASK(149,5462
+#define	LOG_UPTO(150,5526
+#define	LOG_PID	158,5735
+#define	LOG_CONS	159,5793
+#define	LOG_ODELAY	160,5861
+#define	LOG_NDELAY	161,5933
+#define	LOG_NOWAIT	162,5980
+#define	LOG_PERROR	163,6051
+
+paths.h,607
+#define	_PATHS_H_37,1885
+#define	_PATH_DEFPATH	40,1931
+#define	_PATH_BSHELL	42,1970
+#define	_PATH_CONSOLE	43,2001
+#define	_PATH_CSHELL	44,2038
+#define	_PATH_DEVDB	45,2070
+#define	_PATH_DEVNULL	46,2108
+#define	_PATH_DRUM	47,2142
+#define	_PATH_KMEM	48,2173
+#define	_PATH_MAILDIR	49,2204
+#define	_PATH_MAN	50,2238
+#define	_PATH_MEM	51,2273
+#define	_PATH_NOLOGIN	52,2302
+#define	_PATH_SENDMAIL	53,2339
+#define	_PATH_TTY	54,2383
+#define	_PATH_UNIX	55,2412
+#define	_PATH_VI	56,2441
+#define	_PATH_DEV	59,2545
+#define	_PATH_TMP	60,2571
+#define	_PATH_VARRUN	61,2597
+#define	_PATH_VARTMP	62,2630
+
+../sysdeps/unix/bsd/sys/reboot.h,834
+#define _SYS_REBOOT_H_38,1957
+#define	RB_AUTOBOOT	45,2087
+#define	RB_ASKNAME	47,2153
+#define	RB_SINGLE	48,2216
+#define	RB_NOSYNC	49,2272
+#define	RB_HALT	50,2325
+#define	RB_INITNAME	51,2377
+#define	RB_DFLTROOT	52,2442
+#define	RB_KDB	53,2497
+#define	RB_RDONLY	54,2556
+#define	RB_DUMP	55,2609
+#define	B_ADAPTORSHIFT	69,3121
+#define	B_ADAPTORMASK	70,3148
+#define	B_ADAPTOR(71,3176
+#define B_CONTROLLERSHIFT	72,3244
+#define B_CONTROLLERMASK	73,3273
+#define	B_CONTROLLER(74,3302
+#define B_UNITSHIFT	75,3376
+#define B_UNITMASK	76,3400
+#define	B_UNIT(77,3424
+#define B_PARTITIONSHIFT	78,3483
+#define B_PARTITIONMASK	79,3510
+#define	B_PARTITION(80,3540
+#define	B_TYPESHIFT	81,3613
+#define	B_TYPEMASK	82,3636
+#define	B_TYPE(83,3661
+#define	B_MAGICMASK	85,3721
+#define	B_DEVMAGIC	86,3762
+#define MAKEBOOTDEV(88,3803
+
+../sysdeps/stub/sys/reboot.h,55
+#define _SYS_REBOOT_H5,138
+#define RB_AUTOBOOT	7,161
+
+../sysdeps/mach/sys/reboot.h,914
+#define	_SYS_REBOOT_H_78,2880
+#define	RB_AUTOBOOT	85,3033
+#define	RB_ASKNAME	87,3099
+#define	RB_SINGLE	88,3166
+#define	RB_KDB	89,3226
+#define	RB_HALT	90,3288
+#define	RB_INITNAME	93,3408
+#define	RB_DFLTROOT	94,3477
+#define	RB_NOBOOTRC	95,3536
+#define RB_ALTBOOT	96,3594
+#define	RB_UNIPROC	97,3651
+#define	RB_SHIFT	99,3711
+#define	RB_DEBUGGER	101,3759
+#define	B_ADAPTORSHIFT	116,4314
+#define	B_ADAPTORMASK	117,4341
+#define	B_ADAPTOR(118,4369
+#define B_CONTROLLERSHIFT	119,4437
+#define B_CONTROLLERMASK	120,4466
+#define	B_CONTROLLER(121,4495
+#define B_UNITSHIFT	122,4569
+#define B_UNITMASK	123,4593
+#define	B_UNIT(124,4617
+#define B_PARTITIONSHIFT	125,4676
+#define B_PARTITIONMASK	126,4703
+#define	B_PARTITION(127,4733
+#define	B_TYPESHIFT	128,4806
+#define	B_TYPEMASK	129,4829
+#define	B_TYPE(130,4854
+#define	B_MAGICMASK	132,4914
+#define	B_DEVMAGIC	133,4955
+#define MAKEBOOTDEV(135,4996
+
+../sysdeps/generic/sys/mman.h,601
+#define	_SYS_MMAN_H	26,1136
+#define __need_size_t30,1204
+#define	PROT_NONE	39,1532
+#define	PROT_READ	40,1573
+#define	PROT_WRITE	41,1622
+#define	PROT_EXEC	42,1675
+#define	MAP_FILE	48,1853
+#define	MAP_ANON	49,1914
+#define	MAP_TYPE	50,1986
+#define	MAP_COPY	53,2101
+#define	MAP_SHARED	54,2172
+#define	MAP_PRIVATE	55,2220
+#define	MAP_FIXED	58,2313
+#define	MAP_NOEXTEND	59,2386
+#define	MAP_HASSEMPHORE	60,2459
+#define	MAP_INHERIT	61,2528
+#define	MADV_NORMAL	64,2622
+#define	MADV_RANDOM	65,2681
+#define	MADV_SEQUENTIAL	66,2741
+#define	MADV_WILLNEED	67,2809
+#define	MADV_DONTNEED	68,2863
+
+../sysdeps/unix/bsd/sun/sunos4/sys/mman.h,602
+#define	_SYS_MMAN_H	26,1128
+#define __need_size_t30,1196
+#define	PROT_NONE	39,1524
+#define	PROT_READ	40,1565
+#define	PROT_WRITE	41,1614
+#define	PROT_EXEC	42,1667
+#define	MAP_SHARED	46,1784
+#define	MAP_PRIVATE	47,1830
+#define	MAP_TYPE	48,1900
+#define	MAP_FIXED	51,1973
+#define	MAP_RENAME	53,2120
+#define	MAP_NORESERVE	54,2181
+#define	MAP_INHERIT	55,2247
+#define	_MAP_NEW	61,2586
+#define	MADV_NORMAL	64,2643
+#define	MADV_RANDOM	65,2702
+#define	MADV_SEQUENTIAL	66,2762
+#define	MADV_WILLNEED	67,2830
+#define	MADV_DONTNEED	68,2884
+#define	MS_ASYNC	71,2965
+#define	MS_INVALIDATE	72,3027
+
+../sysdeps/unix/bsd/ultrix4/sys/mman.h,431
+#define	_SYS_MMAN_H	26,1129
+#define __need_size_t30,1197
+#define	PROT_NONE	39,1525
+#define	PROT_READ	40,1566
+#define	PROT_WRITE	41,1615
+#define	PROT_EXEC	42,1668
+#define	MAP_SHARED	46,1785
+#define	MAP_PRIVATE	47,1831
+#define	MAP_TYPE	48,1901
+#define	MAP_FIXED	51,1974
+#define	MADV_NORMAL	54,2074
+#define	MADV_RANDOM	55,2133
+#define	MADV_SEQUENTIAL	56,2193
+#define	MADV_WILLNEED	57,2261
+#define	MADV_DONTNEED	58,2315
+
+../sysdeps/unix/bsd/osf1/sys/mman.h,752
+#define	_SYS_MMAN_H	26,1126
+#define __need_size_t30,1194
+#define	PROT_NONE	39,1522
+#define	PROT_READ	40,1563
+#define	PROT_WRITE	41,1612
+#define	PROT_EXEC	42,1665
+#define	MAP_FILE	48,1843
+#define	MAP_ANON	49,1902
+#define	MAP_ANONYMOUS	50,1972
+#define	MAP_TYPE	51,2003
+#define	MAP_SHARED	54,2116
+#define	MAP_PRIVATE	55,2162
+#define	MAP_FIXED	58,2253
+#define	MAP_VARIABLE	59,2326
+#define	MAP_HASSEMPHORE	60,2378
+#define	MAP_INHERIT	61,2447
+#define	MAP_UNALIGNED	62,2512
+#define	MADV_NORMAL	65,2615
+#define	MADV_RANDOM	66,2674
+#define	MADV_SEQUENTIAL	67,2734
+#define	MADV_WILLNEED	68,2802
+#define	MADV_DONTNEED	69,2856
+#define	MADV_SPACEAVAIL	70,2911
+#define MS_ASYNC	73,3007
+#define MS_SYNC	74,3060
+#define MS_INVALIDATE	75,3112
