@@ -58,16 +58,18 @@ int main() {
 
     char bin_path[1024] = "/bin/";
     char current_path[1024];
-    int pid = fork();
-    if(pid < 0) {
-        printf("\nnot able to create child ..!!");
-    }
-    else if(pid == 0) {
-        do {
-            getcwd(current_path, sizeof(current_path));
-            printf("\n%s>",current_path);
-            scanf(" %[^\t\n]s", command);
+    do {
+        getcwd(current_path, sizeof(current_path));
+        printf("\n%s>",current_path);
+        scanf(" %[^\t\n]s", command);
 
+        if(strcmp(command, "exit") == 0) return 1;
+
+        int pid = fork();
+        if(pid < 0) {
+            printf("\nnot able to create child ..!!");
+        }
+        else if(pid == 0) {
             char arguments[1024];
             int pos = get_white_spce_pos(command);
             if(pos == -1) {
@@ -83,9 +85,9 @@ int main() {
 
             if(check_for_cd(command, arguments));
             else execl(final_commad, command, arguments, NULL);
-        } while (strcmp(command, "exit") != 0);
-    } else {
-        wait(0);
-    }
+        } else {
+            wait(0);
+        }
+    } while (strcmp(command, "exit") != 0);
     return 0;
 }
