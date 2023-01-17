@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<string.h>
 #include<unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+#include<sys/types.h>
+#include<sys/wait.h>
 
 int get_white_spce_pos(char* str) {
     if(str == NULL) 
