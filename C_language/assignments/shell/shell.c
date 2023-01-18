@@ -44,47 +44,54 @@ void combie_strings_upto_offsets(char* out, char* string_1, char* string_2, int 
     out[string_out_start] = '\0';
 }
 
-int check_for_cd(char* command,char*  arguments) {
+int check_for_cd(char* command, char*  arguments) {
     if(strcmp(command, "cd") != 0) {
         return 0;   
     }
     // printf("\n\ncommand: %s, argument: %s\n\n", command, arguments);
     chdir(arguments);
+    return 1;
 }
 
 int main() {
+    int pid = -1; //initially set to less than 0 so that if no fork got created then program get terminated ..!!
+
     char command[1024];
     char final_commad[1024];
 
     char bin_path[1024] = "/bin/";
+    char arguments[1024];
     char current_path[1024];
     do {
         getcwd(current_path, sizeof(current_path));
         printf("\n%s>",current_path);
         scanf(" %[^\t\n]s", command);
 
-        if(strcmp(command, "exit") == 0) return 1;
+        if(strcmp(command, "exit") == 0) return 0;
 
-        int pid = fork();
+        int pos = get_white_spce_pos(command);
+        if(pos != -1) {
+            copy_string_from_offset(arguments, command, pos + 1);
+            command[pos] = '\0';
+            if(check_for_cd(command, arguments)) {
+                continue;
+            }
+        }
+
+        pid = fork();
         if(pid < 0) {
             printf("\nnot able to create child ..!!");
         }
         else if(pid == 0) {
-            char arguments[1024];
-            int pos = get_white_spce_pos(command);
             if(pos == -1) {
                 combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(command));
                 execl(final_commad, command, NULL);
-                continue;
             }
-
-            copy_string_from_offset(arguments, command, pos + 1);
 
             combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), pos);
             command[pos] = '\0';
 
-            if(check_for_cd(command, arguments));
-            else execl(final_commad, command, arguments, NULL);
+            execl(final_commad, command, arguments, NULL);
         } else {
             wait(0);
         }
