@@ -1,8 +1,13 @@
 #include<stdio.h>
 #include<string.h>
+
 #include<unistd.h>
 #include<sys/types.h>
 #include<sys/wait.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#include"./queue/queue.h"
 
 int get_white_spce_pos(char* str) {
     if(str == NULL) 
@@ -14,6 +19,39 @@ int get_white_spce_pos(char* str) {
         pos++;
     }
     return pos;
+}
+
+int get_pos_and_count_of_words(queue_list* queue, char* str) {
+    if(str == NULL) 
+        return -1;
+    int pos = 0;
+    int count = 0, w_start = -1, w_end = 0;
+
+    while(str[pos] != '\0') {
+        if(str[pos] != ' ') {
+            w_start++;
+            w_end = 0;
+        }
+
+        if(str[pos] == ' ') {
+            w_start = -1;
+            w_end++;
+        }
+
+        if(w_start == 0 && w_end == 0) {
+            queue_enqueue(queue, pos);
+            count++;
+        }
+        else if(w_start == -1 && w_end == 1) {
+            queue_enqueue(queue, pos);
+            count++;
+        }
+
+        pos++;
+    }
+    queue_enqueue(queue, pos);
+    count++;
+    return count/2;
 }
 
 void copy_string_from_offset(char* dest_str, char* source_str, int offset) {
@@ -44,6 +82,22 @@ void combie_strings_upto_offsets(char* out, char* string_1, char* string_2, int 
     out[string_out_start] = '\0';
 }
 
+char* substr(char* command, int first, int second) {
+    int len = strlen(command);
+    if(len < second)
+        return NULL;
+
+    int i;
+    int c = 0;
+    char* str = malloc(sizeof(char) * ((second - first) + 1));
+    for(i = first; i < second; i++) {
+        str[c] = command[i];
+        c++;
+    }
+    str[c] = '\0';
+    return str;
+}
+
 int check_for_cd(char* command, char*  arguments) {
     if(strcmp(command, "cd") != 0) {
         return 0;   
@@ -56,12 +110,22 @@ int check_for_cd(char* command, char*  arguments) {
 int main() {
     int pid = -1; //initially set to less than 0 so that if no fork got created then program get terminated ..!!
 
+    int output_redirection_index = -1; // -1 for nothing else the index of rediretion sign
+    int output_redirection_flag = -1; // -1 = NULL, 0 = >, 1 = <
+    char* output_redirection_file_name = NULL;
+
     char command[1024];
     char final_commad[1024];
 
     char bin_path[1024] = "/bin/";
-    char arguments[1024];
     char current_path[1024];
+
+    int i;
+    int input_fd = -1, output_fd = -1, fd = -1;
+
+    queue_list queue;
+    queue_init(&queue);
+
     do {
         getcwd(current_path, sizeof(current_path));
         printf("\n%s>",current_path);
@@ -69,13 +133,60 @@ int main() {
 
         if(strcmp(command, "exit") == 0) return 0;
 
-        int pos = get_white_spce_pos(command);
-        if(pos != -1) {
-            copy_string_from_offset(arguments, command, pos + 1);
-            command[pos] = '\0';
-            if(check_for_cd(command, arguments)) {
+        int wc = get_pos_and_count_of_words(&queue, command);
+        if(wc == -1)
+            printf("Invalid ..!!\n");
+
+        char** words = malloc(sizeof(char*) * (wc + 1));
+        int c = 0;
+
+        words[wc] = NULL;
+        while(wc != 0){
+            int first = queue->data;
+            queue_dequeue(&queue);
+            // printf("FS : %d\n", first);
+
+            int second = queue->data;
+            queue_dequeue(&queue);
+            // printf("SC : %d\n", second);
+
+            int len = (second - first) + 1;
+            // printf("LEN : %d\n", len);
+
+            words[c] = malloc(sizeof(char) * len);
+            // printf("IN 3.3\n");
+
+            char *s = substr(command, first, second);
+            words[c] = s;
+            // printf("IN 3 : %s\n", s);
+
+            c++;
+            wc--;
+        }
+        wc = c;
+
+        // printf("OUT\n");
+        if(wc == 2) {
+            if(check_for_cd(words[0], words[1]))
+                continue;
+        } else if(wc > 2) {
+            output_redirection_index = 0;
+            for(i = 0; i < wc; i++) {
+                if(strcmp(words[i], ">") == 0){
+                    output_redirection_flag = 0;
+                    break;
+                }
+                if(strcmp(words[i], "<") == 0){
+                    output_redirection_flag = 1;
+                    break;
+                }
+            }
+            output_redirection_index = i;
+            if(output_redirection_index + 1 > wc){
+                printf("Invalid Redirection ..!! : %d\n", output_redirection_index);
                 continue;
             }
+            output_redirection_file_name = words[output_redirection_index + 1];
         }
 
         pid = fork();
@@ -83,18 +194,53 @@ int main() {
             printf("\nnot able to create child ..!!");
         }
         else if(pid == 0) {
-            if(pos == -1) {
-                combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(command));
-                execl(final_commad, command, NULL);
+            combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(words[0]));
+            
+            if(output_redirection_index != -1) {
+                char **new_args = malloc(sizeof(char*) * (output_redirection_index));
+                for(i = 0; i < output_redirection_index; i++) {
+                    new_args[i] = words[i];
+                }
+                new_args[i] = NULL;
+
+                if(output_redirection_flag == 0) {
+                    output_fd = dup(1);
+                    close(1);
+                    fd = open(output_redirection_file_name, O_WRONLY);
+
+                    return execv(final_commad, new_args);
+                } else if(output_redirection_flag == 1) {
+                    input_fd = dup(0);
+                    close(0);
+                    fd = open(output_redirection_file_name, O_WRONLY);
+
+                    return execv(final_commad, new_args);
+                }
             }
 
-            combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), pos);
-            command[pos] = '\0';
-
-            execl(final_commad, command, arguments, NULL);
+            return execv(final_commad, words);
         } else {
             wait(0);
         }
+
+        printf("\nI_FP : %d, O_FP : %d\n", input_fd, output_fd);
+        if(input_fd != -1) {
+            close(fd);
+
+            close(0);
+            dup(input_fd);
+            close(input_fd);
+        }
+        if(output_fd != -1) {
+
+            close(fd);
+
+            close(1);
+            dup(output_fd);
+            close(output_fd);
+
+        }
+        input_fd = output_fd = fd = -1;
     } while (strcmp(command, "exit") != 0);
     return 0;
 }
