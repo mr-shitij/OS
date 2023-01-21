@@ -283,7 +283,7 @@ int main() {
                 node = node->next;
             }
             if(!found){
-                printf("Invalid Command ..!!\n");
+                printf("Command Not Found ..!!\n");
                 continue;
             }
 
