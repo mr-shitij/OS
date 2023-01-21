@@ -102,7 +102,7 @@ int check_for_cd(char* command, char*  arguments) {
     if(strcmp(command, "cd") != 0) {
         return 0;   
     }
-    // printf("\n\ncommand: %s, argument: %s\n\n", command, arguments);
+
     chdir(arguments);
     return 1;
 }
@@ -121,7 +121,6 @@ int main() {
     char current_path[1024];
 
     int i;
-    int input_fd = -1, output_fd = -1, fd = -1;
 
     queue_list queue;
     queue_init(&queue);
@@ -144,28 +143,22 @@ int main() {
         while(wc != 0){
             int first = queue->data;
             queue_dequeue(&queue);
-            // printf("FS : %d\n", first);
 
             int second = queue->data;
             queue_dequeue(&queue);
-            // printf("SC : %d\n", second);
 
             int len = (second - first) + 1;
-            // printf("LEN : %d\n", len);
 
             words[c] = malloc(sizeof(char) * len);
-            // printf("IN 3.3\n");
 
             char *s = substr(command, first, second);
             words[c] = s;
-            // printf("IN 3 : %s\n", s);
 
             c++;
             wc--;
         }
         wc = c;
 
-        // printf("OUT\n");
         if(wc == 2) {
             if(check_for_cd(words[0], words[1]))
                 continue;
@@ -181,12 +174,14 @@ int main() {
                     break;
                 }
             }
-            output_redirection_index = i;
-            if(output_redirection_index + 1 > wc){
-                printf("Invalid Redirection ..!! : %d\n", output_redirection_index);
-                continue;
+            if(output_redirection_flag != -1) {
+                output_redirection_index = i;
+                if(output_redirection_index + 1 > wc){
+                    printf("Invalid Redirection ..!! : %d\n", output_redirection_index);
+                    continue;
+                }
+                output_redirection_file_name = words[output_redirection_index + 1];
             }
-            output_redirection_file_name = words[output_redirection_index + 1];
         }
 
         pid = fork();
@@ -195,8 +190,7 @@ int main() {
         }
         else if(pid == 0) {
             combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(words[0]));
-            
-            if(output_redirection_index != -1) {
+            if(output_redirection_flag != -1) {
                 char **new_args = malloc(sizeof(char*) * (output_redirection_index));
                 for(i = 0; i < output_redirection_index; i++) {
                     new_args[i] = words[i];
@@ -204,43 +198,26 @@ int main() {
                 new_args[i] = NULL;
 
                 if(output_redirection_flag == 0) {
-                    output_fd = dup(1);
+                    int fd = open(output_redirection_file_name, O_WRONLY);
+                    int tmp = dup(1);
                     close(1);
-                    fd = open(output_redirection_file_name, O_WRONLY);
+                    dup(fd);
 
                     return execv(final_commad, new_args);
                 } else if(output_redirection_flag == 1) {
-                    input_fd = dup(0);
+                    int fd = open(output_redirection_file_name, O_RDONLY);
+                    int tmp = dup(0);
                     close(0);
-                    fd = open(output_redirection_file_name, O_WRONLY);
+                    dup(fd);
 
                     return execv(final_commad, new_args);
                 }
-            }
-
+            } 
             return execv(final_commad, words);
         } else {
             wait(0);
         }
-
-        printf("\nI_FP : %d, O_FP : %d\n", input_fd, output_fd);
-        if(input_fd != -1) {
-            close(fd);
-
-            close(0);
-            dup(input_fd);
-            close(input_fd);
-        }
-        if(output_fd != -1) {
-
-            close(fd);
-
-            close(1);
-            dup(output_fd);
-            close(output_fd);
-
-        }
-        input_fd = output_fd = fd = -1;
+        output_redirection_flag = -1;
     } while (strcmp(command, "exit") != 0);
     return 0;
 }
