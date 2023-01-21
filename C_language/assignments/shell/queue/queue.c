@@ -6,7 +6,7 @@ void queue_init(queue_list *list) {
 	*list = NULL;
 }
 
-void queue_enqueue(queue_list *list, int data) { // Insert At Last
+void queue_enqueue(queue_list *list, void* data) { // Insert At Last
 	queue_node* new_node = malloc(sizeof(queue_node));	
 	new_node->next = NULL;
 	new_node->data = data;
@@ -35,6 +35,7 @@ int queue_dequeue(queue_list *list) { // Remove From First
 		if((*list)->next != NULL)
 			second_node = (*list)->next;
 		
+		free((*list)->data);
 		free(*list);
 		*list = second_node;		
 	}

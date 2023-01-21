@@ -36,6 +36,7 @@
   "files.associations": {
     "math.h": "c",
     "mathinline.h": "c",
-    "queue.h": "c"
+    "queue.h": "c",
+    "string.h": "c"
   }
 }
