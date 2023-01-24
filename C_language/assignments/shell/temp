@@ -7,54 +7,8 @@
 #include<sys/wait.h>
 #include<sys/stat.h>
 #include<fcntl.h>
-#include<stdlib.h>
 
-typedef struct queue_node {
-	struct queue_node* next;
-	void* data;
-}queue_node;
-typedef queue_node* queue_list;
-
-
-void queue_init(queue_list *list) {
-	*list = NULL;
-}
-
-void queue_enqueue(queue_list *list, void* data) { // Insert At Last
-	queue_node* new_node = malloc(sizeof(queue_node));	
-	new_node->next = NULL;
-	new_node->data = data;
-	
-	if(new_node == NULL) {
-		return;
-	}
-
-	if(*list  == NULL) {
-		*list = new_node;
-	} else {
-		queue_node *last_node = *list;
-		while(last_node->next != NULL) {
-			last_node = last_node->next;
-		}
-		last_node->next = new_node;
-	}
-}
-
-int queue_dequeue(queue_list *list) { // Remove From First
-	if(*list == NULL) {
-		return 1; // queue underflow
-	} else {
-		queue_node* second_node = NULL;
-		
-		if((*list)->next != NULL)
-			second_node = (*list)->next;
-		
-		free((*list)->data);
-		free(*list);
-		*list = second_node;		
-	}
-	return 0;
-}
+#include"./queue/queue.h"
 
 char *trimString(char *str) {
     char *end;
@@ -71,7 +25,7 @@ char *trimString(char *str) {
 }
 
 int get_white_spce_pos(char* str) {
-    if(str == NULL)
+    if(str == NULL) 
         return -1;
     int pos = 0;
     while(str[pos] != ' ') {
@@ -83,7 +37,7 @@ int get_white_spce_pos(char* str) {
 }
 
 int get_pos_and_count_of_words(queue_list* queue, char* str) {
-    if(str == NULL)
+    if(str == NULL) 
         return -1;
     int pos = 0;
     int count = 0, w_start = -1, w_end = 0;
@@ -175,7 +129,7 @@ int is_file_exists_access(const char *path){
 
 int check_for_cd(char* command, char*  arguments) {
     if(strcmp(command, "cd") != 0) {
-        return 0; 
+        return 0;   
     }
 
     chdir(arguments);
@@ -207,11 +161,8 @@ int main() {
         if(current_directory_flag == 0)
             getcwd(current_path, sizeof(current_path));
 
-        printf("\n%s>",current_path);
-        if(scanf(" %[^\t\n]s", command) == EOF)
-		break;
-
-        trimString(command);
+        printf("\n%s>",current_path);    
+        scanf(" %[^\t\n]s", command);
 
         if(strcmp(command, "exit") == 0) return 0;
         if(strstr(command, "PS1=\"") != NULL) {

@@ -1,0 +1,11 @@
+total 61
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal     0 Jan 23 14:58 a
+drwxrwxrwx 1 shitij_agrawal shitij_agrawal  4096 Jan 19 21:35 arguments
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal 22368 Jan 23 14:57 main.o
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal   299 Jan 20 00:12 Makefile
+drwxrwxrwx 1 shitij_agrawal shitij_agrawal     0 Jan 19 23:58 queue
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal  2088 Jan 23 14:57 queue.o
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal  9603 Jan 23 14:57 shell.c
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal  9008 Jan 23 14:57 shell.o
+drwxrwxrwx 1 shitij_agrawal shitij_agrawal     0 Jan 19 22:01 stack
+-rwxrwxrwx 1 shitij_agrawal shitij_agrawal  2504 Jan 23 14:57 stack.o
