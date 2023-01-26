@@ -9,6 +9,18 @@
 #include<fcntl.h>
 #include<stdlib.h>
 
+typedef struct history {
+    int pid;
+    char* command;
+} history;
+
+void history_add(history **h, char* bin_path) {
+    *h = malloc(sizeof(history));
+    (*h)->pid = getpid();
+    (*h)->command = malloc(sizeof(char) * strlen(bin_path));
+    strcpy((*h)->command, bin_path);
+}
+
 typedef struct queue_node {
 	struct queue_node* next;
 	void* data;
@@ -203,6 +215,9 @@ int main() {
     queue_list queue;
     queue_init(&queue);
 
+    queue_list history_list;
+    queue_init(&history_list);
+
     do {
         if(current_directory_flag == 0)
             getcwd(current_path, sizeof(current_path));
@@ -237,11 +252,27 @@ int main() {
                 continue;
             }
         }
+        else if (strstr(command, "history") != NULL) {
+            if(strstr(command, "history -c") != NULL) {                
+                while(history_list != NULL) {
+                    queue_dequeue(&history_list);
+                }
+            } else {
+                queue_node* node = history_list;
+                while(node != NULL) {
+                    history *h = (history*)(node->data);
+                    printf("%d %s\n", h->pid, h->command);
+                    node = node->next;
+                }
+            }
+            continue;
+        }
         else if(strstr(command, "PATH=") != NULL) {
             int len = strlen(command);
             if(len < 5) {
                 printf("Invalid Command ..!!\n");
             } else {
+                // clear the path for new
                 while(path != NULL) {
                     queue_dequeue(&path);
                 }
@@ -373,6 +404,10 @@ int main() {
                 } 
                 return execv(bin_path, words);
             } else {
+                history *h;
+                history_add(&h, bin_path);
+                queue_enqueue(&history_list, h);
+
                 wait(0);
             }
             output_redirection_flag = -1;
