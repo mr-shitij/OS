@@ -194,45 +194,58 @@ int check_for_cd(char* command, char*  arguments) {
     return 1;
 }
 
-int main() {
-    int pid = -1; //initially set to less than 0 so that if no fork got created then program get terminated ..!!
 
-    int output_redirection_index = -1; // -1 for nothing else the index of rediretion sign
-    int output_redirection_flag = -1; // -1 = NULL, 0 = >, 1 = <
-    char* output_redirection_file_name = NULL;
+int pid = -1; //initially set to less than 0 so that if no fork got created then program get terminated ..!!
+int current_directory_flag = 0; // 0 = CWD, 1 = SHORT
+int output_redirection_index = -1; // -1 for nothing else the index of rediretion sign
+int output_redirection_flag = -1; // -1 = NULL, 0 = >, 1 = <
+int wc;
 
-    char command[1024];
+char* output_redirection_file_name = NULL;
+char** words = NULL; // to store the tokens
+char command[1024];
+char current_path[1024];
 
-    char bin_path[1024];
-    queue_list path;
-    queue_init(&path);
+queue_list queue;
+queue_list history_list;
+queue_list path;
 
-    int current_directory_flag = 0; // 0 = CWD, 1 = SHORT
-    char current_path[1024];
 
-    int i;
+int pipe_count = 0;
+queue_list pipe_commands;
 
-    queue_list queue;
-    queue_init(&queue);
 
-    queue_list history_list;
-    queue_init(&history_list);
+int take_input() {
+    if(scanf(" %[^\t\n]s", command) == EOF)
+        return -1;
 
-    do {
-        if(current_directory_flag == 0)
-            getcwd(current_path, sizeof(current_path));
+    trimString(command);
+}
 
-        printf("\n%s>",current_path);
-        if(scanf(" %[^\t\n]s", command) == EOF)
-		break;
+void print_path() {
+    if(current_directory_flag == 0)
+        getcwd(current_path, sizeof(current_path));
 
-        trimString(command);
+    printf("\n%s>",current_path);
+}
 
-        if(strcmp(command, "exit") == 0) return 0;
-        if(strstr(command, "PS1=\"") != NULL) {
+int check_for_build_in_commands() {
+    if(strcmp(command, "exit") == 0) return 0;
+    if(strstr(command, "PS1=\"") != NULL) return 1;
+    else if (strstr(command, "history") != NULL) return 2;
+    else if(strstr(command, "PATH=") != NULL) return 3;
+    return 4;
+}
+
+int built_in_command_processor(int command_id) {
+    int len;
+    switch(command_id) {
+        case 0:
+            return 0; // For exit
+        case 1:
             if(strstr(command, "PS1=\"\\w$\"") != NULL) {
                 current_directory_flag = 0;
-                continue;
+                return 1; // For Continue
             }
             int len = strlen(command);
             if(len < 5) {
@@ -249,10 +262,10 @@ int main() {
                     i++;
                     offset++;
                 }
-                continue;
+                return 1;
             }
-        }
-        else if (strstr(command, "history") != NULL) {
+            break;
+        case 2:
             if(strstr(command, "history -c") != NULL) {                
                 while(history_list != NULL) {
                     queue_dequeue(&history_list);
@@ -265,10 +278,9 @@ int main() {
                     node = node->next;
                 }
             }
-            continue;
-        }
-        else if(strstr(command, "PATH=") != NULL) {
-            int len = strlen(command);
+            return 1; // For Continue
+        case 3:
+            len = strlen(command);
             if(len < 5) {
                 printf("Invalid Command ..!!\n");
             } else {
@@ -295,63 +307,131 @@ int main() {
                 char* pa = malloc(sizeof(char) * current_len);
                 copy_string_from_offset(pa, command, temp_offset, i);
                 queue_enqueue(&path, pa);
-                continue;
+                return 1; // For Continue
+            }
+            break;
+    }
+    return 2;
+
+}
+
+void create_tokens() {
+    if(words != NULL)
+        free(words);
+    words = malloc(sizeof(char*) * (wc + 1));
+    int c = 0;
+
+    words[wc] = NULL;
+    while(wc != 0){
+        int first = *((int*)queue->data);
+        queue_dequeue(&queue);
+
+        int second = *((int*)queue->data);
+        queue_dequeue(&queue);
+
+        int len = (second - first) + 1;
+
+        words[c] = malloc(sizeof(char) * len);
+
+        char *s = substr(command, first, second);
+        words[c] = s;
+
+        c++;
+        wc--;
+    }
+    wc = c;
+
+}
+
+int process(int* pipe_d) {
+    int i;
+    char bin_path[1024];
+
+    switch(built_in_command_processor(check_for_build_in_commands())){
+        case 0:
+            return 0; //break
+        case 1:
+            return 1; // continue;
+    }
+
+    wc = get_pos_and_count_of_words(&queue, command);
+    if(wc == -1)
+        printf("Invalid ..!!\n");
+    else {
+        create_tokens(&wc);
+        if(wc == 2) {
+            if(check_for_cd(words[0], words[1]))
+                return 1;
+        } else if(wc > 2) {
+            output_redirection_index = 0;
+            int i, temp = 0;
+            char* fuck = NULL;
+            int len = 0;
+            for(i = 0; i < wc; i++) {
+                if(strcmp(words[i], ">") == 0) {
+                    output_redirection_flag = 0;
+                    break;
+                }
+                if(strcmp(words[i], "<") == 0) {
+                    output_redirection_flag = 1;
+                    break;
+                } 
+                if(strcmp(words[i], "|") == 0) {
+                    pipe_count += 1;
+
+                    for(int j = temp; j < i; j++) {
+                        len += strlen(words[j]);
+                        if(fuck == NULL) {
+                            fuck = malloc(sizeof(char) * len);
+                            strcpy(fuck, words[j]);
+                        }
+                        else{
+                            fuck = realloc(fuck, sizeof(char) * len);
+                            strcat(fuck, words[j]);
+                        }
+                        strcat(fuck, " ");
+                    }
+                    temp = i;
+
+                    // printf("Temp : %d, CMP : Command : %s, i : %d\n", temp, fuck, i);
+                    queue_enqueue(&pipe_commands, fuck);
+                    fuck = NULL;
+                    break;
+                }
+                // printf("W : %s\n", words[i]);
+            }
+            if(pipe_count > 0) {
+                fuck = NULL;
+                for(int j = temp + 1; j < wc; j++) {
+                    len += strlen(words[j]);
+                    if(fuck == NULL) {
+                        fuck = malloc(sizeof(char) * len);
+                        strcpy(fuck, words[j]);
+                    }
+                    else {
+                        fuck = realloc(fuck, sizeof(char) * len);
+                        strcat(fuck, words[j]);
+                    }
+                    strcat(fuck, " ");
+                }
+                temp = i;
+
+                // printf("PIPE : Command : %s, i : %d\n", fuck, i);
+                queue_enqueue(&pipe_commands, fuck);
+                fuck = NULL;
+            }
+
+            if(output_redirection_flag != -1) {
+                output_redirection_index = i;
+                if(output_redirection_index + 1 > wc){
+                    printf("Invalid Redirection ..!! : %d\n", output_redirection_index);
+                    return 1;
+                }
+                output_redirection_file_name = words[output_redirection_index + 1];
             }
         }
 
-        int wc = get_pos_and_count_of_words(&queue, command);
-        if(wc == -1)
-            printf("Invalid ..!!\n");
-        else {
-            char** words = malloc(sizeof(char*) * (wc + 1));
-            int c = 0;
-
-            words[wc] = NULL;
-            while(wc != 0){
-                int first = *((int*)queue->data);
-                queue_dequeue(&queue);
-
-                int second = *((int*)queue->data);
-                queue_dequeue(&queue);
-
-                int len = (second - first) + 1;
-
-                words[c] = malloc(sizeof(char) * len);
-
-                char *s = substr(command, first, second);
-                words[c] = s;
-
-                c++;
-                wc--;
-            }
-            wc = c;
-
-            if(wc == 2) {
-                if(check_for_cd(words[0], words[1]))
-                    continue;
-            } else if(wc > 2) {
-                output_redirection_index = 0;
-                for(i = 0; i < wc; i++) {
-                    if(strcmp(words[i], ">") == 0){
-                        output_redirection_flag = 0;
-                        break;
-                    }
-                    if(strcmp(words[i], "<") == 0){
-                        output_redirection_flag = 1;
-                        break;
-                    }
-                }
-                if(output_redirection_flag != -1) {
-                    output_redirection_index = i;
-                    if(output_redirection_index + 1 > wc){
-                        printf("Invalid Redirection ..!! : %d\n", output_redirection_index);
-                        continue;
-                    }
-                    output_redirection_file_name = words[output_redirection_index + 1];
-                }
-            }
-
-
+        if(pipe_count == 0) {
             queue_node* node = path;
             int found = 0;
             while(node != NULL) {
@@ -369,49 +449,127 @@ int main() {
             }
             if(!found){
                 printf("Command Not Found ..!!\n");
-                continue;
+                return 1;
             }
-
-
-            pid = fork();
-            if(pid < 0) {
-                printf("\nnot able to create child ..!!");
-            }
-            else if(pid == 0) {
-                // combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(words[0]));
-                if(output_redirection_flag != -1) {
-                    char **new_args = malloc(sizeof(char*) * (output_redirection_index));
-                    for(i = 0; i < output_redirection_index; i++) {
-                        new_args[i] = words[i];
-                    }
-                    new_args[i] = NULL;
-
-                    if(output_redirection_flag == 0) {
-                        int fd = open(output_redirection_file_name, O_WRONLY);
-                        int tmp = dup(1);
-                        close(1);
-                        dup(fd);
-
-                        return execv(bin_path, new_args);
-                    } else if(output_redirection_flag == 1) {
-                        int fd = open(output_redirection_file_name, O_RDONLY);
-                        int tmp = dup(0);
-                        close(0);
-                        dup(fd);
-
-                        return execv(bin_path, new_args);
-                    }
-                } 
-                return execv(bin_path, words);
-            } else {
-                history *h;
-                history_add(&h, bin_path);
-                queue_enqueue(&history_list, h);
-
-                wait(0);
-            }
-            output_redirection_flag = -1;
         }
+
+        pid = fork();
+        if(pid < 0) {
+            printf("\nnot able to create child ..!!");
+        }
+        else if(pid == 0) {
+            if(pipe_count != 0) {
+                int temp_output_fd = dup(1);
+                int temp_input_fd = dup(0);
+
+                for(i = 0; i < pipe_count; i++) {
+                    if(pipe_d == NULL) {
+                        pipe_d = malloc(sizeof(int) * 2);
+                        pipe(pipe_d);
+                    }
+
+                    int fd = fork();
+                    if(fd < 0)
+                        printf("Can not create fork..!!");
+                    else if(fd == 0) {
+                        close(1);
+                        dup(pipe_d[1]);
+
+                        close(pipe_d[0]);
+                        strcpy(command, (char*)pipe_commands->data);
+                        queue_dequeue(&pipe_commands);
+                        // command = "new commadn to execute";
+
+                        pipe_count = 0;
+                        printf("Calling Main In Child For : %s\n", command);
+                        main(NULL);
+                        return 0;
+                    } else {
+                        if(pipe_commands != NULL) {
+                            close(0);
+                            dup(pipe_d[0]);
+
+                            close(pipe_d[1]);
+
+                            strcpy(command, (char*)pipe_commands->data);
+                            queue_dequeue(&pipe_commands);
+                            // command = "new commadn to execute";
+
+                            printf("Calling Main In Parent For : %s\n", command);
+                            main(NULL);
+                        }
+                        else {
+                            // restore std. ip/op
+                            close(1);
+                            dup(temp_output_fd);
+                            close(0);
+                            dup(temp_input_fd);
+
+                            close(temp_input_fd);
+                            close(temp_output_fd);
+                        }
+                    }
+                }
+
+            }
+
+
+
+            // combie_strings_upto_offsets(final_commad, bin_path, command, strlen(bin_path), strlen(words[0]));
+            if(output_redirection_flag != -1) {
+                char **new_args = malloc(sizeof(char*) * (output_redirection_index));
+                for(i = 0; i < output_redirection_index; i++) {
+                    new_args[i] = words[i];
+                }
+                new_args[i] = NULL;
+
+                if(output_redirection_flag == 0) {
+                    int fd = open(output_redirection_file_name, O_WRONLY);
+                    int tmp = dup(1);
+                    close(1);
+                    dup(fd);
+
+                    execv(bin_path, new_args);
+                } else if(output_redirection_flag == 1) {
+                    int fd = open(output_redirection_file_name, O_RDONLY);
+                    int tmp = dup(0);
+                    close(0);
+                    dup(fd);
+
+                    execv(bin_path, new_args);
+                }
+            } 
+            execv(bin_path, words);
+        } else {
+            history *h;
+            history_add(&h, bin_path);
+            queue_enqueue(&history_list, h);
+
+            wait(0);
+        }
+        output_redirection_flag = -1;
+    }
+    return 1;
+}
+
+int main() {
+    queue_init(&path);
+    queue_init(&queue);
+    queue_init(&history_list);
+    queue_init(&pipe_commands);
+
+    do {
+
+        print_path();
+        if(take_input() == -1) break;
+
+        switch(process(NULL)){
+            case 0:
+                break; //break
+            case 1:
+                continue;; // continue;
+        }
+
     } while (strcmp(command, "exit") != 0);
     return 0;
 }
