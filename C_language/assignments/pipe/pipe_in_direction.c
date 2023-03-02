@@ -27,10 +27,14 @@ int main() {
 	} else {
         printf("In Parent ..!!\n");
 		close(pipe_d[1]);
-		if(read(pipe_d[0], input, sizeof(input)) == -1) {
-			printf("Error Occured During reading from file ..!!");
-			return 3;
-		}
+		close(0);
+		dup(pipe_d[0]);
+		close(pipe_d[0]);
+		execl("/bin/cat", "cat", NULL);
+		// if(read(pipe_d[0], input, sizeof(input)) == -1) {
+		// 	printf("Error Occured During reading from file ..!!");
+		// 	return 3;
+		// }
 		printf("Recived From Child : %s", input);
 		close(pipe_d[0]);
 	}
